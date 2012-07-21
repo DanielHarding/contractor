@@ -30,7 +30,7 @@ get_header(); ?>
                           'post_parent' => $post->ID, 
                           'order'=>'ASC',
                           'orderby'=> 'menu_order',
-                          'post_type' => 'page',
+                          'post_type' => 'trade',
                           'post_status' => 'publish',
                           'posts_per_page' => 100)); 
 
