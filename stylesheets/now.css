@@ -1,0 +1,674 @@
+/* Artfully masterminded by ZURB  */
+
+/* -------------------------------------------------- 
+   Table of Contents
+-----------------------------------------------------
+:: Shared Styles
+:: Page Name 1
+:: Page Name 2
+*/
+
+
+/* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+
+a {
+color: #001d34;
+}
+
+p.intro { font-size: 115%; line-height: 1.3; color: #111; }
+h2, h3, h4, h5, h6 { font-weight:200; }
+h1 small, h2 small, h3 small, h4 small, h5 small { color: #777; font-size: 60%; font-weight: normal; }
+
+sup {
+  width: 182px;
+  display: inline-block;
+  font-weight: normal;
+  font-size: 13px;
+  line-height:1;
+  vertical-align:middle;
+
+}
+
+form, fieldset, label {
+  font-size: 12px;
+}
+
+form .subheader {
+line-height: 0.5;
+margin-top: 2px;
+margin-bottom: 12px;
+color:#001d34;
+}
+
+input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea {
+  font-size: 12px;
+}
+
+blockquote.huge-text {
+  padding-top: 43px;
+  font-size: 140%;
+  line-height:1.2;
+  color: #222;
+}
+
+blockquote cite {
+  margin-top: 6px;
+  color: #555;
+  display: block;
+  float: right;
+  margin-right: 20px;
+}
+
+img.left {
+  margin-right: 30px;
+}
+
+#blogfeed {
+  background-color: #ddd;
+  padding: 2px 15px 3px 15px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.tweet-box h5 {
+  margin-top: 0px;
+  margin-bottom: 8px;
+}
+
+#blogfeed p, .tweet-box p {
+  font-size: 85%;
+  line-height:1.4;
+}
+
+.tweet-box p {
+  font-size: 80%;
+  margin-right: 102px;
+}
+
+.tweet-date {
+  display: block;
+  margin-top: 6px;
+  font-size: 80%;
+  color: #555;
+}
+
+#blogfeed h4 {
+  margin-top: 10px;
+  margin-bottom: 3px;
+  padding-top: 0px;
+  padding-bottom: 0px; 
+  color: #fff; 
+  font-size: 120%;  
+}
+
+#blogfeed span {
+  display: inline-block;
+  margin-right: 102px;
+}
+
+#blogfeed p {
+  margin-top: 6px;
+  margin-bottom: 12px;
+  margin-right: 51px;
+}
+
+
+/* -----------------------------------------
+Header and Footer
+----------------------------------------- */
+
+header { margin-bottom: 20px; }
+#utility-holder { margin-top: 3px;}
+#utility-holder ul { margin: 0 0 0 -20px; padding: 0; float: right; overflow: hidden; }
+#utility-holder ul li { margin: 0 0 0 20px; padding: 0; display: block; float: left; font-size: 80%; }
+#utility-holder ul li a {  color:#666; }
+
+.hairlinev {
+  clear: both;
+  height:1px;
+}
+
+.nav-bar {
+height: 15px;
+background: white;
+margin-top: 10px;
+padding: 0;
+font-family: Georgia, "Times New Roman", Times, serif
+}
+
+.seriftext,
+#mainContent h3,
+#mainContent h4,
+#mainContent h5,
+.widget-title,
+.twitterwidget-title,
+.page-title  {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.tweet-box ul, .tweet-box ul li {
+  list-style-type: none!important;
+}
+
+.twitterwidget-title  {
+font-size:130%;
+}
+
+.tweet-box .entry-content {
+font-size:85%;
+line-height: 1;
+}
+
+.widget-title {
+  font-size: 150%;
+}
+
+.huge-phone {
+  font-size:204%;
+}
+
+.cat-item-1 {display:none;}
+
+
+
+/* The Div that surrounds the Drop Down Menu*/
+#navigation {
+width:100%;
+background: #fff; /* Background Color for your wp_nav_menu */
+}
+
+/* Menu Bar List */
+ul.dropdown {
+list-style:none; /* Gets rid of bullets in the list */
+float:left;
+width:100%;
+padding: 0 5px; /* Top and bottom padding of 0. Left and right of 5px */
+}
+
+ul.dropdown  li{
+float:left;
+position:relative;
+}
+
+ul.dropdown a { /* Menu link styling */
+padding:12px;
+color:#333; /* Text color of links */
+text-decoration:none; /* Gets rid of underline for links */
+}
+
+/* Styling when a link is hovered over */
+ul.dropdown li:hover a {
+color: #111; /* Text color of links */
+}
+
+/* Displays Links as Blocks */
+ul.dropdown li ul a {
+display:block;
+}
+
+/* Styling for all of the Sub Menus  */
+
+ul.dropdown ul {
+list-style: none; /* Gets rid of bullets */
+margin:0;
+padding:0;
+width:200px; /* Width of the Drop Down Box */
+position:absolute; /* States that you are going to define exactly in pixels where the drop down appears */
+}
+
+ul.dropdown li ul {
+top:24px; /* The Drop Down Box appears 24px below the menu when the menu is hovered over*/
+}
+
+ul.dropdown ul ul { /* Styling for secondary drop downs (Drop Downs of a Drop Down) */
+top:0;
+left:100%;
+}
+
+ul.dropdown ul li {
+float:none;
+}
+
+/* Makes drop downs not appear by default unless the mouse hovers */
+ul.dropdown ul,
+ul.dropdown li:hover ul ul,
+ul.dropdown ul li:hover ul ul
+{ display: none; }
+
+ul.dropdown li:hover ul,
+ul.dropdown ul li:hover ul ,
+ul.dropdown ul li ul li:hover ul
+{ display: block;}
+
+ul.dropdown li * a:hover { /* Styling for every link that is hovered over */
+}
+
+ul.media-grid li {
+  width: auto;
+  height: auto;
+  margin: 0px 12px!important;
+  padding: 0px;
+}
+
+.flex-video {
+  margin-bottom: 1px;
+} 
+
+
+.primary-media .left {
+  margin-left: 0px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.primary-media p {
+  margin-right: 2%;
+}
+
+
+footer { padding-bottom: 10px; background-color: #F3F3F3; border:1px solid #ddd; }
+footer .row { margin-top: 20px; padding-top: 10px; }
+
+#copyright {
+  background: #fff;
+  color: #ccc;
+  padding: 6px 0;
+  margin-top: 10px;
+}
+
+#copyright p {
+  font-size: 10px!important;
+}
+
+.debug {
+  color: #cc0000;
+}
+
+blockquote {
+  border-left: none;
+  font-style: italic;
+}
+
+#frm_search, #frm_search .row, #frm_search input[type="text"], .slimhead row {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+#frm_search input[type="text"] {
+  height:22px;
+  padding: 3px;
+}
+
+
+.prefix, .postfix {
+height: 22px;
+line-height: 20px;
+}
+
+#frm_search button, #frm_search .button {
+padding: 0px;
+font-size: 80%;
+background: #eee;
+border: 1px solid #ddd;
+color:#666;
+}
+
+.mtop {
+  margin-top: 3px;
+}
+
+.vspace60 {
+  height: 60px;
+}
+
+.vspace50 {
+  height: 50px;
+}
+
+.vspace40 {
+  height: 40px;
+}
+
+.vspace30 {
+  height: 30px;
+}
+
+.vspace20 {
+  height: 20px;
+}
+
+.vspace10 {
+  height: 10px;
+}
+
+
+#testCircle {
+width: 200px;
+height: 200px;
+position: relative;
+background:#001d34;
+color: #fff;
+text-align: center;
+font: 12px Arial, sans-serif
+}
+
+.circle {
+border-radius: 50%;
+display: inline-block;
+margin-right: 20px;
+}
+
+.circle h5 {
+font-size:155%;
+margin-top: 35%;
+color:#b0d135;
+margin-right: 10%;
+margin-bottom: 8px;
+margin-left: 10%;
+}
+
+.circle p {
+font-size:95%;
+}
+
+#copyright { background: #fff; color: #001d34; padding: 5px 0; margin-top: 1px; }
+
+#copyright p, #copyright ul.link-list { margin-bottom: 0; }
+
+#copyright a { color: #777; }
+
+#copyright a:hover {
+  color:#555;
+}
+
+dl.tabs, 
+dl.tabs.vertical, 
+dl.tabs.vertical dd, 
+dl.tabs.vertical dd.active,
+dl.tabs.vertical dd a,
+dl.tabs.vertical dd.active a {
+  background: none;
+  border: none;
+}
+
+dl.tabs.vertical dd a {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+dl.tabs.vertical dd.active a  {
+  color: #333;  
+}
+
+dl.tabs.vertical {
+  min-width: 230px;
+}
+
+.spaced-grid li {
+  margin: 10px;
+}
+
+.spaced-grid li .button {
+background: none;
+border: none;
+-webkit-box-shadow: none;
+-moz-box-shadow: none;
+box-shadow: none;
+padding: 0px;
+color: #333;
+}
+
+.spaced-grid li .button:hover {
+color: #111;
+}
+
+
+.thumb-caption h6 {
+  margin: 0px;
+  font-weight: 400;
+}
+
+.thumb-caption p {
+  margin: 0px;
+  font-size:90%;
+  font-weight: 200;
+}
+
+#contact-address {
+  width: 200px;
+  height: auto;
+  margin: 0px auto;
+  padding: 20px;
+  background-color: #ddd;
+  font-size:100%;
+}
+
+
+/* CSS for jQuery Reveal Plugin Maintained for Foundation. foundation.zurb.com Free to use under the MIT license. http://www.opensource.org/licenses/mit-license.php */
+/* Reveal Modals ---------------------- */
+.reveal-modal-bg { position: fixed; height: 100%; width: 100%; background: #000; background: rgba(0, 0, 0, 0.45); z-index: 40; display: none; top: 0; left: 0; }
+
+.reveal-modal { background: white; visibility: hidden; display: none; top: 100px; left: 50%; margin-left: -300px; width: 520px; position: absolute; z-index: 41; padding: 30px; -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
+.reveal-modal *:first-child { margin-top: 0; }
+.reveal-modal *:last-child { margin-bottom: 0; }
+.reveal-modal .close-reveal-modal { font-size: 22px; font-size: 2.2rem; line-height: .5; position: absolute; top: 8px; right: 11px; color: #aaa; text-shadow: 0 -1px 1px rbga(0, 0, 0, 0.6); font-weight: bold; cursor: pointer; }
+.reveal-modal.small { width: 30%; margin-left: -10%; }
+.reveal-modal.medium { width: 40%; margin-left: -20%; }
+.reveal-modal.large { width: 60%; margin-left: -30%; }
+.reveal-modal.expand { width: 90%; margin-left: -45%; }
+.reveal-modal .row { min-width: 0; }
+
+/* Mobile */
+@media only screen and (max-width: 767px) { .reveal-modal-bg { position: absolute; }
+  .reveal-modal, .reveal-modal.small, .reveal-modal.medium, .reveal-modal.large, .reveal-modal.xlarge { width: 80%; top: 15px; left: 50%; margin-left: -40%; padding: 20px; height: auto; } }
+
+.simple-list, .simple-list li, .widget ul, .widget li {
+  list-style-type: none;
+}
+
+.sideheading {
+  margin-top: 0px;
+  padding-top: 0px;
+  margin-bottom: 6px;
+}
+
+.full-width {
+  width:100%;
+  height: auto;
+  margin-bottom: 0px;
+}
+
+.full-width li {
+  width:100%;
+  height: auto;
+  display: block;
+  float: none;
+  margin: 12px 0px;
+  padding: 5px 5px 15px 5px;
+}
+
+
+.full-width li ul li {
+margin: 0px 0px;
+padding: 2px 0px;
+}
+
+.bborder li {
+border-bottom: 1px solid #ddd; 
+}
+
+.bborder li.last {
+border-bottom: none; 
+}
+
+.noborder, .noborder li {
+  border:none!important;
+}
+
+li.last {
+  margin-bottom: 0px!important;
+}
+
+
+.group:before,
+.group:after {
+    content:"";
+    display:table;
+}
+.group:after {
+    clear:both;
+}
+.group {
+    zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+.current_page_item a {
+  color: #001d34!important;
+}
+
+.media-grid h6 {
+  margin: 0px 0px 18px 0px;
+}
+
+.imglinks dl.tabs.vertical dd a {
+padding: 0px;
+}
+
+.centered {
+  margin-right: auto;
+  margin-left:auto;
+}
+
+
+.icon {
+  width:106px;
+  height:106px;
+  margin: 0px 30px 10px 0px;
+  background-image: url(/wp-content/themes/contractor/images/faq.gif);
+}
+
+.faq1 {
+  background-position: 0 -212px;
+}
+
+.faq2 {
+  background-position: -142px -212px;
+}
+
+.faq3 {
+  background-position: -284px -212px;
+}
+
+.faq4 {
+  background-position: -426px -212px;
+}
+
+.faq5 {
+  background-position: -568px -212px;
+}
+
+.group p {
+  margin-bottom: 35px;
+}
+
+.group .panel p {
+  margin-bottom: 10px;
+}
+
+div.panel {
+  background-color: #f3f3f3;
+}
+
+fieldset {
+  padding-bottom: 15px;
+}
+
+fieldset legend {
+  font-weight: normal;
+  background-color: inherit;
+  font-size:110%;
+  color: #333;
+}
+
+input[type=text], input[type=email], textarea {
+  background-color: #fff;
+}
+
+.st-accordion ul li > a {
+font-size: 20px;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+margin-bottom: 14px;
+margin-top: 0px;
+}
+
+footer {
+  margin-top: 20px!important;
+}
+
+
+div.wpanel {
+background: #fff;
+border: solid 1px #E6E6E6;
+margin: 0 0 22px 0!important;
+padding: 20px 10px 0px 10px;
+}
+
+div.wpanel h5 {
+  margin-left: 10px;
+}
+
+/*
+
+.tabs-content {
+  border: 1px solid #ddd;
+}
+
+*/
+
+
+
+/* -----------------------------------------
+   Homepage
+----------------------------------------- */
+
+    /*
+    .jumbotron { position: relative; margin-bottom: 30px; }
+    .jumbotron h1 { position: absolute; left: 20px; bottom: 20px; }
+    
+    .homepage .content { position: absolute; left: 80px; bottom: 20px; width: 50%; background: rgba(255,255,255,0.85); padding: 20px; }
+    .homepage .content blockquote { padding: 0; border-left: none; font-size: 24px; font-weight: bold; }
+    .homepage .content h1 { position: relative; left: 0px; bottom: 0px; font-size: 18px; font-weight: normal; }
+    
+    .homepage a.slider { display: block; background: #fff; width: 60px; height: 80px; line-height: 80px; position: absolute; top: 50%; margin-top: -40px; text-align: center; }
+    .homepage a#prev { left: 0px; }
+    .homepage a#next { right: 0px; }
+    */
+    
+/* -----------------------------------------
+   Culinary Academy
+----------------------------------------- */
+    /*
+    .culinary .content { position: absolute; left: 0; bottom: 0; width: 100%; background: rgba(255,255,255,0.85); }
+    .culinary .content p { width: 60%; padding: 20px; font-size: 15px; color: #555; margin: 0; }
+    .culinary .content .button { position: absolute; right: 20px; bottom: 20px; }
+    */
+    
+/* -----------------------------------------
+   Event
+----------------------------------------- */
+    /*
+    .cta { margin: 30px 0; text-align: center; }
+    .date { padding: 20px 0; background: #ddd; text-align: center; }
+    .date span { display: block; text-align: center; margin-bottom: 6px; }
+    .date strong { font-size: 30px; }
+    
+    a.map { display: block; }
+    */
+
+

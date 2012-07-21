@@ -1,0 +1,64 @@
+<?php
+/*
+Template Name: FAQ Template
+*/
+/**
+ * The template for displaying all pages.
+ *
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site will use a
+ * different template.
+ *
+ * @package Now
+ * @since Now 1.0
+ */
+get_header(); ?>
+
+<div class="row">
+
+  <div class="nine columns">
+    <h3 class="supheading">We've compiled a list of FAQs!</h3> 
+    <h4 class='subheading'>Here are the crucial questions to ask.</h4>
+    <?php
+    $content = apply_filters('the_content', $post->post_content); echo $content;
+    ?>
+  </div>
+
+  <div class="three columns">
+    <form action="/" method="post" name="contact" class="custom">
+
+      <span>Call</span>
+      <h4 class="subheader seriftext huge-phone">033 33 707 247</h4>
+      <span>for free advice about working with us</span>
+      
+      <fieldset>
+        
+        <legend>Or simply fill out this form</legend>
+        
+        <input type="text" name="name" placeholder="Your name (required)" />
+        <input type="text" name="company" placeholder="Company name (required)" />
+        <input type="text" name="email" placeholder="Email address (required)" />
+        <input type="text" name="phone" placeholder="Phone number" />
+        
+        <label for="checkbox1" class="seriftext">
+          <input type="checkbox" id="checkbox1" name="newsletter" style="display: none;">
+          <span class="custom checkbox"></span> I wish to subscribe to your newsletter
+        </label>
+        <br>
+        <p>
+        <input type="submit" name="send_contact" value="Submit" />
+        </p>
+
+      </fieldset>
+
+    </form>
+  </div>
+
+</div>
+
+<div class="row">
+  <hr>
+</div>
+
+<?php get_footer(); ?>
