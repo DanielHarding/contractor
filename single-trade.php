@@ -8,27 +8,54 @@
 
 get_header(); ?>
 
-		<div id="primary" class="site-content">
-			<div id="content" role="main">
 
-			<?php while ( have_posts() ) : the_post(); ?>
+<div class="row">
+  
+	<div class="nine columns">
+	<?php while ( have_posts() ) : the_post(); ?>
+		<?php // contractor_content_nav( 'nav-above' ); ?>
+		<?php get_template_part( 'content', 'trade' ); ?>
+		<?php contractor_content_nav( 'nav-below' ); ?>
+	<?php endwhile; // end of the loop. ?>
+	</div>
 
-				<?php contractor_content_nav( 'nav-above' ); ?>
 
-				<?php get_template_part( 'content', 'single' ); ?>
 
-				<?php contractor_content_nav( 'nav-below' ); ?>
 
-				<?php
-					// If comments are open or we have at least one comment, load up the comment template
-					if ( comments_open() || '0' != get_comments_number() )
-						comments_template( '', true );
-				?>
+	<div class="three columns">
+      <h3>All Trades</h3>
+      <ul class="simple-list">
+        <?php 
+          query_posts(array('showposts' => 20, 
+                            // 'post_parent' => $post->ID, 
+                            'order'=>'ASC',
+                            'orderby'=> 'menu_order',
+                            'post_type' => 'trade',
+                            'post_status' => 'publish',
+                            'posts_per_page' => 100)); 
 
-			<?php endwhile; // end of the loop. ?>
+          $c=0;
+          while ($p = have_posts()) { 
+            the_post();
 
-			</div><!-- #content -->
-		</div><!-- #primary .site-content -->
+            // Remove spaces
+            $ti = get_the_title(get_the_id());
+            // Set first item as active
+            $klass = ($c == 0) ? 'active' : '';
+          ?>
 
-<?php get_sidebar(); ?>
+          <li id="<?php echo $tok; ?>" class="<?php echo $klass; ?>">
+            <?php echo '<a href="' . get_permalink() . '">'.$ti.'</a>'; ?>
+          </li>
+
+        <?php 
+        $c++;
+        } 
+        ?>
+      </ul>
+	</div>
+
+</div>
+
+<?php // get_sidebar(); ?>
 <?php get_footer(); ?>

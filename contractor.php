@@ -30,7 +30,7 @@ get_header(); ?>
 
 
   <div class="three columns">
-      <h3>Situations vacant</h3>
+      <h3>All Trades</h3>
       <ul class="simple-list">
         <?php 
           query_posts(array('showposts' => 20, 

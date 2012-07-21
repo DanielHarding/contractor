@@ -23,7 +23,7 @@ function contractor_content_nav( $nav_id ) {
 
 	?>
 	<nav role="navigation" id="<?php echo $nav_id; ?>" class="<?php echo $nav_class; ?>">
-		<h1 class="assistive-text"><?php _e( 'Post navigation', 'contractor' ); ?></h1>
+		<!-- <h1 class="assistive-text"><?php _e( 'Post navigation', 'contractor' ); ?></h1> -->
 
 	<?php if ( is_single() ) : // navigation links for single posts ?>
 
@@ -110,6 +110,7 @@ if ( ! function_exists( 'contractor_posted_on' ) ) :
  * @since Now 1.0
  */
 function contractor_posted_on() {
+	/*
 	printf( __( 'Posted on <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a><span class="byline"> by <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>', 'contractor' ),
 		esc_url( get_permalink() ),
 		esc_attr( get_the_time() ),
@@ -119,6 +120,7 @@ function contractor_posted_on() {
 		esc_attr( sprintf( __( 'View all posts by %s', 'contractor' ), get_the_author() ) ),
 		esc_html( get_the_author() )
 	);
+	*/
 }
 endif;
 
