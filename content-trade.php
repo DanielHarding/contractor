@@ -70,6 +70,7 @@ if(!empty($_POST)) {
 	if(!$errs && empty($mess) && !$gerrs && empty($gmess) && !$serrs && empty($smess)) {
 		// Success
 
+		$from = "info@everyhome-recruitment.com";
 		$subj = "Test Subject";
 		$message = "Thanks for registering!";
 
@@ -82,7 +83,7 @@ if(!empty($_POST)) {
 		 
 		$phpmailer->IsSMTP(); // telling the class to use SMTP
 		$phpmailer->Host       = "withoutfanfare.com"; // SMTP server
-		$phpmailer->FromName   = $_POST['email'];
+		$phpmailer->FromName   = $from;
 		$phpmailer->Subject    = $subj;
 		$phpmailer->Body       = $message;                      //HTML Body
 		$phpmailer->AltBody    = "To view the message, please use an HTML compatible email viewer!"; // optional, comment out and test
@@ -90,6 +91,9 @@ if(!empty($_POST)) {
 		$phpmailer->MsgHTML($message);
 		$phpmailer->AddAddress('support@wordpressapi.com/files/', 'Wordpress support');
 		//$phpmailer->AddAttachment("images/phpmailer.gif");             // attachment
+		
+		$mailer->AddAddress($_POST['email'], $_POST['first_name'] . ' ' . $_POST['last_name']);
+
 		if(!$phpmailer->Send()) {
 			$errs = true;
 			$mess = "Mailer Error: " . $phpmailer->ErrorInfo;
