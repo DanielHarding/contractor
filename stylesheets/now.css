@@ -589,7 +589,7 @@ fieldset {
 fieldset legend {
   font-weight: normal;
   background-color: inherit;
-  font-size:110%;
+  font-size:130%;
   color: #333;
 }
 
@@ -621,6 +621,17 @@ padding: 20px 10px 0px 10px;
 
 div.wpanel h5 {
   margin-left: 10px;
+}
+
+.message-error {
+  padding: 10px;
+  background-color: pink;
+  color: #cc0000;
+}
+
+.required {
+  color: #cc0000; 
+  font-weight: bold;
 }
 
 /*
