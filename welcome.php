@@ -107,7 +107,7 @@ if( function_exists( 'attachments_get_attachments' ) ) {
   </div>
 
   <div class="eight columns">
-  <?php echo sfstst_showall(); ?>
+  <?php echo sfstst_onerandom(); ?>
   </div>
 
   <div class="two columns">
