@@ -173,7 +173,7 @@ function mediatype_sort($a, $b) {
 
 
 
-
+/*
   add_action('admin_menu', function() { remove_meta_box('pageparentdiv', 'trade', 'normal');});
   add_action('add_meta_boxes', function() { add_meta_box('trade-parent', 'Page', 'trade_attributes_meta_box', 'trade', 'side', 'high');});
   function trade_attributes_meta_box($post) {
@@ -185,6 +185,7 @@ function mediatype_sort($a, $b) {
       } // end empty pages check
     } // end hierarchical check.
   }
+  */
 
 
 
