@@ -43,8 +43,9 @@ get_header(); ?>
 
   <div class="three columns">
 
+
       <h3>All Services</h3>
-      <ul class="simple-list">
+      <ul class="simple-list ico-list">
         <?php 
           query_posts(array('showposts' => 20, 
                             // 'post_parent' => $post->ID, 
@@ -69,6 +70,7 @@ get_header(); ?>
           ?>
 
           <li id="<?php echo $tok; ?>" class="<?php echo $klass; ?>">
+            <span class="ico-<?php echo $tok; ?> twenty-four-sq">&nbsp;</span>
             <?php echo '<a href="' . get_permalink() . '">'.$ti.'</a>'; ?>
           </li>
 
@@ -80,7 +82,8 @@ get_header(); ?>
 
 
       <h3>All Trades</h3>
-      <ul class="simple-list">
+      
+      <ul class="simple-list ico-list">
         <?php 
           query_posts(array('showposts' => 20, 
                             // 'post_parent' => $post->ID, 
@@ -105,6 +108,7 @@ get_header(); ?>
           ?>
 
           <li id="<?php echo $tok; ?>" class="<?php echo $klass; ?>">
+            <span class="ico-trade-<?php echo $tok; ?> twenty-four-sq">&nbsp;</span>
             <?php echo '<a href="' . get_permalink() . '">'.$ti.'</a>'; ?>
           </li>
 
@@ -113,7 +117,8 @@ get_header(); ?>
         } 
         ?>
       </ul>
-      
+
+
   </div>
 
 </div>

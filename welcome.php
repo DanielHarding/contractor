@@ -30,14 +30,15 @@ get_header(); ?>
     <div class="hide-for-small show-for-medium">
       <div class="vspace20 hide-for-large">&nbsp;</div>
       <form action="/" method="post" name="contact" class="custom">
-        <h4 class="subheader seriftext huge-phone">Call 033 33 707 247</h4>
-        <fieldset class="nobord nopad">
-          <legend>Or email *******@******.com</legend>
+        <h4 class="huge-phone">Call 033 33 707 247</h4>
+        <fieldset class="nobord nopad nomarg">
+          <legend>Or email <span class="tiny-text label success"><a href="mailto:name@domain.com">name@domain.com</a></span></legend>
           <input type="text" name="name" name="rfrm_name" placeholder="Your name (required)" />
           <input type="text" name="email" name="rfrm_email" placeholder="Email address (required)" />
           <input type="text" name="phone" name="rfrm_phone" placeholder="Phone number" />
           <textarea name="message" id="rfrm_message" placeholder="Message" class="slim_textarea"></textarea>
-          <input type="submit" name="send_contact" value="Submit" class="button small"/>
+          <span class="tiny-text left">We'll get back to you soon...</span>
+          <input type="submit" name="send_contact" value="Submit" class="button small right"/>
         </fieldset>
       </form>
     </div>

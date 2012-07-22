@@ -95,8 +95,8 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
 }
 
 blockquote.huge-text {
-  padding-top: 43px;
-  font-size: 140%;
+  padding-top: 30px;
+  font-size: 160%;
   line-height:1.2;
   color: #222;
 }
@@ -217,6 +217,7 @@ line-height: 1;
 
 .huge-phone {
   font-size:204%;
+  margin-bottom: 0px;
 }
 
 .cat-item-1 {display:none;}
@@ -677,10 +678,17 @@ fieldset legend {
   background-color: inherit;
   font-size:130%;
   color: #333;
+  padding-bottom: 5px;
+}
+
+.nomarg {
+  margin: 0px!important;
+  
 }
 
 .nopad {
   padding: 0px!important;
+
 }
 
 .nobord {
@@ -781,7 +789,7 @@ form:last-child fieldset {
 
 .backed {
   background-color: #ddd;
-  padding: 4px 8px;
+  padding: 8px 12px 10px 10px;
 }
 
 input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea {
