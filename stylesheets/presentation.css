@@ -1,8 +1,12 @@
+/* @override 
+	http://workforeveryhome.co.uk/wp-content/themes/contractor/stylesheets/presentation.css */
+
 body { padding-bottom: 60px; }
 
-.row { width: 1060px; }
+.row { width: 960px; }
 
 header .subheader { position: relative; /* top: -18px; */ }
+
 
 .row.display { background: #f4f4f4; margin-bottom: 10px; }
 

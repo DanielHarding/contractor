@@ -68,7 +68,8 @@
 <body <?php body_class(); ?>>
 
   <!-- Start header -->
-  <header>
+
+<header>
     <div class="container">
     
       <div class="row">
@@ -78,39 +79,35 @@
         </div>
         
         <div class="eight columns slimhead">
-          
             <nav class="right seriftext">
-              <?php 
-              $defaults = array(
-                'theme_location'  => 'main',
-                'menu'            => 'main', 
-                'container'       => 'menu-container', 
-                'container_id'    => 'container-id',
-                'menu_class'      => 'dropdown', 
-                'menu_id'         => 'menu-id',
-                'echo'            => true,
-                'fallback_cb'     => 'wp_page_menu');
-              
-              wp_nav_menu( $defaults ); 
-              
-              ?> 
-            </nav>
-
-            <div class="hairlinev">&nbsp;</div>
-
-            <span class="right subheader">Welcome to our recruitment site - calling all contractors!</span>
-            
-
+	            <?php 
+	            $defaults = array(
+	              'theme_location'  => 'main',
+	              'menu'            => 'main', 
+	              'container'       => 'menu-container', 
+	              'container_id'    => 'container-id',
+	              'menu_class'      => 'dropdown', 
+	              'menu_id'         => 'menu-id',
+	              'echo'            => true,
+	              'fallback_cb'     => 'wp_page_menu');
+	            
+	            wp_nav_menu( $defaults ); 
+	            
+	            ?> 
+	          </nav>
+	
+	          <div class="hairlinev">&nbsp;</div>
+	
+	          <span class="right subheader">Welcome to our recruitment site - calling all contractors!</span>
         </div>
       </div>
     
     </div>
   </header>
+  
   <!-- End header -->
 
-
 <section id="mainContent">
-
 
 <?php 
 
