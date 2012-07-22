@@ -20,13 +20,13 @@ get_header(); ?>
 <div class="row">
   
   <!-- Start banner -->
-  <div class="eight columns">
+  <div class="nine columns">
     <?php the_post_thumbnail(); ?>
   </div>
   <!-- End banner -->
 
   <!-- Start advice form -->
-  <div class="four columns">
+  <div class="three columns">
     <div class="hide-for-small show-for-medium">
       <div class="vspace20 hide-for-large">&nbsp;</div>
       <form action="/" method="post" name="contact" class="custom">
@@ -52,15 +52,19 @@ get_header(); ?>
 <!-- Start row 2 -->
 <div class="row hide-for-small show-for-medium">
   
-  <div class="four columns">
+  <div class="three columns">
     <img src="<?php echo get_template_directory_uri(); ?>/images/triplet1.gif">
   </div>
 
-  <div class="four columns">
+  <div class="three columns">
     <img src="<?php echo get_template_directory_uri(); ?>/images/triplet2.gif">
   </div>
 
-  <div class="four columns">
+  <div class="three columns">
+    <img src="<?php echo get_template_directory_uri(); ?>/images/triplet.gif">
+  </div>
+
+  <div class="three columns">
     <img src="<?php echo get_template_directory_uri(); ?>/images/triplet.gif">
   </div>
 
@@ -72,7 +76,7 @@ get_header(); ?>
 <!-- Start row 3 -->
 <div class="row">
   
-  <div class="eight columns">
+  <div class="nine columns">
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
       <header class="entry-header">
@@ -86,7 +90,7 @@ get_header(); ?>
   </div>
 
 
-  <div class="four columns">
+  <div class="three columns">
       
       <div class="vspace30 hide-for-small">&nbsp;</div>
       <h3>All Trades</h3>
@@ -175,15 +179,15 @@ if( function_exists( 'attachments_get_attachments' ) ) {
 
 <div class="row">
 
-  <div class="two columns">
+  <div class="three columns">
     <a href="/wp-content/uploads/2012/07/guide.pdf"><img src="<?php echo get_template_directory_uri(); ?>/images/guide.gif"></a>
   </div>
 
-  <div class="eight columns">
+  <div class="six columns">
   <?php echo sfstst_onerandom(); ?>
   </div>
 
-  <div class="two columns">
+  <div class="three columns">
       <a href="/contractors/"><img src="<?php echo get_template_directory_uri(); ?>/images/start.gif"></a>
   </div>
 
