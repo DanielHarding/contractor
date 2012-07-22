@@ -620,8 +620,11 @@ div.panel {
   background-color: #f3f3f3;
 }
 
+
+
 fieldset {
   padding-bottom: 15px;
+  margin: 10px 0;
 }
 
 fieldset legend {
@@ -629,6 +632,14 @@ fieldset legend {
   background-color: inherit;
   font-size:130%;
   color: #333;
+}
+
+.nopad {
+  padding: 0px!important;
+}
+
+.nobord {
+  border:none!important;
 }
 
 input[type=text], input[type=email], textarea {
