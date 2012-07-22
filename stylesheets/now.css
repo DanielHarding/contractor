@@ -32,16 +32,10 @@ color: #25A0D8;
 
 /* dan */
 
-<<<<<<< HEAD
-#mainContent {
-margin: 0px 0 30px 0 ;
-=======
 #mainContent { 
 /*
->>>>>>> 8774d25265c3595603701a871c28ab1e25146c72
 margin-left: 10%;
 margin-right: 10%;
-
 padding: 20px 0 0 0;
 border:solid 1px #999999;
 box-shadow:0 0 3px 3px #cccccc;
@@ -54,13 +48,7 @@ footer {
   display:block;
   overflow:hidden;
   padding:30px 30px 15px;
-    background-color: #8E8E8E;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#8E8E8E), to(#6B6B6B));
-    background-image: -webkit-linear-gradient(top, #8E8E8E, #6B6B6B);
-    background-image:    -moz-linear-gradient(top, #8E8E8E, #6B6B6B);
-    background-image:      -o-linear-gradient(top, #8E8E8E, #6B6B6B);
-    background-image:         linear-gradient(to bottom, #8E8E8E, #6B6B6B);
-  
+  background:#8e8e8e url(../images/footer_bg.png) 0 bottom repeat-x;
 }
 
 
@@ -361,10 +349,6 @@ ul.media-grid li {
 
 footer { padding-bottom: 10px; background-color: #F3F3F3; border:1px solid #ddd; }
 footer .row { margin-top: 20px; padding-top: 10px; }
-
-
-footer a { text-decoration:underline; }
-
 
 #copyright {
   background: #fff;
