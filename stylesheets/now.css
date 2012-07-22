@@ -269,6 +269,11 @@ ul.dropdown .current_page_item a {
   text-decoration: underline;
 }
 
+ul.dropdown li:last-child a {
+	background-image: none;
+}
+
+
 
 /* Styling when a link is hovered over */
 ul.dropdown li:hover a {
