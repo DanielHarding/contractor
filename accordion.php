@@ -16,7 +16,7 @@ Template Name: Accordion Template
 get_header(); ?>
 
 <div class="row">  
-  <div class="eight columns">
+  <div class="nine columns">
 
       <h2 class="seriftext"><?php the_title(); ?></h2>
       <?php echo $post->post_content; ?>
@@ -60,14 +60,14 @@ get_header(); ?>
 
 
 
-  <div class="four columns centered">
+  <div class="three columns centered">
 
     <div class="panel">
       <h3>Our Core Principles</h3>
       <p>We pride ourselves on...</p>
       <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
+        <li>Transparency</li>
+        <li>Communication</li>
         <li>Item 3</li>
       </ul>
 
