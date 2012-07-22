@@ -370,6 +370,7 @@ footer .row { margin-top: 20px; padding-top: 10px; }
 blockquote {
   border-left: none;
   font-style: italic;
+  font-family: Georgia, "Times New Roman", Times, serif
 }
 
 #frm_search, #frm_search .row, #frm_search input[type="text"], .slimhead row {

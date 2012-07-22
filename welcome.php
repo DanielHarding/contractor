@@ -286,16 +286,16 @@ if( function_exists( 'attachments_get_attachments' ) ) {
 
 <div class="row">
 
-  <div class="three columns">
-    <a href="/wp-content/uploads/2012/07/guide.pdf"><img src="<?php echo get_template_directory_uri(); ?>/images/guide.gif"></a>
+  <div class="four columns">
+    <a href="/wp-content/uploads/2012/07/guide.pdf"><img src="<?php echo get_template_directory_uri(); ?>/images/guide.png"></a>
   </div>
 
-  <div class="six columns">
+  <div class="four columns">
   <?php echo sfstst_onerandom(); ?>
   </div>
 
-  <div class="three columns">
-      <a href="/contractors/"><img src="<?php echo get_template_directory_uri(); ?>/images/start.gif"></a>
+  <div class="four columns">
+      <a href="/wp-content/uploads/2012/07/guide.pdf"><img src="<?php echo get_template_directory_uri(); ?>/images/apply.png"></a>
   </div>
 
 </div>
