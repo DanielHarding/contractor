@@ -27,7 +27,7 @@ get_header(); ?>
 
   <!-- Start advice form -->
   <div class="four columns">
-    <div class="hide-for-small show-for-medium">
+    <div class="hide-for-small show-for-medium show-for-large">
       <div class="vspace20 hide-for-large">&nbsp;</div>
       <form action="/" method="post" name="contact" class="custom">
         <h4 class="subheader seriftext huge-phone">Call 033 33 707 247</h4>
@@ -50,7 +50,7 @@ get_header(); ?>
 
 
 <!-- Start row 2 -->
-<div class="row hide-for-small show-for-medium">
+<div class="row hide-for-small show-for-medium show-for-large">
   
   <div class="four columns">
     <img src="<?php echo get_template_directory_uri(); ?>/images/triplet1.gif">
