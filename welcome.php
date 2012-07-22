@@ -33,9 +33,10 @@ get_header(); ?>
         <h4 class="subheader seriftext huge-phone">Call 033 33 707 247</h4>
         <fieldset class="nobord nopad">
           <legend>Or drop us an email</legend>
-          <input type="text" name="name" placeholder="Your name (required)" />
-          <input type="text" name="email" placeholder="Email address (required)" />
-          <input type="text" name="phone" placeholder="Phone number" />
+          <input type="text" name="name" name="rfrm_name" placeholder="Your name (required)" />
+          <input type="text" name="email" name="rfrm_email" placeholder="Email address (required)" />
+          <input type="text" name="phone" name="rfrm_phone" placeholder="Phone number" />
+          <textarea name="message" id="rfrm_message" placeholder="Message" class="slim_textarea"></textarea>
           <!--
             <label for="checkbox1" class="seriftext">
               <input type="checkbox" id="checkbox1" name="newsletter" style="display: none;">

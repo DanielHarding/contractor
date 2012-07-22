@@ -737,6 +737,17 @@ form:last-child fieldset {
   padding: 4px 8px;
 }
 
+input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea {
+margin: 0 0 4px 0;
+padding: 5px;
+height: 26px;
+}
+
+textarea.slim_textarea {
+  height: 78px;
+}
+
+
 /*
 
 .tabs-content {
