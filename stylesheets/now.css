@@ -32,8 +32,13 @@ color: #25A0D8;
 
 /* dan */
 
+<<<<<<< HEAD
 #mainContent {
 margin: 0px 0 30px 0 ;
+=======
+#mainContent { 
+/*
+>>>>>>> 8774d25265c3595603701a871c28ab1e25146c72
 margin-left: 10%;
 margin-right: 10%;
 
@@ -41,6 +46,7 @@ padding: 20px 0 0 0;
 border:solid 1px #999999;
 box-shadow:0 0 3px 3px #cccccc;
 background:white;
+*/
 }
 
 
