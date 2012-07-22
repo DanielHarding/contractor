@@ -18,41 +18,29 @@ get_header(); ?>
 <div class="row">
 
   <div class="nine columns">
-    <h3 class="supheading">We've compiled a list of FAQs!</h3> 
-    <h4 class='subheading'>Here are the crucial questions to ask.</h4>
+    <h3 class="supheading"><?php the_title(); ?></h3> 
+    <h4 class='subheading'>Get in touch if you don't see the answer to your question.</h4>
     <?php
     $content = apply_filters('the_content', $post->post_content); echo $content;
     ?>
   </div>
 
   <div class="three columns">
-    <form action="/" method="post" name="contact" class="custom">
-
-      <span>Call</span>
-      <h4 class="subheader seriftext huge-phone">033 33 707 247</h4>
-      <span>for free advice about working with us</span>
-      
-      <fieldset>
-        
-        <legend>Or simply fill out this form</legend>
-        
-        <input type="text" name="name" placeholder="Your name (required)" />
-        <input type="text" name="company" placeholder="Company name (required)" />
-        <input type="text" name="email" placeholder="Email address (required)" />
-        <input type="text" name="phone" placeholder="Phone number" />
-        
-        <label for="checkbox1" class="seriftext">
-          <input type="checkbox" id="checkbox1" name="newsletter" style="display: none;">
-          <span class="custom checkbox"></span> I wish to subscribe to your newsletter
-        </label>
-        <br>
-        <p>
-        <input type="submit" name="send_contact" value="Submit" />
-        </p>
-
-      </fieldset>
-
-    </form>
+    <div class="hide-for-small show-for-medium">
+      <div class="vspace20 hide-for-large">&nbsp;</div>
+      <form action="/" method="post" name="contact" class="custom">
+        <h4 class="huge-phone">Call 033 33 707 247</h4>
+        <fieldset class="nobord nopad nomarg">
+          <legend>Or email <span class="tiny-text label success"><a href="mailto:name@domain.com">name@domain.com</a></span></legend>
+          <input type="text" name="name" name="rfrm_name" placeholder="Your name (required)" />
+          <input type="text" name="email" name="rfrm_email" placeholder="Email address (required)" />
+          <input type="text" name="phone" name="rfrm_phone" placeholder="Phone number" />
+          <textarea name="message" id="rfrm_message" placeholder="Message" class="slim_textarea"></textarea>
+          <span class="tiny-text left">We'll get back to you soon...</span>
+          <input type="submit" name="send_contact" value="Submit" class="button small right"/>
+        </fieldset>
+      </form>
+    </div>
   </div>
 
 </div>
