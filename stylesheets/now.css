@@ -32,12 +32,14 @@ color: #25A0D8;
 
 /* dan */
 
-#mainContent { width:960px;
-margin:0 auto;
+#mainContent { 
+margin-left: 10%;
+margin-right: 10%;
 padding: 20px 0 0 0;
 border:solid 1px #999999;
 box-shadow:0 0 3px 3px #cccccc;
-background:white;}
+background:white;
+}
 
 
 footer {
