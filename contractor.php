@@ -21,10 +21,22 @@ get_header(); ?>
 
 
   <div class="nine columns">
-  <h2><?php the_title(); ?></h2>
-  <?php echo $post->post_content; ?>
-  </div>
 
+    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+      <header class="entry-header">
+        <?php the_post_thumbnail(); ?>
+        <h2 class="entry-title"><?php the_title(); ?></h2>
+      </header><!-- .entry-header -->
+
+      <div class="entry-content">
+      
+        <?php echo $post->post_content; ?>
+
+      </div>
+    </article>
+
+  </div>
 
 
 

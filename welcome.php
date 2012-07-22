@@ -20,41 +20,50 @@ get_header(); ?>
 <div class="row">
   
   <!-- Start banner -->
-  <div class="nine columns">
-    <img src="<?php echo get_template_directory_uri(); ?>/images/Home1.gif">
+  <div class="eight columns">
+    <?php the_post_thumbnail(); ?>
   </div>
   <!-- End banner -->
 
   <!-- Start advice form -->
-  <div class="three columns centered">
-
+  <div class="four columns">
     <form action="/" method="post" name="contact" class="custom">
-
-      <span>Call</span>
       <h4 class="subheader seriftext huge-phone">033 33 707 247</h4>
-      <span>for free advice about working with us</span>
-      
+      <span>For advice about working with us...</span>
       <fieldset>
-        
-        <legend>Or simply fill out this form</legend>
-        
+        <legend>Or simply fill out the form</legend>
         <input type="text" name="name" placeholder="Your name (required)" />
-        <input type="text" name="company" placeholder="Company name (required)" />
         <input type="text" name="email" placeholder="Email address (required)" />
         <input type="text" name="phone" placeholder="Phone number" />
-        
-        <label for="checkbox1" class="seriftext">
-          <input type="checkbox" id="checkbox1" name="newsletter" style="display: none;">
-          <span class="custom checkbox"></span> I wish to subscribe to your newsletter
-        </label>
-        <br>
-        <p>
-        <input type="submit" name="send_contact" value="Submit" />
-        </p>
-
+        <!--
+          <label for="checkbox1" class="seriftext">
+            <input type="checkbox" id="checkbox1" name="newsletter" style="display: none;">
+            <span class="custom checkbox"></span> I wish to subscribe to your newsletter
+          </label>
+          <br>
+        -->
+        <input type="submit" name="send_contact" value="Submit" class="button"/>
       </fieldset>
-
     </form>
+  </div>
+  <!-- End advice form -->
+
+</div>
+
+
+
+
+<!-- Start row 2 -->
+<div class="row">
+  
+  <!-- Start banner -->
+  <div class="eight columns">
+  </div>
+  <!-- End banner -->
+
+  <!-- Start advice form -->
+  <div class="four columns">
+
   </div>
   <!-- End advice form -->
 
@@ -66,6 +75,7 @@ get_header(); ?>
 
 <!-- 
 <?php
+/*
 if( function_exists( 'attachments_get_attachments' ) ) {
   $attachments = attachments_get_attachments(get_the_id());
 
@@ -94,6 +104,7 @@ if( function_exists( 'attachments_get_attachments' ) ) {
 <?php 
     }
   }
+  */
 ?>
 -->
 

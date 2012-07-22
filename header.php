@@ -98,6 +98,9 @@
 
             <div class="hairlinev">&nbsp;</div>
 
+            <span class="right subheader">Welcome to our recruitment site - calling all contractors!</span>
+            
+
         </div>
       </div>
     

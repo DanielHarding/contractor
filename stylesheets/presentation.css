@@ -1,12 +1,12 @@
 body { padding-bottom: 60px; }
 
-.row { width: 1200px; }
+.row { width: 1060px; }
 
-header .subheader { position: relative; top: -18px; }
+header .subheader { position: relative; /* top: -18px; */ }
 
 .row.display { background: #f4f4f4; margin-bottom: 10px; }
 
-.row.display .column, .row.display .columns, .block-grid li { /* background: #e7e7e7; border: 1px solid #ddd; */ font-size: 11px; text-indent: 0px; padding-top: 6px; padding-bottom: 6px; }
+.row.display .column, .row.display .columns { /* background: #e7e7e7; border: 1px solid #ddd; */ font-size: 11px; text-indent: 0px; padding-top: 6px; padding-bottom: 6px; }
 
 
 .glyph { cursor: default; font-size: 16px; line-height: 1; font-family: "FoundationIconsGeneralEnclosed"; }
@@ -81,7 +81,7 @@ header .subheader { position: relative; top: -18px; }
 
 #megaDrop .show-on-phones, #megaDrop .sitemap-link { display: none !important; }
 
-@media handheld, only screen and (max-width: 767px) { header { border-bottom: 1px solid #ddd; position: relative; }
+@media handheld, only screen and (max-width: 767px) { header { /* border-bottom: 1px solid #ddd; */ position: relative; }
   header .subheader { margin-bottom: 0; }
   header .menu-action { float: left; position: relative; top: 1px; margin-top: -12px; }
   header .menu-action .button.small { padding: 8px; }

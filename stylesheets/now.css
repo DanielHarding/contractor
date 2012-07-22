@@ -13,6 +13,16 @@
    Shared Styles
 ----------------------------------------- */
 
+body {
+background: white none;
+background: transparent url(/wp-content/themes/contractor/images/page_bg.png) 0 0 repeat;
+}
+
+header .container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 a {
 color: #001d34;
 }
@@ -117,15 +127,11 @@ img.left {
 }
 
 
+
+
 /* -----------------------------------------
 Header and Footer
 ----------------------------------------- */
-
-header { margin-bottom: 20px; }
-#utility-holder { margin-top: 3px;}
-#utility-holder ul { margin: 0 0 0 -20px; padding: 0; float: right; overflow: hidden; }
-#utility-holder ul li { margin: 0 0 0 20px; padding: 0; display: block; float: left; font-size: 80%; }
-#utility-holder ul li a {  color:#666; }
 
 .hairlinev {
   clear: both;
@@ -134,20 +140,26 @@ header { margin-bottom: 20px; }
 
 .nav-bar {
 height: 15px;
-background: white;
+background: blue;
 margin-top: 10px;
 padding: 0;
+/*
 font-family: Georgia, "Times New Roman", Times, serif
+*/
 }
 
 .seriftext,
+/*
 #mainContent h3,
 #mainContent h4,
 #mainContent h5,
+*/
 .widget-title,
 .twitterwidget-title,
 .page-title  {
+  /*
   font-family: Georgia, "Times New Roman", Times, serif;
+  */
 }
 
 .tweet-box ul, .tweet-box ul li {
@@ -187,7 +199,20 @@ list-style:none; /* Gets rid of bullets in the list */
 float:left;
 width:100%;
 padding: 0 5px; /* Top and bottom padding of 0. Left and right of 5px */
+height: 26px;
+width: 360px;
+border: solid 1px white;
+box-shadow: 0 0 2px 2px #C4C4C4;
+/*
+behavior: url('/everyhomenew/PIE.php');
+background: transparent url(/wp-content/themes/contractor/images/gradients/blue_gradient_26.png) 0 0 repeat-x; 
+*/
+background-color: #27a7df;
+margin: 6px 0;
+overflow: hidden;
 }
+
+
 
 ul.dropdown  li{
 float:left;
@@ -196,13 +221,22 @@ position:relative;
 
 ul.dropdown a { /* Menu link styling */
 padding:12px;
-color:#333; /* Text color of links */
+color:#fff; /* Text color of links */
 text-decoration:none; /* Gets rid of underline for links */
+font-size: 13px;
+color: white;
+text-shadow: 0 1px #333;
+text-decoration: none;
+padding-right: 15px;
+/*
+background: transparent url(/wp-content/themes/contractor/images/top_quick_nav_bg.png) right center no-repeat;
+*/
+font-family: 'MyriadWebPro', "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, "Lucida Grande", sans-serif
 }
 
 /* Styling when a link is hovered over */
 ul.dropdown li:hover a {
-color: #111; /* Text color of links */
+text-decoration: underline;
 }
 
 /* Displays Links as Blocks */
@@ -398,7 +432,9 @@ dl.tabs.vertical dd.active a {
 }
 
 dl.tabs.vertical dd a {
+  /*
   font-family: Georgia, "Times New Roman", Times, serif;
+  */
 }
 
 dl.tabs.vertical dd.active a  {
@@ -634,6 +670,50 @@ div.wpanel h5 {
 .required {
   color: #cc0000; 
   font-weight: bold;
+}
+
+.entry-title {
+  margin-top: 15px;
+}
+
+.green-panel {
+  background-color: #d6e892!important;
+  border:1px solid #a6bf4a!important;
+}
+
+.blue-panel {
+  background-color: #a6d1e3!important;
+  border:1px solid #55b6e0!important;
+}
+
+p.big {
+  font-size: 120%;
+  color: #111;
+}
+
+.row-label {
+  margin-left: 5px;
+  font-size: 13px;
+}
+
+.tick, .awesome  {
+  display:block;
+  float: left;
+  margin-right: 3px;
+  width: 16px;
+  height: 16px;
+   /*
+   background: rgb(0, 0, 0);
+   background: rgba(0, 0, 0, 0.2); 
+   */
+   font-size: 130%;
+   line-height: 1;
+   text-indent: 3px;
+   padding-top: 2px;
+}
+
+form:last-child fieldset {
+  padding-bottom: 15px;
 }
 
 /*
