@@ -32,18 +32,11 @@ get_header(); ?>
       <form action="/" method="post" name="contact" class="custom">
         <h4 class="subheader seriftext huge-phone">Call 033 33 707 247</h4>
         <fieldset class="nobord nopad">
-          <legend>Or drop us an email</legend>
+          <legend>Or email *******@******.com</legend>
           <input type="text" name="name" name="rfrm_name" placeholder="Your name (required)" />
           <input type="text" name="email" name="rfrm_email" placeholder="Email address (required)" />
           <input type="text" name="phone" name="rfrm_phone" placeholder="Phone number" />
           <textarea name="message" id="rfrm_message" placeholder="Message" class="slim_textarea"></textarea>
-          <!--
-            <label for="checkbox1" class="seriftext">
-              <input type="checkbox" id="checkbox1" name="newsletter" style="display: none;">
-              <span class="custom checkbox"></span> I wish to subscribe to your newsletter
-            </label>
-            <br>
-          -->
           <input type="submit" name="send_contact" value="Submit" class="button small"/>
         </fieldset>
       </form>
