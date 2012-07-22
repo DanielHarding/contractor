@@ -79,10 +79,6 @@ get_header(); ?>
   <div class="nine columns">
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-      <header class="entry-header">
-        &nbsp;
-      </header><!-- .entry-header -->
-
       <div class="entry-content">
         <?php echo $post->post_content; ?>
       </div>
