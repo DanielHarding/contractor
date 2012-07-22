@@ -807,7 +807,8 @@ span.ico-boiler-and-heating {
   background: transparent url(/wp-content/themes/contractor/images/service-icons.png) -21px 0px no-repeat;
 }
 
-span.ico-blocked-drains {
+span.ico-blocked-drains,
+span.ico-trade-drainage-engineer {
   background: transparent url(/wp-content/themes/contractor/images/service-icons.png) -177px 0px no-repeat;
 }
 
@@ -815,11 +816,13 @@ span.ico-burst-pipes {
   background: transparent url(/wp-content/themes/contractor/images/service-icons.png) -132px 0px no-repeat;
 }
 
-span.ico-appliance {
+span.ico-appliance,
+span.ico-trade-appliance-engineer {
   background: transparent url(/wp-content/themes/contractor/images/service-icons.png) -153px 0px no-repeat;
 }
 
-span.ico-glazing-and-boarding {
+span.ico-glazing-and-boarding,
+span.ico-trade-glazer-and-boarder {
   background: transparent url(/wp-content/themes/contractor/images/service-icons.png) left center no-repeat;
 }
 
@@ -829,7 +832,8 @@ span.ico-trade-joiner  {
   background: transparent url(/wp-content/themes/contractor/images/service-icons.png) -197px 0px no-repeat;
 }
 
-span.ico-locksmith {
+span.ico-locksmith,
+span.ico-trade-locksmith {
   background: transparent url(/wp-content/themes/contractor/images/service-icons.png) -88px 0px no-repeat;
 }
 
@@ -843,7 +847,8 @@ span.ico-trade-plumber  {
   background: transparent url(/wp-content/themes/contractor/images/service-icons.png) -45px 0px no-repeat;
 }
 
-span.ico-pest-control {
+span.ico-pest-control,
+span.ico-trade-pest-controller {
   background: transparent url(/wp-content/themes/contractor/images/service-icons.png) -65px 0px no-repeat;
 }
 
