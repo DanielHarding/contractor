@@ -61,7 +61,7 @@ get_header(); ?>
   </div>
 
   <div class="three columns">
-    <img src="<?php echo get_template_directory_uri(); ?>/images/triplet.gif">
+    <img src="<?php echo get_template_directory_uri(); ?>/images/triplet3.png">
   </div>
 
   <div class="three columns">
@@ -89,7 +89,7 @@ get_header(); ?>
   <div class="three columns">
       
       <div class="vspace30 hide-for-small">&nbsp;</div>
-      
+
       <h3>All Trades</h3>
       
       <ul class="simple-list">
@@ -152,7 +152,7 @@ get_header(); ?>
             $klass = ($c == 0) ? 'active' : '';
           ?>
 
-          <li id="<?php echo $tok; ?>" class="<?php echo $klass; ?>">
+          <li id="<?php echo $tok; ?>" class="<?php echo $klass; ?> ico-<?php echo $tok; ?>">
             <?php echo '<a href="' . get_permalink() . '">'.$ti.'</a>'; ?>
           </li>
 

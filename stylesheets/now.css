@@ -793,6 +793,46 @@ article {
   margin-top: 20px;
 }
 
+li.ico-boiler-and-heating {
+  background: transparent url(/wp-content/themes/contractor/images/service-icons.png) left center no-repeat;
+}
+
+li.ico-blocked-drains {
+  background: transparent url(/wp-content/themes/contractor/images/service-icons.png) left center no-repeat;
+}
+
+li.ico-burst-pipes {
+  background: transparent url(/wp-content/themes/contractor/images/service-icons.png) left center no-repeat;
+}
+
+li.ico-appliance {
+  background: transparent url(/wp-content/themes/contractor/images/service-icons.png) left center no-repeat;
+}
+
+li.ico-glazing-and-boarding {
+  background: transparent url(/wp-content/themes/contractor/images/service-icons.png) left center no-repeat;
+}
+
+li.ico-roofing {
+  background: transparent url(/wp-content/themes/contractor/images/service-icons.png) left center no-repeat;
+}
+
+li.ico-locksmith {
+  background: transparent url(/wp-content/themes/contractor/images/service-icons.png) left center no-repeat;
+}
+
+li.ico-electrical {
+  background: transparent url(/wp-content/themes/contractor/images/service-icons.png) left center no-repeat;
+}
+
+li.ico-plumbing {
+  background: transparent url(/wp-content/themes/contractor/images/service-icons.png) left center no-repeat;
+}
+
+li.ico-pest-control {
+  background: transparent url(/wp-content/themes/contractor/images/service-icons.png) left center no-repeat;
+}
+
 /*
 
 .tabs-content {
