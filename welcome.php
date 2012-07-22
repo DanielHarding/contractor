@@ -82,41 +82,45 @@ get_header(); ?>
         $total_attachments = count( $attachments );
         if(!empty($total_attachments)) {
           
-          $myvj_options = array();
+          if( function_exists( 'vjspro_video_shortcode' ) ) {
 
-          // get_template_directory_uri()
-          $thumb = get_the_post_thumbnail();
-          if(empty($thumb) || trim($thumb) == '') {
-            $td = get_template_directory_uri();
-            $thumb  = $td . "/images/default-video.gif";
-          }
+            $myvj_options = array();
 
-          $myvj_options['width'] = "240px";
-          $myvj_options['height'] = "120px";
+            // get_template_directory_uri()
+            $thumb = get_the_post_thumbnail();
+            if(empty($thumb) || trim($thumb) == '') {
+              $td = get_template_directory_uri();
+              $thumb  = $td . "/images/default-video.gif";
+            }
 
-          // $myvj_options['poster'] = $thumb;
-          
-          for( $i=0; $i<$total_attachments; $i++ ) {
+            $myvj_options['width'] = "240px";
+            $myvj_options['height'] = "120px";
+
+            // $myvj_options['poster'] = $thumb;
+            
+            for( $i=0; $i<$total_attachments; $i++ ) {
 
 
-            switch($attachments[$i]['mime']) {
-              case 'video/mp4':
+              switch($attachments[$i]['mime']) {
+                case 'video/mp4':
 
-                if(stripos($attachments[$i]['location'], '.m4v')) {
-                  $myvj_options['mobile'] = $attachments[$i]['location'];
-                } else {
-                  $myvj_options['mp4'] = $attachments[$i]['location'];
-                }
+                  if(stripos($attachments[$i]['location'], '.m4v')) {
+                    $myvj_options['mobile'] = $attachments[$i]['location'];
+                  } else {
+                    $myvj_options['mp4'] = $attachments[$i]['location'];
+                  }
 
-              break;
-              case 'video/ogg':
-                $myvj_options['ogg'] = $attachments[$i]['location'];
-              break;
-              case '':
+                break;
+                case 'video/ogg':
+                  $myvj_options['ogg'] = $attachments[$i]['location'];
+                break;
+                case '':
 
-              break;
-              default:
-              break;
+                break;
+                default:
+                break;
+              }
+
             }
 
           }
