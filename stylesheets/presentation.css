@@ -3,7 +3,7 @@
 
 body { padding-bottom: 60px; }
 
-.row { width: 960px; }
+.row { width: 1024px; }
 
 header .subheader { position: relative; /* top: -18px; */ }
 
@@ -12,18 +12,7 @@ header .subheader { position: relative; /* top: -18px; */ }
 
 .row.display .column, .row.display .columns { /* background: #e7e7e7; border: 1px solid #ddd; */ font-size: 11px; text-indent: 0px; padding-top: 6px; padding-bottom: 6px; }
 
-
-.glyph { cursor: default; font-size: 16px; line-height: 1; font-family: "FoundationIconsGeneralEnclosed"; }
-
-.glyph.success { color: #5b8737; }
-
-.glyph.failure { color: #e91c21; }
-
-.glyph.social { font-family: "FoundationIconsSocial"; font-size: 24px; }
-
 .row.support { margin-bottom: 11px; }
-
-.row.support .glyph { font-size: 18px; font-size: 1.8rem; position: relative; bottom: 5px; }
 
 #featuredContent { background: #f4f4f4; }
 
