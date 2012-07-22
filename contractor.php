@@ -20,7 +20,7 @@ get_header(); ?>
 
 
 
-  <div class="nine columns">
+  <div class="eight columns">
 
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
@@ -41,7 +41,7 @@ get_header(); ?>
 
 
 
-  <div class="three columns">
+  <div class="four columns">
       <h3>All Trades</h3>
       <ul class="simple-list">
         <?php 

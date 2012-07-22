@@ -63,48 +63,15 @@ get_header(); ?>
   <div class="four columns centered">
 
     <div class="panel">
-
-      <form action="/" method="post" name="contact" class="custom">
-
-        <span>Call</span>
-        <h4 class="subheader seriftext huge-phone">0333 332 2222</h4>
-        <span>Free Auto Enrolment pension advice</span>
-        
-        <fieldset>
-          
-          <legend>Or simply fill out this form</legend>
-          
-          <input type="text" name="name" placeholder="Your name (required)" />
-          <input type="text" name="company" placeholder="Company name (required)" />
-          <input type="text" name="email" placeholder="Email address (required)" />
-          <input type="text" name="phone" placeholder="Phone number" />
-          
-          <label for="checkbox1" class="seriftext">
-            <input type="checkbox" id="checkbox1" name="newsletter" style="display: none;">
-            <span class="custom checkbox"></span> NOW:Pensions newsletter?
-          </label>
-          <br>
-          <p>
-          <input type="submit" name="send_contact" value="Submit" />
-          </p>
-
-        </fieldset>
-
-      </form>
+      <h3>Our Core Principles</h3>
+      <p>We pride ourselves on...</p>
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ul>
 
     </div>
-
-  <!--  
-    <div class="vspace60 hide-for-small">&nbsp;</div>
-    <ul class="side-nav seriftext">
-      <li class="active"><a href="#">NOW:Pensions For Employers</a></li>
-      <li class="divider"></li>
-      <li><a href="#">NOW:Pensions For Advisors</a></li>
-      <li class="divider"></li>
-      <li><a href="#">NOW:Pensions For Employees</a></li>
-    </ul>
-    <div class="vspace60 hide-for-small">&nbsp;</div>
-  -->
 
   </div>
 

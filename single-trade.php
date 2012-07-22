@@ -11,7 +11,7 @@ get_header(); ?>
 
 <div class="row">
   
-	<div class="nine columns">
+	<div class="eight columns">
 	<?php while ( have_posts() ) : the_post(); ?>
 		<?php // contractor_content_nav( 'nav-above' ); ?>
 		<?php get_template_part( 'content', 'trade' ); ?>
@@ -22,7 +22,7 @@ get_header(); ?>
 
 
 
-	<div class="three columns">
+	<div class="four columns">
       <h3>All Trades</h3>
       <ul class="simple-list">
         <?php 
@@ -56,6 +56,5 @@ get_header(); ?>
 	</div>
 
 </div>
-
-<?php // get_sidebar(); ?>
+<?php get_sidebar('footer'); ?>
 <?php get_footer(); ?>

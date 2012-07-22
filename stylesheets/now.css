@@ -691,6 +691,11 @@ p.big {
   color: #111;
 }
 
+p.mid {
+  font-size: 115%;
+  color: #222;
+}
+
 .row-label {
   margin-left: 5px;
   font-size: 13px;
@@ -714,6 +719,11 @@ p.big {
 
 form:last-child fieldset {
   padding-bottom: 15px;
+}
+
+.backed {
+  background-color: #ddd;
+  padding: 4px 8px;
 }
 
 /*

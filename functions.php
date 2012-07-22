@@ -172,6 +172,28 @@ function mediatype_sort($a, $b) {
 }
 
 
+/*
+register_sidebar( array(
+		'name' => __( 'Main Sidebar', 'contractor' ),
+		'id' => 'sidebar-1',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => "</aside>",
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+
+	register_sidebar( array(
+		'name' => __( 'Showcase Sidebar', 'contractor' ),
+		'id' => 'sidebar-2',
+		'description' => __( 'The sidebar for the optional Showcase Template', 'twentyeleven' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => "</aside>",
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+	*/
+
+
 
 /*
   add_action('admin_menu', function() { remove_meta_box('pageparentdiv', 'trade', 'normal');});
