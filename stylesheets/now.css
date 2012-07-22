@@ -843,6 +843,25 @@ span.ico-pest-control {
   background: transparent url(/wp-content/themes/contractor/images/service-icons.png) -65px 0px no-repeat;
 }
 
+
+
+span.ico-trade-plumber {
+background: transparent url(/wp-content/themes/contractor/images/service-icons.png) -45px 0px no-repeat;
+}
+
+span.ico-trade-roofer {
+  background: transparent url(/wp-content/themes/contractor/images/service-icons.png) -88px 0px no-repeat;
+}
+
+span.ico-trade-electrician {
+  background: transparent url(/wp-content/themes/contractor/images/service-icons.png) -109px 0px no-repeat;
+}
+
+span.ico-trade-joiner {
+background: transparent url(/wp-content/themes/contractor/images/service-icons.png) left center no-repeat;
+}
+
+
 /*
 
 .tabs-content {
