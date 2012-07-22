@@ -79,7 +79,7 @@
         </div>
         
         <div class="eight columns slimhead">
-            <nav class="right seriftext">
+            <nav class="right">
 	            <?php 
 	            $defaults = array(
 	              'theme_location'  => 'main',

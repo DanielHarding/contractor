@@ -57,7 +57,7 @@ get_header(); ?>
   </div>
 
   <div class="three columns">
-    <img src="<?php echo get_template_directory_uri(); ?>/images/triplet2.gif">
+    <img src="<?php echo get_template_directory_uri(); ?>/images/triplet2.png">
   </div>
 
   <div class="three columns">
