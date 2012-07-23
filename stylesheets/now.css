@@ -17,10 +17,8 @@
 ----------------------------------------- */
 
 body {
-background: #111 none;
-/*
-background: transparent url(/wp-content/themes/contractor/images/page_bg.png) 0 0 repeat;
-*/
+background: #fff none;
+background: transparent url(/wp-content/themes/contractor/images/sub_nav_bg.png) 0 0 repeat;
 }
 
 header .container {
@@ -35,18 +33,15 @@ color: #25A0D8;
 /* dan */
 
 #mainContent { 
-/*
-margin-left: 10%;
-margin-right: 10%;
-box-shadow:0 0 2px 2px #ddd;
-*/
-padding: 20px 0 0 0;
-
-border-top:solid 3px #25A0D8;
-
-
-background:white;
-
+  /*
+  margin-left: 10%;
+  margin-right: 10%;
+  box-shadow:0 0 2px 2px #ddd;
+  */
+  padding: 20px 0 0 0;
+  border-top:solid 1px #ccc;
+  background:white;
+  background: transparent url(/wp-content/themes/contractor/images/page_bg.png) 0 0 repeat;
 }
 
 
@@ -127,13 +122,13 @@ border-color: #777;
 
 blockquote.huge-text {
   padding-top: 30px;
-    line-height:1.2;
+  line-height:1.2;
+  font-size: 160%;
   color: #222;
   margin: 0;
 }
 
 blockquote.huge-text p {
-	font-size: 160%;
 	margin: 0;
 }
 
@@ -297,6 +292,7 @@ padding:14px;
 color:#fff; /* Text color of links */
 text-decoration:none; /* Gets rid of underline for links */
 font-size: 13px;
+font-weight: 600;
 color: white;
 text-shadow: 0 1px #277a9c;
 text-decoration: none;
@@ -870,7 +866,21 @@ height: 26px;
 }
 
 textarea.slim_textarea {
-  height: 75px;
+  height: 61px;
+}
+
+.slim-panel input[type="text"], 
+.slim-panel input[type="password"], 
+.slim-panel input[type="date"], 
+.slim-panel input[type="datetime"], 
+.slim-panel input[type="email"], 
+.slim-panel input[type="number"], 
+.slim-panel input[type="search"], 
+.slim-panel input[type="tel"], 
+.slim-panel input[type="time"], 
+.slim-panel input[type="url"], 
+.slim-panel textarea {
+  margin: 0 0 2px 0;
 }
 
 article {
@@ -1028,7 +1038,8 @@ font-weight: 400;
 }
 
 .tertiary {
-  background-color: beige!important;
+  background-color: #ddd!important;
+  color: #222;
 }
 
 .label a:hover {
@@ -1054,6 +1065,22 @@ footer li {
 
 footer h4 {
   text-shadow: 0 1px #999;
+}
+
+img.thumb {
+  padding: 8px;
+}
+
+.box_shadow {
+  -webkit-box-shadow: 0px 0px 3px 0px #666666; /* Saf3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+          box-shadow: 0px 0px 3px 0px #666666; /* Opera 10.5, IE9, FF4+, Chrome 6+, iOS 5 */
+}
+
+div.slim-panel {
+background: #F2F2F2;
+border: solid 1px #E6E6E6;
+margin: 0 0 22px 0;
+padding: 10px;
 }
 
 /*

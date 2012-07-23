@@ -98,7 +98,7 @@
 	
 	          <div class="hairlinev">&nbsp;</div>
 	
-	          <span class="right subheader">Welcome to our recruitment site - <span class="label tertiary"><a href="/contractors">we're hiring contractors!</a></span></span>
+	          <span class="right subheader"><span class="label tertiary">Call - 033 33 707 247</span> or <span class="tiny-text label"><a href="mailto:name@domain.com">jobs@workforeveryhome.co.uk</a></span></span>
         </div>
       </div>
     

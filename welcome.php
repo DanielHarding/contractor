@@ -27,13 +27,13 @@ get_header(); ?>
 
   <!-- Start advice form -->
   <div class="three columns">
-    <div class="hide-for-small show-for-medium">
+    <div class="hide-for-small show-for-medium slim-panel">
       <form action="/" method="post" name="contact" class="custom">
-        <h4 class="huge-phone">Call 033 33 707 247</h4>
-        <fieldset class="nobord nopad nomarg">
-          <legend class="jobemail">Or email <span class="tiny-text label"><a href="mailto:name@domain.com">jobs@workforeveryhome.co.uk</a></span></legend>
+        <h4 class="huge-phone">Quick contact</h4>
+        <fieldset class="nobord nopad">
           <input type="text" name="name" name="rfrm_name" placeholder="Your name (required)" />
           <input type="text" name="email" name="rfrm_email" placeholder="Email address (required)" />
+          <input type="text" name="company" name="rfrm_company" placeholder="Company (required)" />
           <input type="text" name="phone" name="rfrm_phone" placeholder="Phone number" />
           <textarea name="message" id="rfrm_message" placeholder="Message" class="slim_textarea"></textarea>
           <!-- <span class="tiny-text left">We'll get back to you soon...</span> -->
@@ -46,28 +46,26 @@ get_header(); ?>
 
 </div>
 
-<div class="row">
-  <hr>
-</div>
+
 
 <!-- Start row 2 -->
 <div class="row hide-for-small show-for-medium">
   
   <div class="three columns">
     <a href="/contractors/#phone">
-    <img src="<?php echo get_template_directory_uri(); ?>/images/triplet1.png">
+    <img src="<?php echo get_template_directory_uri(); ?>/images/triplet1.png" class="thumb box_shadow">
     </a>
   </div>
 
   <div class="three columns">
     <a href="/contractors/#trades">
-    <img src="<?php echo get_template_directory_uri(); ?>/images/triplet2.png">
+    <img src="<?php echo get_template_directory_uri(); ?>/images/triplet2.png" class="thumb box_shadow">
     </a>
   </div>
 
   <div class="three columns">
     <a href="/contractors/#applications">
-    <img src="<?php echo get_template_directory_uri(); ?>/images/triplet3.png">
+    <img src="<?php echo get_template_directory_uri(); ?>/images/triplet3.png" class="thumb box_shadow">
     </a>
   </div>
 
@@ -86,6 +84,7 @@ get_header(); ?>
         }
 
         $total_attachments = count( $attachments );
+        $total_attachments = false;
         if(!empty($total_attachments)) {
           
           if( function_exists( 'vjspro_video_shortcode' ) ) {
@@ -131,20 +130,27 @@ get_header(); ?>
 
           }
 
-        } 
+          /*
+          Example:
+          $atts = array("poster" =>"http://nowpensions.mac/wp-content/uploads/2012/07/example.gif",
+          "mobile" =>"http://nowpensions.mac/wp-content/uploads/2012/07/example.m4v",
+          "ogg" =>"http://nowpensions.mac/wp-content/uploads/2012/07/example.ogg",
+          "webm" =>"http://nowpensions.mac/wp-content/uploads/2012/07/example.webm",
+          "mp4" =>"http://nowpensions.mac/wp-content/uploads/2012/07/example.mp4",
+          "googleid" => "Test File");
+          */
+
+          echo vjspro_video_shortcode($myvj_options);
+
+        } else {
+          ?>
+
+          <img src="<?php echo get_template_directory_uri(); ?>/images/non-franchise.png" class="thumb box_shadow">
+
+          <?php
+        }
     }
 
-    /*
-    Example:
-    $atts = array("poster" =>"http://nowpensions.mac/wp-content/uploads/2012/07/example.gif",
-    "mobile" =>"http://nowpensions.mac/wp-content/uploads/2012/07/example.m4v",
-    "ogg" =>"http://nowpensions.mac/wp-content/uploads/2012/07/example.ogg",
-    "webm" =>"http://nowpensions.mac/wp-content/uploads/2012/07/example.webm",
-    "mp4" =>"http://nowpensions.mac/wp-content/uploads/2012/07/example.mp4",
-    "googleid" => "Test File");
-    */
-
-    echo vjspro_video_shortcode($myvj_options);
     ?>
 
   </div>
