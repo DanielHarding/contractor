@@ -125,9 +125,14 @@ border-color: #777;
 
 blockquote.huge-text {
   padding-top: 30px;
-  font-size: 160%;
-  line-height:1.2;
+    line-height:1.2;
   color: #222;
+  margin: 0;
+}
+
+blockquote.huge-text p {
+	font-size: 160%;
+	margin: 0;
 }
 
 blockquote cite {
@@ -379,8 +384,17 @@ ul.media-grid li {
 }
 
 
-footer { padding-bottom: 10px; background-color: #F3F3F3; border:1px solid #ddd; }
-footer .row { margin-top: 20px; padding-top: 10px; }
+footer { 
+	padding-bottom: 10px; 
+	background-color: #F3F3F3; 
+	border:1px solid #ddd; 
+	margin-top: 20px!important;
+	margin: 0 0 10px 0;
+}
+
+footer .row { 
+	margin-top: 20px; 
+	padding-top: 10px; }
 
 #copyright {
   background: #fff;
@@ -466,7 +480,7 @@ background-color:#ddd;
 color: #fff;
 text-align: center;
 font: 12px Arial, sans-serif;
-margin: 3px 0px;
+margin: 3px 0px 10px;
 -webkit-transition: background-color 0.15s ease-in-out; -moz-transition: background-color 0.15s ease-in-out; -o-transition: background-color 0.15s ease-in-out; transition: background-color 0.15s ease-in-out; 
 }
 
@@ -721,6 +735,20 @@ fieldset legend {
   padding-bottom: 9px;
 }
 
+ legend.jobemail {
+	font-size: 12px;
+}
+
+legend.jobemail .tiny-text {
+	font-size: 11px!important;
+}
+
+
+#f_message {
+	height: 200px;
+}
+
+
 .nomarg {
   margin: 0px!important;
   
@@ -750,7 +778,7 @@ margin-top: 0px;
 }
 
 footer {
-  margin-top: 20px!important;
+  
 }
 
 
@@ -872,6 +900,8 @@ article {
   color: ##008db3;
 }
 
+
+span.ico-trade-gas-engineer,
 span.ico-boiler-and-heating {
   background: transparent url(/wp-content/themes/contractor/images/service-icons.png) -21px 0px no-repeat;
 }
@@ -925,7 +955,7 @@ span.ico-trade-pest-controller {
 
 
 
-
+li:hover span.ico-trade-gas-engineer,
 li:hover span.ico-boiler-and-heating {
   background: transparent url(/wp-content/themes/contractor/images/service-icons-over.png) -21px 0px no-repeat;
 }

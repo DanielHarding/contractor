@@ -13,16 +13,23 @@
     <div class="row">
       <footer>
     
-        <div class="four columns">
+        <div class="three columns">
           <h4>Information</h4>
-          <ul class="simple-list">
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/faq">FAQs</a></li>
-            <li><a href="/liability-cover">Liability Cover</a></li>
-            <li><a href="/privacy">Privacy</a></li>
-            <li><a href="/terms-and-conditions">Terms and Conditions</a></li>
-            <li><a href="/service-agreement">Service Agreement</a></li>
-          </ul>
+          
+          <?php 
+          $defaults = array(
+            'theme_location'  => 'footer',
+            'menu'            => 'footer', 
+            'container'       => 'menu-container', 
+            'container_id'    => 'container-id',
+            'menu_class'      => 'simple-list', 
+            'menu_id'         => 'menu-id',
+            'echo'            => true,
+            'fallback_cb'     => 'wp_page_menu');
+          
+          wp_nav_menu( $defaults ); 
+          
+          ?>
         </div>
 
         <div class="four columns">
@@ -38,11 +45,11 @@
           </div>
         </div>
 
-        <div class="two columns">
+        <div class="three columns">
             <h4><span class="label">Contact EveryHome</span></h4>
             <ul class="simple-list">
               <li><a href="/contact">Contact Us Web Form</a></li>
-              <li><strong>Email:</strong> <a href="mailto:name@domain.com">name@domain.com</a></li>
+              <li><strong>Email:</strong> <a href="mailto:jobs@workforeveryhome.co.uk">jobs@workforeveryhome.co.uk</a></li>
               <li><strong>Phone:</strong> 033 33 707 247</li>
               <li><strong>VAT:</strong> 012345678912345</li>
               <li>Registered UK and Wales.</li>
@@ -58,7 +65,7 @@
               <li>91 Kirkstall Road</li>
               <li>Leeds LS3 1HE</li>
               <li>United Kingdom</li>
-              <li><strong><a href="">Map and Directions</a></strong></li>
+              <li><strong><a href="/contact/">Map and Directions</a></strong></li>
               <li></li>
             </ul>
         </div>

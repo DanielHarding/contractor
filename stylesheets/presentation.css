@@ -14,6 +14,18 @@ header .subheader { position: relative; /* top: -18px; */ }
 
 .row.support { margin-bottom: 11px; }
 
+.row form .row {
+	margin: 0px -6px 10px;
+}
+
+label {
+	margin: 0 0 7px 0;
+}
+
+.label.success {
+	background-color: #A4C625;
+}
+
 #featuredContent { background: #f4f4f4; }
 
 #featuredContent div { background: #f4f4f4; padding: 30px 60px; }

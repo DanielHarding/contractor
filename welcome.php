@@ -31,7 +31,7 @@ get_header(); ?>
       <form action="/" method="post" name="contact" class="custom">
         <h4 class="huge-phone">Call 033 33 707 247</h4>
         <fieldset class="nobord nopad nomarg">
-          <legend>Or email <span class="tiny-text label"><a href="mailto:name@domain.com">name@domain.com</a></span></legend>
+          <legend class="jobemail">Or email <span class="tiny-text label"><a href="mailto:name@domain.com">jobs@workforeveryhome.co.uk</a></span></legend>
           <input type="text" name="name" name="rfrm_name" placeholder="Your name (required)" />
           <input type="text" name="email" name="rfrm_email" placeholder="Email address (required)" />
           <input type="text" name="phone" name="rfrm_phone" placeholder="Phone number" />
