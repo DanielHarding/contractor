@@ -27,7 +27,7 @@ get_header(); ?>
 
   <!-- Start advice form -->
   <div class="three columns">
-    <div class="hide-for-small show-for-medium slim-panel">
+    <div class="hide-for-small show-for-medium slim-panel blue_gradient">
       <form action="/" method="post" name="contact" class="custom">
         <h4 class="huge-phone">Quick contact</h4>
         <fieldset class="nobord nopad">
