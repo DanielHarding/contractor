@@ -66,7 +66,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-
+<a name="top" id="top"></a>
   <!-- Start header -->
 
 <header>

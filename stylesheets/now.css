@@ -458,14 +458,20 @@ color:#666;
 }
 
 
-#testCircle {
-width: 200px;
-height: 200px;
+#top_circle {
+width: 40px;
+height: 40px;
 position: relative;
-background:#001d34;
+background-color:#ddd;
 color: #fff;
 text-align: center;
-font: 12px Arial, sans-serif
+font: 12px Arial, sans-serif;
+margin: 3px 0px;
+-webkit-transition: background-color 0.15s ease-in-out; -moz-transition: background-color 0.15s ease-in-out; -o-transition: background-color 0.15s ease-in-out; transition: background-color 0.15s ease-in-out; 
+}
+
+#top_circle:hover {
+  background-color:#47a4e2;
 }
 
 .circle {
@@ -475,12 +481,16 @@ margin-right: 20px;
 }
 
 .circle h5 {
-font-size:155%;
-margin-top: 35%;
-color:#b0d135;
+font-size:100%;
+margin-top: 32%;
+color:#333;
 margin-right: 10%;
 margin-bottom: 8px;
 margin-left: 10%;
+}
+
+.circle h5 a {
+  color: #333;
 }
 
 .circle p {
@@ -837,6 +847,9 @@ article {
   /* margin-top: 20px; */
 }
 
+.ico-list li {
+  margin: 5px 0px;
+}
 
 .ico-list li span.twenty-four-sq {
   display:inline-block!important;
@@ -844,8 +857,11 @@ article {
   height: 24px!important;
 }
 
+
+
 .ico-list li a, footer li a {
   color: #222;
+  -webkit-transition: color 0.15s ease-in-out; -moz-transition: color 0.15s ease-in-out; -o-transition: color 0.15s ease-in-out; transition: color 0.15s ease-in-out; 
 }
 
 .ico-list li a:hover {
@@ -982,12 +998,21 @@ font-weight: 400;
   font-size: 80%!important;
 }
 
+
+footer li a:hover {
+  color: #fff;
+}
+
 footer li a {
   text-decoration: underline;
 }
 
 footer li {
   font-size: 80%!important;
+}
+
+footer h4 {
+  text-shadow: 0 1px #999;
 }
 
 /*
