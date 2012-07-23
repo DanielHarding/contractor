@@ -56,7 +56,7 @@ footer {
 
 
 header {
-	margin: 20px 0 5px 0;
+	margin: 0px 0 5px 0;
 }
 
 
@@ -807,7 +807,7 @@ textarea.slim_textarea {
 }
 
 article {
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 
@@ -822,11 +822,11 @@ article {
 }
 
 .ico-list li a:hover {
-  color: #000;
+  color: #008db3;
 }
 
 .ico-list li a.active {
-  color: red;
+  color: ##008db3;
 }
 
 span.ico-boiler-and-heating {
@@ -877,6 +877,61 @@ span.ico-pest-control,
 span.ico-trade-pest-controller {
   background: transparent url(/wp-content/themes/contractor/images/service-icons.png) -65px 0px no-repeat;
 }
+
+
+
+
+
+
+li:hover span.ico-boiler-and-heating {
+  background: transparent url(/wp-content/themes/contractor/images/service-icons-over.png) -21px 0px no-repeat;
+}
+
+li:hover span.ico-blocked-drains,
+li:hover span.ico-trade-drainage-engineer {
+  background: transparent url(/wp-content/themes/contractor/images/service-icons-over.png) -177px 0px no-repeat;
+}
+
+li:hover span.ico-burst-pipes {
+  background: transparent url(/wp-content/themes/contractor/images/service-icons-over.png) -132px 0px no-repeat;
+}
+
+li:hover span.ico-appliance,
+li:hover span.ico-trade-appliance-engineer {
+  background: transparent url(/wp-content/themes/contractor/images/service-icons-over.png) -153px 0px no-repeat;
+}
+
+li:hover span.ico-glazing-and-boarding,
+li:hover span.ico-trade-glazer-and-boarder {
+  background: transparent url(/wp-content/themes/contractor/images/service-icons-over.png) left center no-repeat;
+}
+
+li:hover span.ico-roofing:hover,
+li:hover span.ico-trade-roofer,
+li:hover span.ico-trade-joiner  {
+  background: transparent url(/wp-content/themes/contractor/images/service-icons-over.png) -197px 0px no-repeat;
+}
+
+li:hover span.ico-locksmith,
+li:hover span.ico-trade-locksmith {
+  background: transparent url(/wp-content/themes/contractor/images/service-icons-over.png) -88px 0px no-repeat;
+}
+
+li:hover span.ico-electrical,
+li:hover span.ico-trade-electrician {
+  background: transparent url(/wp-content/themes/contractor/images/service-icons-over.png) -109px 0px no-repeat;
+}
+
+li:hover span.ico-plumbing,
+li:hover span.ico-trade-plumber  {
+  background: transparent url(/wp-content/themes/contractor/images/service-icons-over.png) -45px 0px no-repeat;
+}
+
+li:hover span.ico-pest-control,
+li:hover span.ico-trade-pest-controller {
+  background: transparent url(/wp-content/themes/contractor/images/service-icons-over.png) -65px 0px no-repeat;
+}
+
 
 
 .subheader {

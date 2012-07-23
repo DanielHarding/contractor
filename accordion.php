@@ -63,7 +63,7 @@ get_header(); ?>
   <div class="three columns centered">
 
     <div class="panel">
-      <h3>Our Core Principles</h3>
+      <h3>Core Principles</h3>
       <p>We pride ourselves on...</p>
       <ul>
         <li>Transparency</li>

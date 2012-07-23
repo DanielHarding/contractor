@@ -32,7 +32,7 @@ get_header(); ?>
       <form action="/" method="post" name="contact" class="custom">
         <h4 class="huge-phone">Call 033 33 707 247</h4>
         <fieldset class="nobord nopad nomarg">
-          <legend>Or email <span class="tiny-text label success"><a href="mailto:name@domain.com">name@domain.com</a></span></legend>
+          <legend>Or email <span class="tiny-text label"><a href="mailto:name@domain.com">name@domain.com</a></span></legend>
           <input type="text" name="name" name="rfrm_name" placeholder="Your name (required)" />
           <input type="text" name="email" name="rfrm_email" placeholder="Email address (required)" />
           <input type="text" name="phone" name="rfrm_phone" placeholder="Phone number" />
@@ -54,15 +54,21 @@ get_header(); ?>
 <div class="row hide-for-small show-for-medium">
   
   <div class="three columns">
+    <a href="/contractors/#phone">
     <img src="<?php echo get_template_directory_uri(); ?>/images/triplet1.gif">
+    </a>
   </div>
 
   <div class="three columns">
+    <a href="/contractors/#trades">
     <img src="<?php echo get_template_directory_uri(); ?>/images/triplet2.png">
+    </a>
   </div>
 
   <div class="three columns">
+    <a href="/contractors/#applications">
     <img src="<?php echo get_template_directory_uri(); ?>/images/triplet3.png">
+    </a>
   </div>
 
   <div class="three columns">
@@ -93,7 +99,7 @@ get_header(); ?>
               $thumb  = $td . "/images/default-video.gif";
             }
 
-            $myvj_options['width'] = "240px";
+            $myvj_options['width'] = "228px";
             $myvj_options['height'] = "120px";
 
             // $myvj_options['poster'] = $thumb;
@@ -155,6 +161,7 @@ get_header(); ?>
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
       <div class="entry-content">
+        <div class="vspace20">&nbsp;</div>
         <?php echo $post->post_content; ?>
       </div>
     </article>
