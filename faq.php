@@ -18,11 +18,20 @@ get_header(); ?>
 <div class="row">
 
   <div class="nine columns">
-    <h3 class="supheading"><?php the_title(); ?></h3> 
-    <h4 class='subheading'>Get in touch if you don't see the answer to your question.</h4>
-    <?php
-    $content = apply_filters('the_content', $post->post_content); echo $content;
-    ?>
+    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+      <header class="entry-header">
+        <?php the_post_thumbnail(); ?>
+        <h2 class="entry-title"><?php the_title(); ?></h2>
+        <h4 class='subheading'>Get in touch if you don't see the answer to your question.</h4>
+      </header><!-- .entry-header -->
+
+      <div class="entry-content">
+      
+        <?php $content = apply_filters('the_content', $post->post_content); echo $content; ?>
+
+      </div>
+    </article>
   </div>
 
   <div class="three columns">

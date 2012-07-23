@@ -9,52 +9,70 @@
  */
 ?>
 
-<footer class="row">
-            <div class="twelve columns">
-              <div class="three columns">
-                <h3>Information</h3>
-                <ul>
-                  <li><a href="/contractors">Contractors</a></li>
-                  <li><a href="/about">About Us</a></li>
-                  <li><a href="/faq">FAQs</a></li>
-                  <li><a href="/liabilitycover">Liability Cover</a></li>
-                  <li><a href="/contact">Contact</a></li>
-                </ul>
-                </div>
-                <div class="three columns">
-                  <h3>Information</h3>
-                  <ul>
-                    <li><a href="/privacy">Privacy</a></li>
-                    <li><a href="/terms-and-conditions">Terms and Conditions</a></li>
-                    <li><a href="/grants">Service Agreement</a></li>
-                  </ul>
-                  </div>
-              <div class="three columns">
-                <h3>
-                  Contact Us
-                </h3>
-                <p>
-                  <a href="/contact"></a>
-                </p>
-                <p>
-                  Our Call Centre is in Yorkshire to serve Yorkshire! Grand.
-                </p>
-                <p>
-                  <a href="/contact">Contact Us</a> to find out more.
-                </p>
-                <hr>
-              </div>
-                            
-            </div>
-            
-            <p class="call-us">MOBILE-FRIENDLY CALL: 033 33 707 247</p>
-          </footer>
 
+    <div class="row">
+      <footer>
+    
+        <div class="four columns">
+          <h4>Information</h4>
+          <ul class="simple-list">
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/faq">FAQs</a></li>
+            <li><a href="/liability-cover">Liability Cover</a></li>
+            <li><a href="/privacy">Privacy</a></li>
+            <li><a href="/terms-and-conditions">Terms and Conditions</a></li>
+            <li><a href="/service-agreement">Service Agreement</a></li>
+          </ul>
+        </div>
+
+        <div class="four columns">
+          <div class="tweet-box">
+            <div class="vspace20">&nbsp;</div>
+              <?php           
+              $wpTwitterWidget = wpTwitterWidget::getInstance();  
+              if(!empty($wpTwitterWidget)) {      
+                // echo $wpTwitterWidget->display($wpTwitterWidget->getSettings($wpTwitterWidget));
+              }
+              ?>
+            </p>
+          </div>
+        </div>
+
+        <div class="two columns">
+            <h4><span class="label">Contact EveryHome</span></h4>
+            <ul class="simple-list">
+              <li><a href="/contact">Contact Us Web Form</a></li>
+              <li><strong>Email:</strong> <a href="mailto:name@domain.com">name@domain.com</a></li>
+              <li><strong>Phone:</strong> 033 33 707 247</li>
+              <li><strong>VAT:</strong> 012345678912345</li>
+              <li>Registered UK and Wales.</li>
+              <li>&copy 2012 Everyhome LTD</li>
+              <li></li>
+            </ul>
+        </div>
+
+        <div class="two columns">
+            <h4>&nbsp;</h4>
+            <ul class="simple-list">
+              <li><strong>The Tannery</strong></li>
+              <li>91 Kirkstall Road</li>
+              <li>Leeds LS3 1HE</li>
+              <li>United Kingdom</li>
+              <li><strong><a href="">Map and Directions</a></strong></li>
+              <li></li>
+            </ul>
+        </div>
+
+      </footer>          
+    </div>            
 
   </section>
   <!-- End maincontent -->
    
-  <!--<div class="ten columns">
+  <?php 
+  if(isset($_GET['debug'])) { 
+  ?>
+  <div class="ten columns">
     <p class="debug">
       <strong class="show-for-xlarge">You are on a very large screen.</strong> 
       <strong class="show-for-large">You are on a large screen.</strong> 
@@ -65,10 +83,11 @@
       <strong class="show-for-touch">You are on a touch-enabled device.</strong>
       <strong class="hide-for-touch">You are not on a touch-enabled device.</strong>
     </p>
-  </div>-->
+  </div>
+  <?php
+  }
+  ?>
   
-
-
   <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.min.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/js/foundation.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.accordion.js"></script>

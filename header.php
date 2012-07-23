@@ -98,7 +98,7 @@
 	
 	          <div class="hairlinev">&nbsp;</div>
 	
-	          <span class="right subheader">Welcome to our recruitment site - <span class="label success"><a href="/contractors">calling all contractors!</a></span></span>
+	          <span class="right subheader">Welcome to our recruitment site - <span class="label success"><a href="/contractors">we're hiring contractors!</a></span></span>
         </div>
       </div>
     
