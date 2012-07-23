@@ -283,11 +283,11 @@ overflow: hidden;
 
 .blue_gradient {
   background-color: #48A6E4;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#48A6E4), to(#429AD6));
-  background-image: -webkit-linear-gradient(top, #48A6E4, #429AD6);
-  background-image:    -moz-linear-gradient(top, #48A6E4, #429AD6);
-  background-image:      -o-linear-gradient(top, #48A6E4, #429AD6);
-  background-image:         linear-gradient(to bottom, #48A6E4, #429AD6);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#48A6E4), to(#3780b1));
+  background-image: -webkit-linear-gradient(top, #48A6E4, #3780b1);
+  background-image:    -moz-linear-gradient(top, #48A6E4, #3780b1);
+  background-image:      -o-linear-gradient(top, #48A6E4, #3780b1);
+  background-image:         linear-gradient(to bottom, #48A6E4, #3780b1);
 }
 
 
@@ -893,6 +893,22 @@ textarea.slim_textarea {
   margin: 0 0 2px 0;
 }
 
+.blue_gradient
+
+.blue_gradient input[type="text"], 
+.blue_gradient input[type="password"], 
+.blue_gradient input[type="date"], 
+.blue_gradient input[type="datetime"], 
+.blue_gradient input[type="email"], 
+.blue_gradient input[type="number"], 
+.blue_gradient input[type="search"], 
+.blue_gradient input[type="tel"], 
+.blue_gradient input[type="time"], 
+.blue_gradient input[type="url"], 
+.blue_gradient textarea {
+  border: 1px solid #276289!important;
+}
+
 article {
   /* margin-top: 20px; */
 }
@@ -1086,11 +1102,18 @@ img.thumb {
           box-shadow: 0px 0px 3px 0px #666666; /* Opera 10.5, IE9, FF4+, Chrome 6+, iOS 5 */
 }
 
+.box_round {
+  -webkit-border-radius: 5px; /* Saf3-4, iOS 1-3.2, Android ≤1.6 */
+          border-radius: 5px; /* Opera 10.5, IE9, Saf5, Chrome, FF4+, iOS 4, Android 2.1+ */
+  /* useful if you don't want a bg color from leaking outside the border: */
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+}
+
 div.slim-panel {
 /*
 background: #F2F2F2;
-border: solid 1px #E6E6E6;
 */
+border: solid 1px #276289;
 margin: 0 0 22px 0;
 padding: 10px;
 }
