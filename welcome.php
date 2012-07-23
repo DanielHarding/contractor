@@ -55,7 +55,7 @@ get_header(); ?>
   
   <div class="three columns">
     <a href="/contractors/#phone">
-    <img src="<?php echo get_template_directory_uri(); ?>/images/triplet1.gif">
+    <img src="<?php echo get_template_directory_uri(); ?>/images/triplet1.png">
     </a>
   </div>
 

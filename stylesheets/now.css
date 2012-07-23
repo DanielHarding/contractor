@@ -17,8 +17,10 @@
 ----------------------------------------- */
 
 body {
-background: white none;
+background: #111 none;
+/*
 background: transparent url(/wp-content/themes/contractor/images/page_bg.png) 0 0 repeat;
+*/
 }
 
 header .container {
@@ -40,7 +42,7 @@ box-shadow:0 0 2px 2px #ddd;
 */
 padding: 20px 0 0 0;
 
-border:solid 1px #ddd;
+border-top:solid 3px #25A0D8;
 
 
 background:white;
@@ -267,8 +269,8 @@ height: 26px;
 /*
 width: 400px;
 */
-border: solid 1px white;
-box-shadow: 0 0 2px 2px #C4C4C4;
+border: solid 1px 111;
+box-shadow: 0 0 2px 2px #222;
 /*
 behavior: url('/everyhomenew/PIE.php');
 background: transparent url(/wp-content/themes/contractor/images/gradients/blue_gradient_26.png) 0 0 repeat-x; 
@@ -1008,7 +1010,7 @@ li:hover span.ico-trade-pest-controller {
 
 
 .subheader {
-color: #444;
+color: #ddd;
 font-size: 110%;
 font-weight: 400;
 }
@@ -1020,6 +1022,15 @@ font-weight: 400;
 .label a {
   color: #fff;
 }
+
+.success a, .tertiary a {
+  color: #111;
+}
+
+.tertiary {
+  background-color: beige!important;
+}
+
 .label a:hover {
   text-decoration: underline;
 }
