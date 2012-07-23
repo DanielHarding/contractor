@@ -249,6 +249,7 @@ line-height: 1;
 .huge-phone {
   font-size:204%;
   margin-bottom: 0px;
+  color: #111;
 }
 
 .cat-item-1 {display:none;}
@@ -1103,17 +1104,21 @@ img.thumb {
 }
 
 .box_round {
-  -webkit-border-radius: 5px; /* Saf3-4, iOS 1-3.2, Android ≤1.6 */
-          border-radius: 5px; /* Opera 10.5, IE9, Saf5, Chrome, FF4+, iOS 4, Android 2.1+ */
+  -webkit-border-radius: 3px; /* Saf3-4, iOS 1-3.2, Android ≤1.6 */
+          border-radius: 3px; /* Opera 10.5, IE9, Saf5, Chrome, FF4+, iOS 4, Android 2.1+ */
   /* useful if you don't want a bg color from leaking outside the border: */
   -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+}
+
+.lightblue_textshadow {
+     text-shadow: 1px 1px 1px #96ccf0; /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
 }
 
 div.slim-panel {
 /*
 background: #F2F2F2;
-*/
 border: solid 1px #276289;
+*/
 margin: 0 0 22px 0;
 padding: 10px;
 }
