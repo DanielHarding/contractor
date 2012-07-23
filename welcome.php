@@ -70,9 +70,6 @@ get_header(); ?>
   </div>
 
   <div class="three columns">
-    <!-- 
-    <img src="<?php echo get_template_directory_uri(); ?>/images/triplet.gif">
-    -->
 
     <?php
       if( function_exists( 'attachments_get_attachments' ) ) {
@@ -217,86 +214,9 @@ get_header(); ?>
         ?>
       </ul>
 
-
-      <h3>All Services</h3>
-      <ul class="simple-list ico-list">
-        <?php 
-          query_posts(array('showposts' => 20, 
-                            // 'post_parent' => $post->ID, 
-                            'order'=>'ASC',
-                            'orderby'=> 'menu_order',
-                            'post_type' => 'service',
-                            'post_status' => 'publish',
-                            'posts_per_page' => 100)); 
-
-          $c=0;
-          while ($p = have_posts()) { 
-            the_post();
-
-            // Remove spaces
-            $ti = get_the_title(get_the_id());
-            $tok = strtolower(str_replace(' ', '-', $ti));
-            $tok = str_replace(':', '', $tok);
-            $tok = str_replace('--', '-', $tok);
-
-            // Set first item as active
-            $klass = ($c == 0) ? 'active' : '';
-          ?>
-
-          <li id="<?php echo $tok; ?>" class="<?php echo $klass; ?>">
-            <span class="ico-<?php echo $tok; ?> twenty-four-sq">&nbsp;</span>
-            <?php echo '<a href="' . get_permalink() . '">'.$ti.'</a>'; ?>
-          </li>
-
-        <?php 
-        $c++;
-        } 
-        ?>
-      </ul>
-
-
   </div>
 
 </div>
-
-
-
-
-
-<!-- 
-<?php
-/*
-if( function_exists( 'attachments_get_attachments' ) ) {
-  $attachments = attachments_get_attachments(get_the_id());
-
-  if(isset($_GET['debug'])) {
-    var_dump($attachments);
-  }
-
-  $total_attachments = count( $attachments );
-  if(!empty($total_attachments)) {
-?>
-<div class="row">
-  <div class="twelve columns">
-    <ul>
-      <?php 
-      for( $i=0; $i<$total_attachments; $i++ ) {
-      ?>
-             
-      <li><a href="<?php echo $attachments[$i]['location']; ?>">Download</a></li>
-      
-      <?php
-      }
-      ?> 
-      </ul>
-  </div>
-</div>
-<?php 
-    }
-  }
-  */
-?>
--->
 
 
 <div class="row">
