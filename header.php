@@ -75,7 +75,7 @@
       <div class="row">
         
         <div class="four columns">
-          <a href="/"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" class="branding"></a>
+          <a href="/" class="logobrand">EveryHome Recruitment</a>
         </div>
         
         <div class="eight columns slimhead">

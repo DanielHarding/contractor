@@ -29,7 +29,7 @@ get_header(); ?>
   <div class="three columns">
     <div class="hide-for-small show-for-medium slim-panel blue_gradient box_round">
       <form action="/" method="post" name="contact" class="custom">
-        <h4 class="huge-phone">Quick contact</h4>
+        <h4 class="huge-phone blue_textshadow">Quick contact</h4>
         <fieldset class="nobord nopad">
           <input type="text" name="name" name="rfrm_name" placeholder="Your name (required)" />
           <input type="text" name="email" name="rfrm_email" placeholder="Email address (required)" />
@@ -37,7 +37,7 @@ get_header(); ?>
           <input type="text" name="phone" name="rfrm_phone" placeholder="Phone number" />
           <textarea name="message" id="rfrm_message" placeholder="Message" class="slim_textarea"></textarea>
           <!-- <span class="tiny-text left">We'll get back to you soon...</span> -->
-          <input type="submit" name="send_contact" value="Submit" class="button small right"/>
+          <input type="submit" name="send_contact" value="Submit" class="button small success radius right"/>
         </fieldset>
       </form>
     </div>
