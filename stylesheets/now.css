@@ -408,6 +408,8 @@ footer {
 	padding-bottom: 10px;
 	background-color: #F3F3F3;
 	margin: 0 0 10px 0;
+  border-top: 1px solid #999;
+  border-bottom: 1px solid #333;
 }
 
 footer .row { 
@@ -423,6 +425,7 @@ ul.reasonwhy img
 {
     background: #BFBFBF;
     padding: 20px 0;
+    border-bottom: 1px solid #666;
 }
 
 
@@ -1150,7 +1153,7 @@ padding: 10px;
 }
 
 article h2 {
-  margin-bottom:28px;
+  margin-bottom:16px;
 }
 
 /*

@@ -65,7 +65,7 @@ get_header(); ?>
 
   <div class="three columns">
     <a href="/contractors/#applications">
-    <img src="<?php echo get_template_directory_uri(); ?>/images/triplet3.png" class="thumb box_shadow">
+    <img src="<?php echo get_template_directory_uri(); ?>/images/realtime.png" class="thumb box_shadow">
     </a>
   </div>
 
