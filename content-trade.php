@@ -352,10 +352,6 @@ export WEB_DOMAIN=www.redunderlongwave.com
 				</div>
 
 			</form>
-
-		
-
-		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'contractor' ), 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
 
 </article><!-- #post-<?php the_ID(); ?> -->

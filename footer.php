@@ -10,12 +10,17 @@
 ?>
 
 
+<!--<div class="row">
+  <footer>
+<?php wp_link_pages( array( 'before' => '<div class="three columns">' . __( 'Pages:', 'contractor' ), 'after' => '</div>' ) ); ?>
+
+</footer>
+</div>-->
+
     <div class="row">
       <footer>
     
-        <div class="three columns">
-          <h4>Information</h4>
-          
+        <div class="three columns">          
           <?php 
           $defaults = array(
             'theme_location'  => 'footer',
@@ -32,7 +37,7 @@
           ?>
         </div>
 
-        <div class="four columns">
+        <!--<div class="four columns">
           <div class="tweet-box">
             <div class="vspace20">&nbsp;</div>
               <?php           
@@ -43,15 +48,14 @@
               ?>
             </p>
           </div>
-        </div>
+        </div>-->
 
         <div class="three columns">
-            <h4><span class="label">Contact EveryHome</span></h4>
+            <h5>Contact EveryHome</h5>
             <ul class="simple-list">
               <li><a href="/contact">Contact Us Web Form</a></li>
               <li><strong>Email:</strong> <a href="mailto:jobs@workforeveryhome.co.uk">jobs@workforeveryhome.co.uk</a></li>
               <li><strong>Phone:</strong> 033 33 707 247</li>
-              <li><strong>VAT:</strong> 012345678912345</li>
               <li>Registered UK and Wales.</li>
               <li>&copy 2012 Everyhome LTD</li>
               <li></li>
@@ -59,14 +63,13 @@
         </div>
 
         <div class="two columns">
-            <h4>&nbsp;</h4>
+            <h5>Head Office&nbsp;</h5>
             <ul class="simple-list">
               <li><strong>The Tannery</strong></li>
               <li>91 Kirkstall Road</li>
               <li>Leeds LS3 1HE</li>
               <li>United Kingdom</li>
               <li><strong><a href="/contact/">Map and Directions</a></strong></li>
-              <li></li>
             </ul>
         </div>
 

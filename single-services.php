@@ -24,7 +24,7 @@ get_header(); ?>
 
 	<div class="four columns">
 
-      <h3>All Services</h3>
+      <!--<h3>All Services</h3>
       <ul class="simple-list">
         <?php 
           query_posts(array('showposts' => 20, 
@@ -53,7 +53,7 @@ get_header(); ?>
         $c++;
         } 
         ?>
-      </ul>
+      </ul>-->
 
 
       <h3>All Trades</h3>

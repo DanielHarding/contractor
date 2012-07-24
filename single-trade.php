@@ -63,7 +63,7 @@ get_header(); ?>
       </ul>
 
 
-      <h3>All Services</h3>
+      <!--<h3>All Services</h3>
       <ul class="simple-list ico-list">
         <?php 
           query_posts(array('showposts' => 20, 
@@ -97,7 +97,7 @@ get_header(); ?>
         $c++;
         } 
         ?>
-      </ul>
+      </ul>-->
 
 
 	</div>
