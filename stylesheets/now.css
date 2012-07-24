@@ -234,11 +234,8 @@ font-family: Georgia, "Times New Roman", Times, serif
 #mainContent h5,
 */
 .widget-title,
-.twitterwidget-title,
-.page-title  {
-  /*
+.twitterwidget-title {
   font-family: Georgia, "Times New Roman", Times, serif;
-  */
 }
 
 .tweet-box ul, .tweet-box ul li {
@@ -715,9 +712,9 @@ padding: 0px;
 
 
 .icon {
-  width:113px;
-  height:113px;
-  margin: 0px 30px 10px 0px;
+  width:86px;
+  height:86px;
+  margin: 0px 15px 10px 0px;
   background-image: url(/wp-content/themes/contractor/images/question.png);
 }
 
@@ -1179,6 +1176,8 @@ padding: 10px 10px 1px 10px;
 article h2 {
   margin-bottom:16px;
 }
+
+.ser
 
 /*
 
