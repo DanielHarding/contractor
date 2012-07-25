@@ -205,7 +205,22 @@ img.left {
   margin-right: 51px;
 }
 
+.columns .border {
+	border:solid 1px #eee;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	padding: 10px;
+	margin-bottom: 20px;
+	
+}
+.columns .border p {
+	font-size: 13px;
+}
 
+h3.gform_title {
+	font-size: 27px!important;
+	font-weight: normal;
+}
 
 
 /* -----------------------------------------
@@ -1186,7 +1201,7 @@ article h1 {
 
 article h2 {
   margin-bottom:16px;
-  font-size: 37px;
+  font-size: 30px;
 }
 
 article h1, article h2, h3 {
