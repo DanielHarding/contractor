@@ -16,12 +16,12 @@ Template Name: Contact Template
 get_header(); ?>
 <div class="row">
   <div class="nine columns">
-   
-        <h2>
-        <?php
-        the_title();
-        ?>
-        </h2>
+  
+        <header class="entry-header">
+          <?php the_post_thumbnail(); ?>
+          <h2 class="entry-title"><?php the_title(); ?></h2>
+        </header><!-- .entry-header -->
+
         <?php echo the_content(); ?>
 
         <?php
@@ -44,9 +44,6 @@ get_header(); ?>
             033 33 707 247<br>
             info@every-home.co.uk
         </p>
-    </div>
-    <div class="panel">
-      <p>Google Map</p>
     </div>
   </div>
 
