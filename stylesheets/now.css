@@ -18,7 +18,7 @@
 
 body {
 background: #fff none;
-background: transparent url(/wp-content/themes/contractor/images/sub_nav_bg.png) 0 0 repeat;
+background: transparent url(/wp-content/themes/contractor/images/page_bg.png) 0 0 repeat;
 }
 
 header .container {
@@ -51,7 +51,7 @@ color: #25A0D8;
   box-shadow:0 0 2px 2px #ddd;
   */
   padding: 15px 0 0 0;
-  border-top:solid 1px #ccc;
+  border-top:solid 1px #eee;
   background:white;
   background: transparent url(/wp-content/themes/contractor/images/page_bg.png) 0 0 repeat;
 }
