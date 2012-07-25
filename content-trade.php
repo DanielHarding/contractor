@@ -118,75 +118,18 @@ export WEB_DOMAIN=www.redunderlongwave.com
 
 	<header class="entry-header">
 		<?php the_post_thumbnail(); ?>
-		<h2 class="entry-title"><?php the_title(); ?></h2>
+		<h1 class="entry-title"><?php the_title(); ?></h1>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
 	
 		<?php the_content(); ?>
 
-		<ul class="block-grid two-up">
-			<li>
-				<div class='panel blue-panel'>
-					<h4>General Requirements</h4>
-					<ul class="simple-list">
-						<li><span class='tick'>&#10003;</span>UK Citizen (Required)</li>
-						<li><span class='tick'>&#10003;</span>UK Driving Licence (Required)</li>
-					</ul>
-				</div>
-			</li>
-
-			<?php 
-			if(!empty($required_trade_certificates)) {
-				
-				if(count(array_merge($required_trade_certificates)) > 0 
-					&& isset($required_trade_certificates[0]) 
-						&& trim($required_trade_certificates[0]) !=='') {
-
-
-					echo "<li><div class='panel blue-panel'>";
-					echo "<h4>Trade Requirements</h4>";
-					echo "<ul class='simple-list'>";
-
-					foreach ($required_trade_certificates as $value) {
-						if(empty($value)) { continue; }
-						echo "<li><span class='tick'>&#10003;</span>$value (Required)</li>";	
-					}	
-					echo "</ul>";
-					echo "</div></li>";
-
-				}
-			}
-			?> 
-		</ul>
-
-		<?php
-		if(count(array_merge($trade_desirables)) > 0 
-			&& isset($trade_desirables[0]) 
-				&& trim($trade_desirables[0]) !=='') {
-		?>
-		<div class='panel green-panel'>
-			<h3>Desirables</h3>
-			<ul class="simple-list">
-				<?php
-				foreach ($trade_desirables as $value) {
-					if(empty($value)) { continue; }
-					echo "<li><span class='awesome'>&#10003;</span>$value</li>";	
-				}	
-				?>
-			</ul>
-		</div>
-		<?php
-			}
-		?>
-
-
 		<div class="row"><hr></div>
-
 		<a name="application" id="application"></a>
 
-		<h3>Your Application</h3>
-		<p>Please complete and submit the following form and we'll contact you to get things started. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fermentum tristique libero, eget pharetra mi condimentum a. Nullam fermentum convallis orci eget porta. Integer id odio magna. Aenean felis nisl, pellentesque nec suscipit in, pulvinar sit amet tellus. Etiam mauris libero, fermentum eu varius vel, pharetra quis justo. Proin non tristique lacus. Ut aliquet dolor sed nisl suscipit sed euismod augue fermentum. Aenean pretium lobortis mattis.</p>
+		<h2>Application Request</h2>
+		<p>Please complete and submit the following form and we'll contact you to get things started.</p>
 
 			<?php
 			if(!empty($mess) && $errs) {
@@ -202,9 +145,9 @@ export WEB_DOMAIN=www.redunderlongwave.com
 			}
 			?>
 			
-			<form action="#application" method="post" name="apply" id="frm_apply" class="custom">
-
-				<div class='panel'>
+			<div class="row">
+			<form action="#application" method="post" name="apply" id="frm_apply" class="custom eight columns">
+					
 
 				<fieldset>
 
@@ -212,23 +155,32 @@ export WEB_DOMAIN=www.redunderlongwave.com
 
 					<div class='row'>
 						<div class="six mobile-two columns">
-							<label for="">First Name <span class="required">*</span></label>
+							<label for="f_first_name">First Name <span class="required">*</span></label>
 							<input type="text" name="first_name" id="f_first_name" value="" placeholder="First Name"/>
 						</div>
 						<div class="six mobile-two columns">
-							<label for="">Last Name <span class="required">*</span></label>
+							<label for="f_last_name">Last Name <span class="required">*</span></label>
 							<input type="text" name="last_name" id="f_last_name" value="" placeholder="Last Name"/>
 						</div>
 					</div>
 
 					<div class='row'>
 						<div class="six mobile-two columns">
-							<label for="">Email <span class="required">*</span></label>
+							<label for="f_email">Email <span class="required">*</span></label>
 							<input type="text" name="email" id="f_email" value="" placeholder="Email"/>
 						</div>
 						<div class="six mobile-two columns">
 							<label for="">Telephone <span class="required">*</span></label>
 							<input type="text" name="telephone" id="f_telephone" value="" placeholder="Telephone"/>
+						</div>
+					</div>
+					
+					<div class='row'>
+						<div class="six mobile-two columns">
+							<label for="f_website">Website Address</label>
+							<input type="text" name="website" id="f_website" value="" placeholder="First Name"/>
+						</div>
+						<div class="six mobile-two columns">
 						</div>
 					</div>
 
@@ -291,19 +243,56 @@ export WEB_DOMAIN=www.redunderlongwave.com
 			}
 			?> 
 
-
 				<fieldset>
-
-					<legend>About You...</legend>
+				<legend>Which other trades do you cover?</legend>
 					<div class='row'>
-						<div class="twelve mobile-four columns">
-							<label for="">Introduction <span class="required">*</span></label>
-							<textarea name="message" id="f_message" placeholder="Introduction"></textarea>
-						</div>
+						<label for="checkbox1">
+						  <input type="checkbox" id="checkbox1" name="" style="display: none;">
+						  <span class="custom checkbox"></span> Appliance Engineer
+						</label>
+						
+						<label for="checkbox2">
+						  <input type="checkbox" id="checkbox2" name="" style="display: none;">
+						  <span class="custom checkbox"></span> Drainage Engineer
+						</label>
+						
+						<label for="checkbox3">
+						  <input type="checkbox" id="checkbox3" name="" style="display: none;">
+						  <span class="custom checkbox"></span> Electrician
+						</label>
+						
+						<label for="checkbox4">
+						  <input type="checkbox" id="checkbox4" name="" style="display: none;">
+						  <span class="custom checkbox"></span> Gas Engineer
+						</label>
+						
+						<label for="checkbox5">
+						  <input type="checkbox" id="checkbox5" name="" style="display: none;">
+						  <span class="custom checkbox"></span> Glazer And Boarder
+						</label>
+						
+						<label for="checkbox6">
+						  <input type="checkbox" id="checkbox6" name="" style="display: none;">
+						  <span class="custom checkbox"></span> Locksmith
+						</label>
+						
+						<label for="checkbox7">
+						  <input type="checkbox" id="checkbox7" name="" style="display: none;">
+						  <span class="custom checkbox"></span> Pest Controller
+						</label>
+						
+						<label for="checkbox8">
+						  <input type="checkbox" id="checkbox8" name="" style="display: none;">
+						  <span class="custom checkbox"></span> Plumber
+						</label>
+						
+						<label for="checkbox9">
+						  <input type="checkbox" id="checkbox9" name="" style="display: none;">
+						  <span class="custom checkbox"></span> Roofer
+						</label>
 					</div>
 
-				</fieldset>			
-
+				</fieldset>	
 
 					<?php
 					if(count(array_merge($trade_desirables)) > 0 
@@ -331,6 +320,32 @@ export WEB_DOMAIN=www.redunderlongwave.com
 					}
 					?> 
 
+				<fieldset>
+
+					<legend>About You...</legend>
+					<div class='row'>
+						<div class="twelve mobile-four columns">				
+							<label for="">Introduction <span class="required">*</span></label>
+							<textarea name="message" id="f_message" placeholder="Introduction"></textarea>
+						</div>
+					</div>
+				</fieldset>
+
+
+				<fieldset>
+				<legend>How would you like to receive your application pack?</legend>
+					<div class='row'>
+						<label for="radio1">
+						  <input name="radio1" type="radio" id="radio1"> By Post
+						</label>
+						
+						<label for="radio2">
+						  <input name="radio2" type="radio" id="radio2"> By Email
+						</label>
+					</div>
+				</fieldset>
+
+
 			<!-- 
 				<div class='row'>
 			        <label for="ch_opt_out">
@@ -339,8 +354,8 @@ export WEB_DOMAIN=www.redunderlongwave.com
 			        </label>
 			    </div>
 			-->
-			</div>
-
+			
+			
 			    <div class='row'>
 			    	<br>
 			    </div>
@@ -350,8 +365,72 @@ export WEB_DOMAIN=www.redunderlongwave.com
 						<input type="submit" value="Submit Application" id="btn_apply" class="large button"/>
 					</div>
 				</div>
-
 			</form>
+			
+			
+			<div class="four columns requirements">
+			<h3>Requirements and Desirables</h3>
+					<ul class="block-grid up-up">
+						<li>
+							<div class='panel blue-panel'>
+								<h4>General Requirements</h4>
+								<ul class="simple-list">
+									<li><span class='tick'>&#10003;</span>UK Citizen (Required)</li>
+									<li><span class='tick'>&#10003;</span>UK Driving Licence (Required)</li>
+								</ul>
+							</div>
+						</li>
+			
+						<?php 
+						if(!empty($required_trade_certificates)) {
+							
+							if(count(array_merge($required_trade_certificates)) > 0 
+								&& isset($required_trade_certificates[0]) 
+									&& trim($required_trade_certificates[0]) !=='') {
+			
+			
+								echo "<li><div class='panel blue-panel'>";
+								echo "<h4>Trade Requirements</h4>";
+								echo "<ul class='simple-list'>";
+			
+								foreach ($required_trade_certificates as $value) {
+									if(empty($value)) { continue; }
+									echo "<li><span class='tick'>&#10003;</span>$value (Required)</li>";	
+								}	
+								echo "</ul>";
+								echo "</div></li>";
+			
+							}
+						}
+						?> 
+					</ul>
+			
+					<?php
+					if(count(array_merge($trade_desirables)) > 0 
+						&& isset($trade_desirables[0]) 
+							&& trim($trade_desirables[0]) !=='') {
+					?>
+					<div class='panel green-panel'>
+						<h4>Desirables</h4>
+						<ul class="simple-list">
+							<?php
+							foreach ($trade_desirables as $value) {
+								if(empty($value)) { continue; }
+								echo "<li><span class='awesome'>&#10003;</span>$value</li>";	
+							}	
+							?>
+						</ul>
+					</div>
+					<?php
+						}
+					?>
+			
+			
+			
+			</div>
+			</div>
+			
+			
 	</div><!-- .entry-content -->
 
 </article><!-- #post-<?php the_ID(); ?> -->

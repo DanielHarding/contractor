@@ -41,7 +41,7 @@ get_header(); ?>
             United Kingdom<br>
             <br><br>
             Telephone &amp; Email<br>
-            033 33 707 247<br>
+            0845 319 8314<br>
             info@every-home.co.uk
         </p>
     </div>

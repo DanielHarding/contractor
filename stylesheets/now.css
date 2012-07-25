@@ -222,6 +222,14 @@ h3.gform_title {
 	font-weight: normal;
 }
 
+div.requirements {
+	padding-top: 23px;
+}
+
+ul.block-grid {
+	margin-bottom: 0!important;
+}
+
 
 /* -----------------------------------------
 Header and Footer

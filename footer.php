@@ -10,13 +10,6 @@
 ?>
 
 
-<!--<div class="row">
-  <footer>
-<?php wp_link_pages( array( 'before' => '<div class="three columns">' . __( 'Pages:', 'contractor' ), 'after' => '</div>' ) ); ?>
-
-</footer>
-</div>-->
-
     <div class="row">
       <footer>
     
@@ -55,7 +48,7 @@
             <ul class="simple-list">
               <li><a href="/contact">Contact Us Web Form</a></li>
               <li><strong>Email:</strong> <a href="mailto:jobs@workforeveryhome.co.uk">jobs@workforeveryhome.co.uk</a></li>
-              <li><strong>Phone:</strong> 033 33 707 247</li>
+              <li><strong>Phone:</strong> 0845 319 8314</li>
               <li>Registered UK and Wales.</li>
               <li>&copy 2012 Everyhome LTD</li>
               <li></li>
