@@ -712,8 +712,8 @@ padding: 0px;
 
 
 .icon {
-  width:86px;
-  height:86px;
+  width:58px;
+  height:58px;
   margin: 0px 15px 10px 0px;
   background-image: url(/wp-content/themes/contractor/images/question.png);
 }
@@ -1080,8 +1080,8 @@ li:hover span.ico-trade-pest-controller {
 }
 
 .subheader {
-color: #ddd;
-font-size: 110%;
+color: #444;
+font-size: 125%;
 font-weight: 400;
 margin-bottom:0px;
 }
@@ -1093,6 +1093,11 @@ margin-bottom:0px;
 .label a {
   color: #fff;
 }
+
+.subheader .label {
+font-size: 85%!important;
+}
+
 
 .success a, .tertiary a {
   color: #111;
@@ -1173,11 +1178,17 @@ padding: 10px 10px 1px 10px;
   margin-bottom: 6px;
 }
 
+
 article h2 {
   margin-bottom:16px;
+  font-size: 44px;
 }
 
-.ser
+article h2, h3 {
+  font-family: "BebasNeueRegular", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+
 
 /*
 
