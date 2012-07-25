@@ -8,7 +8,7 @@
 
 	<header class="entry-header">
 		<?php the_post_thumbnail(); ?>
-		<h2 class="entry-title"><?php the_title(); ?></h2>
+		<h1 class="entry-title"><?php the_title(); ?></h1>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">

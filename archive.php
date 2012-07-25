@@ -23,7 +23,7 @@ get_header(); ?>
 		<?php $taxonomy_array = array(); ?>
 
 		<header class="page-header">
-			<h2 class="page-title">
+			<h1 class="page-title">
 				<?php
 					if ( is_category() ) {
 						printf( __( '%s', 'contractor' ), '<span>' . single_cat_title( '', false ) . '</span>' );
@@ -57,7 +57,7 @@ get_header(); ?>
 
 					}
 				?>
-			</h2>
+			</h1>
 			<?php
 
 				if ( is_category() ) {

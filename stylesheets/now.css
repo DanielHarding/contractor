@@ -1179,12 +1179,17 @@ padding: 10px 10px 1px 10px;
 }
 
 
-article h2 {
+article h1 {
   margin-bottom:16px;
   font-size: 44px;
 }
 
-article h2, h3 {
+article h2 {
+  margin-bottom:16px;
+  font-size: 37px;
+}
+
+article h1, article h2, h3 {
   font-family: "BebasNeueRegular", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 

@@ -22,7 +22,7 @@ get_header(); ?>
 
       <header class="entry-header">
         <?php the_post_thumbnail(); ?>
-        <h2 class="entry-title"><?php the_title(); ?></h2>
+        <h1 class="entry-title"><?php the_title(); ?></h1>
         <h4 class='subheading'>Get in touch if you don't see the answer to your question.</h4>
       </header><!-- .entry-header -->
 
