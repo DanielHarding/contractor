@@ -85,11 +85,11 @@ export WEB_DOMAIN=www.redunderlongwave.com
 		require_once ABSPATH . WPINC . '/class-smtp.php';
 		$phpmailer = new PHPMailer();
 		$phpmailer->SMTPAuth = true;
-		$phpmailer->Username = 'admin@redunderlongwave.com';
-		$phpmailer->Password = 'rulaba0954';
+		$phpmailer->Username = 'contact@workforeveryhome.co.uk';
+		$phpmailer->Password = 'xIG20etew7gK';
 		 
 		$phpmailer->IsSMTP(); // telling the class to use SMTP
-		$phpmailer->Host       = "www.redunderlongwave.com"; // SMTP server
+		$phpmailer->Host       = "mail.workforeveryhome.co.uk"; // SMTP server
 		$phpmailer->FromName   = $from;
 		$phpmailer->Subject    = $subj;
 		$phpmailer->Body       = $message;                      //HTML Body
@@ -184,7 +184,7 @@ export WEB_DOMAIN=www.redunderlongwave.com
 					<div class='row'>
 						<div class="six mobile-two columns">
 							<label for="f_website">Website Address</label>
-							<input type="text" name="website" id="f_website" value="" placeholder="First Name"/>
+							<input type="text" name="website" id="f_website" value="" placeholder="Website Address"/>
 						</div>
 						<div class="six mobile-two columns">
 						</div>

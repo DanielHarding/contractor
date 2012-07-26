@@ -114,7 +114,7 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
 input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea {
 border: 1px solid #888;
 font-size: 12px;
-
+font-family: "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, "Lucida Grande", sans-serif;
 -webkit-border-radius: 2px;
 -moz-border-radius: 2px;
 -ms-border-radius: 2px;
@@ -1218,8 +1218,6 @@ article h1, article h2, h3 {
   font-family: "BebasNeueRegular", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
-
-
 .page-id-2 .callout {
 	min-height: 530px;
 }
@@ -1228,7 +1226,9 @@ article h1, article h2, h3 {
 	min-height: 450px;
 }
 
-
+.nopad {
+	padding: 0;
+}
 
 
 

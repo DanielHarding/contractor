@@ -28,19 +28,6 @@
           ?>
         </div>
 
-        <!--<div class="four columns">
-          <div class="tweet-box">
-            <div class="vspace20">&nbsp;</div>
-              <?php           
-              $wpTwitterWidget = wpTwitterWidget::getInstance();  
-              if(!empty($wpTwitterWidget)) {      
-                // echo $wpTwitterWidget->display($wpTwitterWidget->getSettings($wpTwitterWidget));
-              }
-              ?>
-            </p>
-          </div>
-        </div>-->
-
         <div class="three columns">
             <h5>Contact EveryHome</h5>
             <ul class="simple-list">
@@ -63,7 +50,6 @@
               <li><strong><a href="/contact/">Map and Directions</a></strong></li>
             </ul>
         </div>
-
       </footer>
     <div class="row">           
       <div class="one centered">
@@ -108,8 +94,5 @@
         });
     });
   </script>
-
-  <?php wp_footer(); ?>
-
 </body>
 </html>
