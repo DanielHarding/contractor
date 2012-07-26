@@ -55,11 +55,13 @@ if(!empty($_POST)) {
 	if(count(array_merge($required_trade_certificates)) > 0 
 		&& isset($required_trade_certificates[0]) 
 			&& trim($required_trade_certificates[0]) !=='') {
-
+		var_dump($_POST);
 		foreach($required_trade_certificates as $key) {
+			var_dump($key);
 			if(!isset($_POST[$key]) || empty($_POST[$key])) {
+
 				$serrs = true;
-				$smess = "Sorry - you don't meet the trade specific requirements *";
+				$smess = "Sorry - you don't meet the trade specific requirements - " . $key;
 				break;
 			}
 		}
@@ -84,11 +86,11 @@ export WEB_DOMAIN=www.redunderlongwave.com
 		require_once ABSPATH . WPINC . '/class-phpmailer.php';
 		require_once ABSPATH . WPINC . '/class-smtp.php';
 		$phpmailer = new PHPMailer();
-		$phpmailer->SMTPAuth = true;
-		$phpmailer->Username = 'contact@workforeveryhome.co.uk';
-		$phpmailer->Password = 'xIG20etew7gK';
+		// $phpmailer->SMTPAuth = true;
+		// $phpmailer->Username = 'contact@workforeveryhome.co.uk';
+		// $phpmailer->Password = 'xIG20etew7gK';
 		 
-		$phpmailer->IsSMTP(); // telling the class to use SMTP
+		// $phpmailer->IsSMTP(); // telling the class to use SMTP
 		$phpmailer->Host       = "mail.workforeveryhome.co.uk"; // SMTP server
 		$phpmailer->FromName   = $from;
 		$phpmailer->Subject    = $subj;
@@ -209,6 +211,18 @@ export WEB_DOMAIN=www.redunderlongwave.com
 					        <label for="ch_uk_driving_licence">
 					          <input type="checkbox" id="ch_uk_driving_licence" name="uk_driving_licence" style="display: none;">
 					          <span class="custom checkbox"></span> UK Driving Licence
+					        </label>
+						</li>
+						<li>
+					        <label for="two_years_trade_experience">
+					          <input type="checkbox" id="ck_two_years_trade_experience" name="two_years_trade_experience" style="display: none;">
+					          <span class="custom checkbox"></span> Two years trade experience
+					        </label>
+						</li>
+						<li>
+					        <label for="crb_checked">
+					          <input type="checkbox" id="ck_crb_checked" name="crb_checked" style="display: none;">
+					          <span class="custom checkbox"></span> CRB checked
 					        </label>
 						</li>
 					</ul>
