@@ -14,12 +14,12 @@ Template Name: Contact Template
  * @since Now 1.0
  */
 get_header(); ?>
-<div class="row">
+<article class="row">
   <div class="nine columns">
   
         <header class="entry-header">
           <?php the_post_thumbnail(); ?>
-          <h2 class="entry-title"><?php the_title(); ?></h2>
+          <h1 class="entry-title"><?php the_title(); ?></h1>
         </header><!-- .entry-header -->
 
         <?php echo the_content(); ?>
@@ -34,7 +34,8 @@ get_header(); ?>
   <div class="three columns">
     <div class="panel">
         <p>
-            <strong>Every Home Customer Service</strong><br>
+            <strong>Head Office</strong><br>
+            Every Home<br>
             The Tannery<br>
             91 Kirkstall Road<br> 
             Leeds LS3 1HE<br>
@@ -42,10 +43,10 @@ get_header(); ?>
             <br><br>
             Telephone &amp; Email<br>
             0845 319 8314<br>
-            info@every-home.co.uk
+            <a href="mailto:jobs@workforeveryhomes.co.uk">jobs@workforeveryhomes.co.uk</a>
         </p>
     </div>
   </div>
 
-</div>
+</article>
 <?php get_footer(); ?>

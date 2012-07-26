@@ -28,6 +28,7 @@ header .container {
 
 a {
 color: #25A0D8;
+cursor: pointer;
 }
 
 /* dan */
@@ -53,7 +54,7 @@ color: #25A0D8;
   padding: 15px 0 0 0;
   border-top:solid 1px #eee;
   background:white;
-  background: transparent url(/wp-content/themes/contractor/images/page_bg.png) 0 0 repeat;
+  /*background: transparent url(/wp-content/themes/contractor/images/page_bg.png) 0 0 repeat;*/
 }
 
 
@@ -82,7 +83,7 @@ margin: 0 0 8px;
 
 
 p.intro { font-size: 115%; line-height: 1.3; color: #111; }
-h2, h3, h4, h5, h6 { font-weight:200; }
+h2, h3, h4, h5, h6 { font-weight:normal; }
 h1 small, h2 small, h3 small, h4 small, h5 small { color: #777; font-size: 60%; font-weight: normal; }
 
 sup {
@@ -96,7 +97,7 @@ sup {
 }
 
 form, fieldset, label {
-  font-size: 12px;
+  font-size: 13px;
 }
 
 form .subheader {
@@ -829,6 +830,7 @@ font-size: 20px;
 h1, h2, h3, h4, h5, h6 {
 margin-bottom: 14px;
 margin-top: 0px;
+font-weight: normal!important;
 }
 
 div.wpanel {
@@ -1091,20 +1093,20 @@ li:hover span.ico-trade-pest-controller {
 }
 
 .logobrand {
-  width: 218px;
-  height: 58px;
+  width: 300px;
+  height: 70px;
   display: block;
   text-indent: -5000px;
-  background: transparent url(/wp-content/themes/contractor/images/logo.png) 0px 0px no-repeat;
+  background: transparent url(/wp-content/themes/contractor/images/logo-safe.png) 0px 0px no-repeat;
 }
-
+/*
 .logobrand:hover {
   background: transparent url(/wp-content/themes/contractor/images/logo-over.png) 0px 0px no-repeat;
-}
+}*/
 
 .subheader {
 color: #444;
-font-size: 125%;
+font-size: 150%;
 font-weight: 400;
 margin-bottom:0px;
 }
@@ -1215,6 +1217,21 @@ article h2 {
 article h1, article h2, h3 {
   font-family: "BebasNeueRegular", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
+
+
+
+.page-id-2 .callout {
+	min-height: 530px;
+}
+
+.page-id-38 .callout {
+	min-height: 450px;
+}
+
+
+
+
+
 
 
 

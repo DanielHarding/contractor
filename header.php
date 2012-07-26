@@ -98,7 +98,7 @@
 	
 	          <div class="hairlinev">&nbsp;</div>
 	
-	          <span class="right subheader"><span class="label tertiary">Call - 0845 3198314</span> ~ <span class="label success"><a href="mailto:name@domain.com">jobs@workforeveryhome.co.uk</a></span></span>
+	          <span class="right subheader"><span class="label tertiary">Call - 0845 319 8314</span></span>
         </div>
       </div>
     

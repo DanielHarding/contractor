@@ -9,9 +9,7 @@
  */
 ?>
 
-
-    <div class="row">
-      <footer>
+      <footer class="row">
     
         <div class="three columns">          
           <?php 
@@ -66,8 +64,7 @@
             </ul>
         </div>
 
-      </footer>          
-    </div> 
+      </footer>
     <div class="row">           
       <div class="one centered">
         <div class="circle" id="top_circle">

@@ -123,9 +123,15 @@ export WEB_DOMAIN=www.redunderlongwave.com
 
 	<div class="entry-content">
 	
+	<div class="row">
+		<p class="six columns centred"><a href="#application" class="large success button">Start Application Now</a></p>
+	</div>
+			
 		<?php the_content(); ?>
 
+
 		<div class="row"><hr></div>
+		
 		<a name="application" id="application"></a>
 
 		<h2>Application Request</h2>
@@ -194,13 +200,13 @@ export WEB_DOMAIN=www.redunderlongwave.com
 
 					<ul class="simple-list">
 						<li>
-					        <label for="ch_uk_citizen" class="seriftext">
+					        <label for="ch_uk_citizen">
 					          <input type="checkbox" id="ch_uk_citizen" name="uk_citizen" style="display: none;">
 					          <span class="custom checkbox"></span> UK Citizenship
 					        </label>
 						</li>
 						<li>
-					        <label for="ch_uk_driving_licence" class="seriftext">
+					        <label for="ch_uk_driving_licence">
 					          <input type="checkbox" id="ch_uk_driving_licence" name="uk_driving_licence" style="display: none;">
 					          <span class="custom checkbox"></span> UK Driving Licence
 					        </label>
@@ -307,7 +313,7 @@ export WEB_DOMAIN=www.redunderlongwave.com
 							$tok = str_replace(' ', '', $value);
 						?>
 						<li>
-					        <label for="ch_<?php echo $tok; ?>_id" class="seriftext">
+					        <label for="ch_<?php echo $tok; ?>_id">
 					          <input type="checkbox" id="ch_<?php echo $tok; ?>_id" name="desirable[<?php echo $tok; ?>]" style="display: none;" value="1">
 					          <span class="custom checkbox"></span> <?php echo $value; ?>
 					        </label>
