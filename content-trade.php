@@ -10,8 +10,9 @@ $required_trade_certificates = get_post_meta($post->ID, 'wpcf-certificate');
 $trade_desirables = get_post_meta($post->ID, 'wpcf-desirable'); 
 if(!empty($_POST)) {
 
+	$email_sent = false;
 	$req = array('first_name', 'last_name', 'email', 'telephone');
-	$global_required = array('uk_citizen', 'uk_driving_licence');
+	$global_required = array('uk_citizen', 'uk_driving_licence', 'crb_checked', 'two_years_trade_experience');
 
 	$email_sent = false;
 	$errs = $mess = false;
@@ -38,8 +39,9 @@ if(!empty($_POST)) {
 	if(count(array_merge($global_required)) > 0 
 		&& isset($global_required[0]) 
 			&& trim($global_required[0]) !=='') {
-
-		foreach($global_required as $key) {
+		foreach($global_required as $key => $val) {
+			if(!is_array($val)) { $key = $val; }
+			$key = strtolower($key);
 			if(!isset($_POST[$key]) || empty($_POST[$key])) {
 				$gerrs = true;
 				$gmess = "Sorry - you don't meet the general contractor requirements *";
@@ -56,8 +58,8 @@ if(!empty($_POST)) {
 		&& isset($required_trade_certificates[0]) 
 			&& trim($required_trade_certificates[0]) !=='') {
 		var_dump($_POST);
-		foreach($required_trade_certificates as $key) {
-			var_dump($key);
+		foreach($required_trade_certificates as $key => $val) {
+			if(!is_array($val)) { $key = $val; }
 			if(!isset($_POST[$key]) || empty($_POST[$key])) {
 
 				$serrs = true;
@@ -107,7 +109,7 @@ export WEB_DOMAIN=www.redunderlongwave.com
 			$errs = true;
 			$mess = "Mailer Error: " . $phpmailer->ErrorInfo;
 		} else {
-			$email_sent =  "Message sent!";
+			$email_sent =  "Application sent!";
 		}
 
 	} 
@@ -141,15 +143,19 @@ export WEB_DOMAIN=www.redunderlongwave.com
 
 			<?php
 			if(!empty($mess) && $errs) {
-				echo "<p class='message-error'>{$mess}</p>";
+				echo "<div class='alert-box alert'><p class='message-error'>{$mess}</p></div>";
 			}
 
 			if(!empty($gmess) && $gerrs) {
-				echo "<p class='message-error'>{$gmess}</p>";
+				echo "<div class='alert-box alert'><p class='message-error'>{$gmess}</p></div>";
 			}
 
 			if(!empty($smess) && $serrs) {
-				echo "<p class='message-error'>{$smess}</p>";
+				echo "<div class='alert-box alert'><p class='message-error'>{$smess}</p></div>";
+			}
+
+			if(!empty($email_sent)) {
+				echo "<div class='alert-box success'><p class=''>Message sent</p></div>";
 			}
 			?>
 			
@@ -240,7 +246,8 @@ export WEB_DOMAIN=www.redunderlongwave.com
 				echo "<legend>Trade Requirements</legend>";
 				echo "<ul class='simple-list'>";
 				foreach ($required_trade_certificates as $value) { 
-					$tok = str_replace(' ', '', $value);
+					$tok = strtolower(str_replace(' ', '', $value));
+					$tok = str_replace('/', '', $tok);
 				?>
 				<li>
 					<div class='row'>
@@ -324,7 +331,8 @@ export WEB_DOMAIN=www.redunderlongwave.com
 						echo "<legend>Desirables</legend>";
 						echo "<ul class='simple-list'>";
 						foreach ($trade_desirables as $value) { 
-							$tok = str_replace(' ', '', $value);
+							$tok = strtolower(str_replace(' ', '', $value));
+							$tok = str_replace('/', '', $tok);
 						?>
 						<li>
 					        <label for="ch_<?php echo $tok; ?>_id">
