@@ -24,11 +24,6 @@ get_header(); ?>
 
         <?php echo the_content(); ?>
 
-        <?php
-          if( function_exists( 'gravity_form' ) ) {
-            gravity_form(1, true, true, false, '', false);
-          }
-        ?>
   </div>
   
   <div class="three columns">

@@ -81,8 +81,8 @@ export GMAIL_SMTP_PASSWORD=rulaba0954
 export WEB_DOMAIN=www.redunderlongwave.com
 		*/
 
-		$from = "info@everyhome-recruitment.com";
-		$subj = "Test Subject";
+		$from = "jobs@workforeveryhome.co.uk";
+		$subj = "Contract Application";
 		$message = "Thanks for registering!";
 
 		require_once ABSPATH . WPINC . '/class-phpmailer.php';
@@ -220,14 +220,14 @@ export WEB_DOMAIN=www.redunderlongwave.com
 					        </label>
 						</li>
 						<li>
-					        <label for="two_years_trade_experience">
-					          <input type="checkbox" id="ck_two_years_trade_experience" name="two_years_trade_experience" style="display: none;">
+					        <label for="ch_two_years_trade_experience">
+					          <input type="checkbox" id="ch_two_years_trade_experience" name="two_years_trade_experience" style="display: none;">
 					          <span class="custom checkbox"></span> Two years trade experience
 					        </label>
 						</li>
 						<li>
-					        <label for="crb_checked">
-					          <input type="checkbox" id="ck_crb_checked" name="crb_checked" style="display: none;">
+					        <label for="ch_crb_checked">
+					          <input type="checkbox" id="ch_crb_checked" name="crb_checked" style="display: none;">
 					          <span class="custom checkbox"></span> CRB checked
 					        </label>
 						</li>

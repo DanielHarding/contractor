@@ -534,7 +534,7 @@ background-color:#ddd;
 color: #fff;
 text-align: center;
 font: 12px Arial, sans-serif;
-margin: 3px 0px 10px;
+margin: 10px 0px 10px;
 -webkit-transition: background-color 0.15s ease-in-out; -moz-transition: background-color 0.15s ease-in-out; -o-transition: background-color 0.15s ease-in-out; transition: background-color 0.15s ease-in-out; 
 }
 
@@ -1008,8 +1008,8 @@ span.ico-trade-appliance-engineer {
 }
 
 span.ico-glazing-and-boarding,
-span.ico-trade-glazer-and-boarder {
-  background: transparent url(/wp-content/themes/contractor/images/service-icons.png) left center no-repeat;
+span.ico-trade-glazier-and-boarder {
+  background: transparent url(/wp-content/themes/contractor/images/service-icons.png) left 0px no-repeat;
 }
 
 span.ico-roofing,
@@ -1062,8 +1062,8 @@ li:hover span.ico-trade-appliance-engineer {
 }
 
 li:hover span.ico-glazing-and-boarding,
-li:hover span.ico-trade-glazer-and-boarder {
-  background: transparent url(/wp-content/themes/contractor/images/service-icons-over.png) left center no-repeat;
+li:hover span.ico-trade-glazier-and-boarder {
+  background: transparent url(/wp-content/themes/contractor/images/service-icons-over.png) left 0 no-repeat;
 }
 
 li:hover span.ico-roofing:hover,

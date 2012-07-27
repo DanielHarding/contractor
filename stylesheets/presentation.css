@@ -57,7 +57,7 @@ label {
 
 .top-bar .attached > .name > span > a.toggle-nav { right: -45px !important; }
 
-@media only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .top-bar .attached > .name span > a.toggle-nav { background-image: url("../images/plus-toggle-2-retina.png?1340846519"); background-size: 100% 100%; } }
+/*@media only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .top-bar .attached > .name span > a.toggle-nav { background-image: url("../images/plus-toggle-2-retina.png?1340846519"); background-size: 100% 100%; } }
 @media only screen and (max-width: 1024px) and (min-width: 768px) { .top-bar { height: 45px !important; }
   .top-bar .attached { height: auto; }
   .top-bar .attached > ul.right { overflow: visible !important; height: 45px !important; }
@@ -86,13 +86,13 @@ label {
 
 #megaDrop .show-on-phones, #megaDrop .sitemap-link { display: none !important; }
 
-@media handheld, only screen and (max-width: 767px) { header { /* border-bottom: 1px solid #ddd; */ position: relative; }
+@media handheld, only screen and (max-width: 767px) { header { /* border-bottom: 1px solid #ddd; *!/ position: relative; }
   header .subheader { margin-bottom: 0; }
   header .menu-action { float: left; position: relative; top: 1px; margin-top: -12px; }
   header .menu-action .button.small { padding: 8px; }
   header .menu-action .button.small svg { opacity: 0.5; }
   header h1 { font-size: 27px; font-size: 2.7rem; margin-bottom: 18px; }
-  header h4 { font-size: 17px; font-size: 1.7rem; } }
+  header h4 { font-size: 17px; font-size: 1.7rem; } }*/
 /* Off Canvas */
 body.off-canvas { padding: 0; margin: 0; }
 

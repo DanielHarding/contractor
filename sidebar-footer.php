@@ -10,69 +10,11 @@
 
 
   <!-- Start footer -->
-  <footer class="row">
+  <!--<footer class="row">
   
 	<?php do_action( 'before_sidebar' ); ?>
 	<?php if ( ! dynamic_sidebar( 'footer' ) ) : ?>
 
-    <!--<section class="four columns">
-      <div id="blogfeed">
-
-        <?php
-
-        $toptions = get_option( 'contractor_theme_options' ); 
-
-        if($toptions) {
-
-          $str = "";
-          $feed_url = $toptions['blog_feed_url'];
-          $feed_id = md5($feed_url . date("d-m-Y"));
-          $lim = $toptions['blog_item_limit'];
-         
-          if(isset($_GET['debug'])) {
-            var_dump($feed_url);
-          }
-
-          $cached = wp_cache_get($feed_id);
-          if(empty($cached)) {
-
-            include_once(ABSPATH.WPINC.'/rss.php'); // path to include script
-            $feed = fetch_rss($feed_url); // specify feed url
-
-            if(isset($_GET['debug'])) {
-              var_dump($feed);
-            }            
-
-            $items = array_slice($feed->items, 0, $lim); // specify first and last item
-            ?>
-
-            <?php if (!empty($items)) : ?>
-            <?php foreach ($items as $item) : ?>
-
-            <?php 
-            $str .= "<h4 class='seriftext'><a href='" . $item['link'] ."'>" . $item['title'] . "</a></h4>";
-            $str .= "<p>" . $item['description'] . "</p>";
-            ?>
-
-            <?php endforeach; ?>
-            
-            <?php wp_cache_set( $feed_id, $str ); ?>
-
-            <?php endif; ?>
-
-          <?php 
-          } else {
-            echo $str = $cached;
-          } 
-
-          echo $str;
-
-        }
-
-        ?>
-
-      </div>
-    </section>-->
 
 		<div class="three columns">          
 		  <?php 
@@ -116,6 +58,6 @@
 
     <?php endif; // end sidebar widget area ?>
 
-  </footer>
+  </footer>-->
   <!-- End footer -->
 

@@ -25,7 +25,7 @@ get_header(); ?>
     
     
     
-    <div class='gf_browser_chrome gform_wrapper' id='gform_wrapper_2' ><form method='post' enctype='multipart/form-data'  id='gform_2'  action='/contact/'>
+    <!--<div class='gf_browser_chrome gform_wrapper' id='gform_wrapper_2' ><form method='post' enctype='multipart/form-data'  id='gform_2'  action='/contact/'>
                             <div class='gform_heading'>
                                 <h3 class='gform_title'>Quick Contact</h3>
                                 <span class='gform_description'>Call - 0845 319 8314</span>
@@ -44,8 +44,7 @@ get_header(); ?>
                 
             </div>
                     </form>
-                    </div><script type='text/javascript'> jQuery(document).ready(function(){jQuery(document).trigger('gform_post_render', [2, 1]) } ); </script>
-    <div style="text-align: center"><span class="st_twitter"></span><span class="st_facebook"></span><span class="st_googleplus" ></span><span class="st_email"></span><span class="st_sharethis"></span></div>
+                    </div><script type='text/javascript'> jQuery(document).ready(function(){jQuery(document).trigger('gform_post_render', [2, 1]) } ); </script>-->
     
     
     
@@ -54,7 +53,7 @@ get_header(); ?>
 
   <!-- Start advice form -->
   <div class="three columns">
-    <div class="hide-for-small show-for-medium slim-panel blue_gradient box_round">
+    <div class="hide-for-small slim-panel blue_gradient box_round">
       <form action="/" method="post" name="contact" class="custom">
         <h4 class="huge-phone blue_textshadow">Quick contact</h4>
         <fieldset class="nobord nopad">
@@ -76,7 +75,7 @@ get_header(); ?>
 
 
 <!-- Start row 2 -->
-<div class="row hide-for-small show-for-medium">
+<div class="row hide-for-small">
   
   <div class="three columns">
     <a href="/contractors/#phone">
