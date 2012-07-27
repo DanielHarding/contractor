@@ -42,8 +42,8 @@ get_header(); ?>
 
 
   <div class="three columns">
-
-      <h3>All Trades</h3>
+			<div class="panel radius">
+      <h3>Trades Jobs</h3>
       
       <ul class="simple-list ico-list">
         <?php 
@@ -79,7 +79,7 @@ get_header(); ?>
         } 
         ?>
       </ul>
-
+			</div>
   </div>
 
 </div>

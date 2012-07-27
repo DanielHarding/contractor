@@ -11,7 +11,7 @@
 
       <footer class="row">
     
-        <div class="three columns">          
+        <div class="seven columns">          
           <?php 
           $defaults = array(
             'theme_location'  => 'footer',

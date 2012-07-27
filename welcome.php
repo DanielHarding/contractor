@@ -78,19 +78,19 @@ get_header(); ?>
 <div class="row hide-for-small">
   
   <div class="three columns">
-    <a href="/contractors/#phone">
+    <a href="/contractor-jobs-yorkshire/#phone">
     <img src="<?php echo get_template_directory_uri(); ?>/images/triplet1.png" class="thumb box_shadow">
     </a>
   </div>
 
   <div class="three columns">
-    <a href="/contractors/#trades">
+    <a href="/contractor-jobs-yorkshire/#trades">
     <img src="<?php echo get_template_directory_uri(); ?>/images/triplet2.png" class="thumb box_shadow">
     </a>
   </div>
 
   <div class="three columns">
-    <a href="/contractors/#applications">
+    <a href="/contractor-jobs-yorkshire/#applications">
     <img src="<?php echo get_template_directory_uri(); ?>/images/realtime.png" class="thumb box_shadow">
     </a>
   </div>
@@ -200,10 +200,8 @@ get_header(); ?>
 
 
   <div class="three columns">
-      
-      <div class="vspace10 hide-for-small">&nbsp;</div>
-
-      <h3>All Trades</h3>
+      <div class="panel radius">
+      <h3>Trade Jobs</h3>
       
       <ul class="simple-list ico-list">
         <?php 
@@ -239,20 +237,21 @@ get_header(); ?>
         } 
         ?>
       </ul>
-
+			</div>
   </div>
 
 </div>
 
 <div class="row prefooter">
-  <div class="four columns">
-  	<img src="/wp-content/themes/contractor/images/logo-safe.png" height="" width="" alt="Every Home Recruitment" />
+  <div class="four columns whoarewe">
+	
+  	
   </div>
   <div class="four columns">
   <?php echo sfstst_onerandom(); ?>
   </div>
   <div class="four columns">
-      <a href="/wp-content/uploads/2012/07/guide.pdf"><img src="<?php echo get_template_directory_uri(); ?>/images/apply.png"></a>
+      <a href="/contractor-jobs-yorkshire/"><img src="<?php echo get_template_directory_uri(); ?>/images/apply.png"></a>
   </div>
 </div>
 <?php get_footer(); ?>

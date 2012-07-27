@@ -403,8 +403,10 @@ export WEB_DOMAIN=www.redunderlongwave.com
 							<div class='panel blue-panel'>
 								<h4>General Requirements</h4>
 								<ul class="simple-list">
-									<li><span class='tick'>&#10003;</span>UK Citizen (Required)</li>
-									<li><span class='tick'>&#10003;</span>UK Driving Licence (Required)</li>
+									<li><span class='tick'>&#10003;</span>UK Citizen</li>
+									<li><span class='tick'>&#10003;</span>UK Driving Licence</li>
+									<li><span class='tick'>&#10003;</span>Two years trade experience</li>
+									<li><span class='tick'>&#10003;</span>CRB checked</li>
 								</ul>
 							</div>
 						</li>

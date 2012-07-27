@@ -23,40 +23,8 @@ get_header(); ?>
 
 
 	<div class="four columns">
-
-      <!--<h3>All Services</h3>
-      <ul class="simple-list">
-        <?php 
-          query_posts(array('showposts' => 20, 
-                            // 'post_parent' => $post->ID, 
-                            'order'=>'ASC',
-                            'orderby'=> 'menu_order',
-                            'post_type' => 'services',
-                            'post_status' => 'publish',
-                            'posts_per_page' => 100)); 
-
-          $c=0;
-          while ($p = have_posts()) { 
-            the_post();
-
-            // Remove spaces
-            $ti = get_the_title(get_the_id());
-            // Set first item as active
-            $klass = ($c == 0) ? 'active' : '';
-          ?>
-
-          <li id="<?php echo $tok; ?>" class="<?php echo $klass; ?>">
-            <?php echo '<a href="' . get_permalink() . '">'.$ti.'</a>'; ?>
-          </li>
-
-        <?php 
-        $c++;
-        } 
-        ?>
-      </ul>-->
-
-
-      <h3>All Trades</h3>
+			<div class="panel radius">
+      <h3>Trade Jobs</h3>
       <ul class="simple-list">
         <?php 
           query_posts(array('showposts' => 20, 
@@ -86,6 +54,7 @@ get_header(); ?>
         } 
         ?>
       </ul>
+      </div>
 	</div>
 
 </div>
