@@ -21,7 +21,7 @@ get_header(); ?>
   
   <!-- Start banner -->
   <div class="nine columns">
-    <?php the_post_thumbnail(); ?>
+    <a href="/contractor-jobs-yorkshire/"><?php the_post_thumbnail(); ?></a>
     
     
     
