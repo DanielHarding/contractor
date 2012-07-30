@@ -51,7 +51,8 @@
             </ul>
         </div>
       </footer>
-    <div class="row">           
+    <div class="row">  
+    <a href="/" class="logobrand-small right">EveryHome Recruitment</a>         
       <div class="one centered">
         <div class="circle" id="top_circle">
           <h5><a href="#top" id="btn_top" class="">Top</a></h5>

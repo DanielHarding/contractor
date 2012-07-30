@@ -1095,12 +1095,26 @@ li:hover span.ico-trade-pest-controller {
   background: transparent url(/wp-content/themes/contractor/images/logo-safe.png) 0px 0px no-repeat;
 }
 
+
+.logobrand-small {
+  width: 160px;
+  height: 39px;
+  display: block;
+  text-indent: -5000px;
+  background: transparent url(/wp-content/themes/contractor/images/logo-small.png) 0px 0px no-repeat;
+  margin-top: 8px;
+}
+
 .subheader {
 color: #444;
 font-size: 150%;
 font-weight: 400;
 margin-bottom:0px;
 }
+
+ ul.dark-text li {
+  color: #222;
+ }
 
 .label {
   background-color: #47a4e2;
