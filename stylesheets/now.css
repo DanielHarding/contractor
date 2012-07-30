@@ -1112,7 +1112,7 @@ font-weight: 400;
 margin-bottom:0px;
 }
 
- ul.dark-text li {
+ ul.dark-text li, .dark-text h2, .dark-text p {
   color: #222;
  }
 
@@ -1128,6 +1128,9 @@ margin-bottom:0px;
 font-size: 100%!important;
 }
 
+.trapp_btn {
+  margin: 12px 15px 0px 0px;
+}
 
 .success a, .tertiary a {
   color: #111;

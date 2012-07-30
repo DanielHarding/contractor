@@ -238,16 +238,14 @@ if(!empty($_POST)) {
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<header class="entry-header">
+	<header class="entry-header group">
 		<?php the_post_thumbnail(); ?>
-		<h1 class="entry-title"><?php the_title(); ?></h1>
+		<h1 class="entry-title left"><?php the_title(); ?></h1>
+		<a href="#application" class="large success button right trapp_btn">Start Application Now</a>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
 	
-	<div class="row">
-		<p class="six columns centred"><a href="#application" class="large success button">Start Application Now</a></p>
-	</div>
 			
 		<?php the_content(); ?>
 
