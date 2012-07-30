@@ -10,6 +10,12 @@ $required_trade_certificates = get_post_meta($post->ID, 'wpcf-certificate');
 $trade_desirables = get_post_meta($post->ID, 'wpcf-desirable'); 
 if(!empty($_POST)) {
 
+	/*
+	print("<pre>");
+	var_dump($_POST);
+	print("</pre>");
+	*/
+
 	$email_sent = false;
 	$req = array('first_name', 'last_name', 'email', 'telephone');
 	$global_required = array('uk_citizen', 'uk_driving_licence', 'crb_checked', 'two_years_trade_experience');
@@ -58,15 +64,26 @@ if(!empty($_POST)) {
 	if(count(array_merge($required_trade_certificates)) > 0 
 		&& isset($required_trade_certificates[0]) 
 			&& trim($required_trade_certificates[0]) !=='') {
-		// var_dump($_POST);
-		foreach($required_trade_certificates as $key => $val) {
-			if(!is_array($val)) { $key = $val; }
-			if(!isset($_POST[$key]) || empty($_POST[$key])) {
-
-				$serrs = true;
-				$smess = "Sorry - you don't meet the trade specific requirements - " . $key;
-				break;
+		foreach($required_trade_certificates as $key) {
+			$tok = strtolower(str_replace(' ', '_', $key));
+			$tok = str_replace('/', '', $tok);
+						
+			// if(!is_array($val)) { $key = $val; }
+			if(!isset($_POST[$tok]) || empty($_POST[$tok]) || empty($_POST[$tok]['id']) || empty($_POST[$tok]['exp'])) {
+				// Todo - check date on expiry.
+				$exp = strtotime($_POST[$tok]['exp']);
+				var_dump($exp, time());
+				if(!empty($_POST[$tok]['exp']) && $exp < time()) {
+					$serrs = true;
+					$smess = "Sorry - " . $key . " has expired";
+					break;					
+				} else {
+					$serrs = true;
+					$smess = "Sorry - you don't meet the trade specific requirements - " . $key;
+					break;
+				}
 			}
+			
 		}
 
 	}
@@ -88,8 +105,98 @@ if(!empty($_POST)) {
 		*/
 
 		$from = "contact@workforeveryhome.co.uk";
-		$subj = "Contract Application";
+		$subj = "Every Home Contractor Application";
+		
 		$message = "Thanks for registering!";
+
+		$fullname = $_POST['first_name'] . ' ' . $_POST['last_name'];
+
+		$m = "";
+
+		$m .= "Dear " . $_POST['first_name'] . ",\n\n";
+		$m .= "Thanks for registering your interest with Every Home.\n";
+		$m .= "Below are the details of your application:\n\n\n";
+		
+		$m .= "[Contact Details]\n";
+		$m .= "Role: " . get_the_title() . "\n";
+		$m .= "Name: " . $fullname . "\n";
+		$m .= "Email: " . $_POST['email'] . "\n";
+		$m .= "Telephone: " . $_POST['telephone'] . "\n";
+		$m .= "Website: " . $_POST['website'] . "\n";
+		$m .= "\n\n";
+		
+
+		if(count(array_merge($global_required)) > 0 
+			&& isset($global_required[0]) 
+				&& trim($global_required[0]) !=='') {
+
+			$m .= "[General Requirements]\n";
+
+			foreach($global_required as $key => $val) {
+				if(!is_array($val)) { $key = $val; }
+				$ukey = ucwords(str_replace('_', ' ', $key));
+				$key = strtolower($key);
+				if(isset($_POST[$key]) && !empty($_POST[$key])) {
+					$m .= $ukey . ": YES\n";
+				}
+			}
+			$m .= "\n\n";
+
+		}
+
+		if(count(array_merge($required_trade_certificates)) > 0 
+			&& isset($required_trade_certificates[0]) 
+				&& trim($required_trade_certificates[0]) !=='') {
+			$m .= "[Trade Requirements]\n";
+			foreach($required_trade_certificates as $key) {
+				$tok = strtolower(str_replace(' ', '_', $key));
+				$tok = str_replace('/', '', $tok);
+							
+				// if(!is_array($val)) { $key = $val; }
+				if(!isset($_POST[$tok]) || empty($_POST[$tok]) || empty($_POST[$tok]['id']) || empty($_POST[$tok]['exp'])) {
+					$m .= $key . " - ID: " . $_POST[$tok]['id'] . ", Expires: " . $_POST[$tok]['exp'] . "\n";
+				}
+			}
+			$m .= "\n\n";
+		}
+		
+
+		if(isset($_POST['trades']) && !empty($_POST['trades'])) {
+			$m .= "[Additional Trades]\n";
+			foreach($_POST['trades'] as $tra) {
+				$m .= $tra . "\n";
+			}
+			$m .= "\n\n";
+		}
+
+
+		if(isset($_POST['desirable']) && !empty($_POST['desirable'])) {
+			$m .= "[Additional]\n";
+			foreach($_POST['desirable'] as $des) {
+				$m .= $des . "\n";
+			}
+			$m .= "\n\n";
+		}
+
+		$m .= "\n\n[Introduction]\n";
+		$m .= $_POST['message'] . "\n";
+
+
+		$m .= "\n\n[Reply By]\n";
+		$t = "Email";
+		if(isset($_POST['radio1']) && !empty($_POST['radio1'])) {
+			$t = 'Post';
+		}
+		$m .= $t . "\n";
+
+		
+		$m .= "\n\nWe'll contact you about your application as soon as we can.\n";
+
+		$m .= "\n\n\n\nKind regards,\n";
+		$m .= "The Every Home Team\n\n\n";
+
+
+		$m .= "Legal and Disclaimer - Every Home LTD\n";
 
 		require_once ABSPATH . WPINC . '/class-phpmailer.php';
 		require_once ABSPATH . WPINC . '/class-smtp.php';
@@ -106,12 +213,15 @@ if(!empty($_POST)) {
 		$phpmailer->Body       = $message;                      //HTML Body
 		$phpmailer->AltBody    = "To view the message, please use an HTML compatible email viewer!"; // optional, comment out and test
 		$phpmailer->WordWrap   = 50; // set word wrap
-		$phpmailer->MsgHTML($message);
+		
+		$phpmailer->MsgHTML($m);
 		
 		// $phpmailer->AddAddress('support@wordpressapi.com/files/', 'Wordpress support');
 		// $phpmailer->AddAttachment("images/phpmailer.gif");             // attachment
 		
 		$phpmailer->AddAddress($_POST['email'], $_POST['first_name'] . ' ' . $_POST['last_name']);
+
+		// var_dump($m);
 
 		if(!$phpmailer->Send()) {
 			$errs = true;
@@ -263,14 +373,17 @@ if(!empty($_POST)) {
 					&& trim($required_trade_certificates[0]) !=='') {
 
 
+
 				echo "<fieldset>";
 				echo "<legend>Trade Requirements</legend>";
 				echo "<ul class='simple-list'>";
 				foreach ($required_trade_certificates as $value) { 
-					$tok = strtolower(str_replace(' ', '', $value));
+					$tok = strtolower(str_replace(' ', '_', $value));
 					$tok = str_replace('/', '', $tok);
+					
 					$psted_id = (isset($_POST[$tok]['id'])) ? $_POST[$tok]['id'] : '';
 					$psted_exp = (isset($_POST[$tok]['exp'])) ? $_POST[$tok]['exp'] : '';
+					
 					$has_error_id = (isset($_POST) && empty($_POST[$tok]['id'])) ? true : false;
 					$has_error_exp = (isset($_POST) && empty($_POST[$tok]['exp'])) ? true : false;
 				?>
@@ -299,47 +412,47 @@ if(!empty($_POST)) {
 				<legend>Which other trades do you cover?</legend>
 					<div class='row'>
 						<label for="checkbox1">
-						  <input type="checkbox" id="checkbox1" value="1" name="trades[appliance_engineer]" style="display: none;"<?php echo (isset($_POST['trades']['appliance_engineer']) && !empty($_POST['trades']['appliance_engineer'])) ? ' checked' : ''; ?>>
+						  <input type="checkbox" id="checkbox1" value="Appliance Engineer" name="trades[]" style="display: none;"<?php echo (isset($_POST['trades']['appliance_engineer']) && !empty($_POST['trades']['appliance_engineer'])) ? ' checked' : ''; ?>>
 						  <span class="custom checkbox"></span> Appliance Engineer
 						</label>
 						
 						<label for="checkbox2">
-						  <input type="checkbox" id="checkbox2" value="1" name="trades[drainage_engineer]" style="display: none;"<?php echo (isset($_POST['trades']['drainage_engineer']) && !empty($_POST['trades']['drainage_engineer'])) ? ' checked' : ''; ?>>
+						  <input type="checkbox" id="checkbox2" value="Drainage Engineer" name="trades[]" style="display: none;"<?php echo (isset($_POST['trades']['drainage_engineer']) && !empty($_POST['trades']['drainage_engineer'])) ? ' checked' : ''; ?>>
 						  <span class="custom checkbox"></span> Drainage Engineer
 						</label>
 						
 						<label for="checkbox3">
-						  <input type="checkbox" id="checkbox3" value="1" name="trades[electrician]" style="display: none;"<?php echo (isset($_POST['trades']['electrician']) && !empty($_POST['trades']['electrician'])) ? ' checked' : ''; ?>>
+						  <input type="checkbox" id="checkbox3" value="Electrician" name="trades[]" style="display: none;"<?php echo (isset($_POST['trades']['electrician']) && !empty($_POST['trades']['electrician'])) ? ' checked' : ''; ?>>
 						  <span class="custom checkbox"></span> Electrician
 						</label>
 						
 						<label for="checkbox4">
-						  <input type="checkbox" id="checkbox4" value="1" name="trades[gas_engineer]" style="display: none;"<?php echo (isset($_POST['trades']['gas_engineer']) && !empty($_POST['trades']['gas_engineer'])) ? ' checked' : ''; ?>>
+						  <input type="checkbox" id="checkbox4" value="Gas Engineer" name="trades[]" style="display: none;"<?php echo (isset($_POST['trades']['gas_engineer']) && !empty($_POST['trades']['gas_engineer'])) ? ' checked' : ''; ?>>
 						  <span class="custom checkbox"></span> Gas Engineer
 						</label>
 						
 						<label for="checkbox5">
-						  <input type="checkbox" id="checkbox5" value="1" name="trades[glazer_and_boarder]" style="display: none;"<?php echo (isset($_POST['trades']['glazer_and_boarder']) && !empty($_POST['trades']['glazer_and_boarder'])) ? ' checked' : ''; ?>>
+						  <input type="checkbox" id="checkbox5" value="Glazer And Boarder" name="trades[]" style="display: none;"<?php echo (isset($_POST['trades']['glazer_and_boarder']) && !empty($_POST['trades']['glazer_and_boarder'])) ? ' checked' : ''; ?>>
 						  <span class="custom checkbox"></span> Glazer And Boarder
 						</label>
 						
 						<label for="checkbox6">
-						  <input type="checkbox" id="checkbox6" value="1" name="trades[locksmith]" style="display: none;"<?php echo (isset($_POST['trades']['locksmith']) && !empty($_POST['trades']['locksmith'])) ? ' checked' : ''; ?>>
+						  <input type="checkbox" id="checkbox6" value="Locksmith" name="trades[]" style="display: none;"<?php echo (isset($_POST['trades']['locksmith']) && !empty($_POST['trades']['locksmith'])) ? ' checked' : ''; ?>>
 						  <span class="custom checkbox"></span> Locksmith
 						</label>
 						
 						<label for="checkbox7">
-						  <input type="checkbox" id="checkbox7" value="1" name="trades[pest_controller]" style="display: none;"<?php echo (isset($_POST['trades']['pest_controller']) && !empty($_POST['trades']['pest_controller'])) ? ' checked' : ''; ?>>
+						  <input type="checkbox" id="checkbox7" value="Pest Controller" name="trades[]" style="display: none;"<?php echo (isset($_POST['trades']['pest_controller']) && !empty($_POST['trades']['pest_controller'])) ? ' checked' : ''; ?>>
 						  <span class="custom checkbox"></span> Pest Controller
 						</label>
 						
 						<label for="checkbox8">
-						  <input type="checkbox" id="checkbox8" value="1" name="trades[plumber]" style="display: none;"<?php echo (isset($_POST['trades']['plumber']) && !empty($_POST['trades']['plumber'])) ? ' checked' : ''; ?>>
+						  <input type="checkbox" id="checkbox8" value="Plumber" name="trades[]" style="display: none;"<?php echo (isset($_POST['trades']['plumber']) && !empty($_POST['trades']['plumber'])) ? ' checked' : ''; ?>>
 						  <span class="custom checkbox"></span> Plumber
 						</label>
 						
 						<label for="checkbox9">
-						  <input type="checkbox" id="checkbox9" value="1" name="trades[roofer]" style="display: none;"<?php echo (isset($_POST['trades']['roofer']) && !empty($_POST['trades']['roofer'])) ? ' checked' : ''; ?>>
+						  <input type="checkbox" id="checkbox9" value="Roofer" name="trades[]" style="display: none;"<?php echo (isset($_POST['trades']['roofer']) && !empty($_POST['trades']['roofer'])) ? ' checked' : ''; ?>>
 						  <span class="custom checkbox"></span> Roofer
 						</label>
 					</div>
@@ -362,7 +475,7 @@ if(!empty($_POST)) {
 						?>
 						<li>
 					        <label for="ch_<?php echo $tok; ?>_id">
-					          <input type="checkbox" id="ch_<?php echo $tok; ?>_id" name="desirable[<?php echo $tok; ?>]" style="display: none;" value="1" <?php echo $checked; ?>>
+					          <input type="checkbox" id="ch_<?php echo $tok; ?>_id" name="desirable[]" style="display: none;" value="<?php echo $value; ?>" <?php echo $checked; ?>>
 					          <span class="custom checkbox"></span> <?php echo $value; ?>
 					        </label>
 						</li>
