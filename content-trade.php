@@ -221,7 +221,7 @@ if(!empty($_POST)) {
 		
 		$phpmailer->AddAddress($_POST['email'], $_POST['first_name'] . ' ' . $_POST['last_name']);
 
-		var_dump($m);
+		// var_dump($m);
 
 		if(!$phpmailer->Send()) {
 			$errs = true;
