@@ -111,11 +111,11 @@ if(!empty($_POST)) {
 
 		$fullname = $_POST['first_name'] . ' ' . $_POST['last_name'];
 
-		$m = "";
+		$m = "Every Home Contractor Application:\n\n\n";
 
-		$m .= "Dear " . $_POST['first_name'] . ",\n\n";
-		$m .= "Thanks for registering your interest with Every Home.\n";
-		$m .= "Below are the details of your application:\n\n\n";
+		// $m .= "Dear " . $_POST['first_name'] . ",\n\n";
+		// $m .= "Thanks for registering your interest with Every Home.\n";
+		// $m .= "Below are the details of your application:\n\n\n";
 		
 		$m .= "[Contact Details]\n";
 		$m .= "Role: " . get_the_title() . "\n";
@@ -190,10 +190,10 @@ if(!empty($_POST)) {
 		$m .= $t . "\n";
 
 		
-		$m .= "\n\nWe'll contact you about your application as soon as we can.\n";
+		// $m .= "\n\nWe'll contact you about your application as soon as we can.\n";
 
 		$m .= "\n\n\n\nKind regards,\n";
-		$m .= "The Every Home Team\n\n\n";
+		$m .= "Every Home\n\n\n";
 
 
 		$m .= "Legal and Disclaimer - Every Home LTD\n";
@@ -221,7 +221,7 @@ if(!empty($_POST)) {
 		
 		$phpmailer->AddAddress($_POST['email'], $_POST['first_name'] . ' ' . $_POST['last_name']);
 
-		// var_dump($m);
+		var_dump($m);
 
 		if(!$phpmailer->Send()) {
 			$errs = true;
