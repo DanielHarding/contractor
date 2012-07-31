@@ -1232,12 +1232,12 @@ article h1, article h2, h3 {
 }
 
 .page-id-2 .callout {
-	min-height: 530px;
+	min-height: 430px;
 }
 
-/*.page-id-38 .callout {
-	min-height: 450px;
-}*/
+.page-id-38 .callout {
+	min-height: 430px;
+}
 
 .nopad {
 	padding: 0;

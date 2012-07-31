@@ -10,8 +10,29 @@
 ?>
 
       <footer class="row">
-    
-        <div class="seven columns">          
+           <div class="three columns">
+            <h5>Contact EveryHome</h5>
+            <ul class="simple-list">
+              <li><a href="/contact">Contact Us Web Form</a></li>
+              <li><strong>Email:</strong> <a href="mailto:jobs@workforeveryhome.co.uk">jobs@workforeveryhome.co.uk</a></li>
+              <li><strong>Phone:</strong> 0845 319 8314</li>
+              <li>Registered UK and Wales.</li>
+              <li>&copy 2012 Everyhome LTD</li>
+              <li></li>
+            </ul>
+        </div>
+
+        <div class="seven columns">
+            <h5>Head Office&nbsp;</h5>
+            <ul class="simple-list">
+              <li><strong>The Tannery</strong></li>
+              <li>91 Kirkstall Road</li>
+              <li>Leeds LS3 1HE</li>
+              <li>United Kingdom</li>
+              <li><strong><a href="/contact/">Map and Directions</a></strong></li>
+            </ul>
+        </div>
+        <div class="two columns">          
           <?php 
           $defaults = array(
             'theme_location'  => 'footer',
@@ -26,29 +47,6 @@
           wp_nav_menu( $defaults ); 
           
           ?>
-        </div>
-
-        <div class="three columns">
-            <h5>Contact EveryHome</h5>
-            <ul class="simple-list">
-              <li><a href="/contact">Contact Us Web Form</a></li>
-              <li><strong>Email:</strong> <a href="mailto:jobs@workforeveryhome.co.uk">jobs@workforeveryhome.co.uk</a></li>
-              <li><strong>Phone:</strong> 0845 319 8314</li>
-              <li>Registered UK and Wales.</li>
-              <li>&copy 2012 Everyhome LTD</li>
-              <li></li>
-            </ul>
-        </div>
-
-        <div class="two columns">
-            <h5>Head Office&nbsp;</h5>
-            <ul class="simple-list">
-              <li><strong>The Tannery</strong></li>
-              <li>91 Kirkstall Road</li>
-              <li>Leeds LS3 1HE</li>
-              <li>United Kingdom</li>
-              <li><strong><a href="/contact/">Map and Directions</a></strong></li>
-            </ul>
         </div>
       </footer>
     <div class="row">  
