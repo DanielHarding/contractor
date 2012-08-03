@@ -79,19 +79,19 @@ get_header(); ?>
   
   <div class="three columns">
     <a href="/contractor-jobs-yorkshire/#phone">
-    <img src="<?php echo get_template_directory_uri(); ?>/images/triplet1.png" class="thumb box_shadow">
+    <img src="<?php echo get_template_directory_uri(); ?>/images/triplet1.png" class="thumb">
     </a>
   </div>
 
   <div class="three columns">
     <a href="/contractor-jobs-yorkshire/#trades">
-    <img src="<?php echo get_template_directory_uri(); ?>/images/triplet2.png" class="thumb box_shadow">
+    <img src="<?php echo get_template_directory_uri(); ?>/images/triplet2.png" class="thumb">
     </a>
   </div>
 
   <div class="three columns">
     <a href="/contractor-jobs-yorkshire/#applications">
-    <img src="<?php echo get_template_directory_uri(); ?>/images/realtime.png" class="thumb box_shadow">
+    <img src="<?php echo get_template_directory_uri(); ?>/images/realtime.png" class="thumb">
     </a>
   </div>
 

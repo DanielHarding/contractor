@@ -55,7 +55,11 @@ cursor: pointer;
 footer {
   display:block;
   overflow:hidden;
-  padding:20px 10px 10px;
+  padding:20px 10px 10px; 	
+  margin: 0 0 10px 0;
+  border-top: 1px solid #999;
+  border-bottom: 1px solid #333;
+  text-shadow: 1px 1px 0 #959595;
   
     background-color: #7D7D7D;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#7D7D7D), to(#6B6B6B));
@@ -302,7 +306,7 @@ list-style:none; /* Gets rid of bullets in the list */
 float:left;
 width:100%;
 padding: 0 5px; /* Top and bottom padding of 0. Left and right of 5px */
-height: 26px;
+padding: 3px 0;
 border: solid 1px 111;
 box-shadow: 0 1px 1px 2px #ccc;
 
@@ -425,16 +429,6 @@ ul.media-grid li {
 
 .primary-media p {
   margin-right: 2%;
-}
-
-
-footer { 
-	padding-bottom: 10px;
-	background-color: #F3F3F3;
-	margin: 0 0 10px 0;
-  border-top: 1px solid #999;
-  border-bottom: 1px solid #333;
-  text-shadow: 1px 1px 0 #959595;
 }
 
 footer .row { 
@@ -1057,7 +1051,8 @@ li:hover span.ico-boiler-and-heating {
 }
 
 li:hover span.ico-blocked-drains,
-li:hover span.ico-trade-drainage-engineer {
+li:hover span.ico-trade-drainage-engineer,
+li:hover span.ico-trade-drainage-technician  {
   background: transparent url(/wp-content/themes/contractor/images/service-icons-over.png) -177px 0px no-repeat;
 }
 
@@ -1192,7 +1187,6 @@ footer h4 {
 }
 
 footer #menu-id {
-	border-top: 1px solid #333;
 	padding: 5px ;
 	border-color: #737373;
 }
