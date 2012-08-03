@@ -135,10 +135,12 @@ border-color: #777;
 }
 
 blockquote.huge-text {
-  padding-top: 30px;
-  line-height:1.2;
+
+  padding: 10px 0 20px;
+  line-height: 1.2;
   font-size: 160%;
-  color: #222;
+  color: #d5d5d5;
+	text-shadow: 1px 1px #2c2c2c;
   margin: 0;
 }
 
@@ -148,10 +150,16 @@ blockquote.huge-text p {
 
 blockquote cite {
   margin-top: 6px;
-  color: #555;
+  color: #f8f8f8;
   display: block;
   float: right;
   margin-right: 20px;
+  text-shadow: 1px 1px #2c2c2c;
+}
+
+blockquote cite a {
+  color: #b5b4b4;
+  text-shadow: 1px 1px #2c2c2c;
 }
 
 img.left {
@@ -426,6 +434,7 @@ footer {
 	margin: 0 0 10px 0;
   border-top: 1px solid #999;
   border-bottom: 1px solid #333;
+  text-shadow: 1px 1px 0 #959595;
 }
 
 footer .row { 
@@ -884,7 +893,7 @@ p.mid {
 .tick, .awesome  {
   display:block;
   float: left;
-  margin-right: 8px;
+  margin-right: 10px;
   width: 16px;
   height: 16px;
    /*
@@ -895,6 +904,14 @@ p.mid {
    line-height: 1;
    text-indent: 3px;
    padding-top: 2px;
+}
+
+.ticklist {
+	margin: 0 0 0 22px;
+}
+
+.ticklist .tick {
+	margin-left: -27px;
 }
 
 form:last-child fieldset {
@@ -1032,9 +1049,6 @@ span.ico-pest-control,
 span.ico-trade-pest-controller {
   background: transparent url(/wp-content/themes/contractor/images/service-icons.png) -65px 0px no-repeat;
 }
-
-
-
 
 
 li:hover span.ico-trade-gas-engineer,
@@ -1177,6 +1191,18 @@ footer h4 {
   text-shadow: 0 1px #999;
 }
 
+footer #menu-id {
+	border-top: 1px solid #333;
+	padding: 5px ;
+	border-color: #737373;
+}
+
+footer #menu-id li {
+	float: left;
+	display: block;
+	margin: 0 10px 0 0;
+}
+
 img.thumb {
   padding: 8px;
 }
@@ -1248,7 +1274,19 @@ article h1, article h2, h3 {
 }
 
 
+.center {
+	margin: 0 auto;
+	display: block;
+}
 
+.alert-box p {
+	margin: 0;
+}
+
+.single-trade h3{
+	color: #277A9C;
+	font-weight: normal;
+}
 
 /*
 

@@ -241,7 +241,6 @@ if(!empty($_POST)) {
 	<header class="entry-header group">
 		<?php the_post_thumbnail(); ?>
 		<h1 class="entry-title left"><?php the_title(); ?></h1>
-		<a href="#application" class="large success button right trapp_btn">Start Application Now</a>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
@@ -249,6 +248,7 @@ if(!empty($_POST)) {
 			
 		<?php the_content(); ?>
 
+		<a href="#application" class="large success button center trapp_btn" style="width: 250px;">Start Application Now</a>
 
 		<div class="row"><hr></div>
 		
@@ -271,12 +271,12 @@ if(!empty($_POST)) {
 			}
 
 			if(!empty($email_sent)) {
-				echo "<div class='alert-box success'><p class=''>Message sent</p></div>";
+				echo "<div class='alert-box success'><p class=''>Application request sent</p></div>";
 			}
 			?>
 			
 			<div class="row">
-			<form action="#application" method="post" name="apply" id="frm_apply" class="custom eight columns">
+			<form action="#application" method="post" name="apply" id="frm_apply" class="custom twelve columns">
 					
 
 				<fieldset>
@@ -349,7 +349,7 @@ if(!empty($_POST)) {
 					        <?php $has_error = (isset($_POST) && empty($_POST['two_years_trade_experience'])) ? true : false; ?>
 					        <label for="ch_two_years_trade_experience" class='<?php echo ($has_error) ? 'error' : ''; ?>'>
 					          <input type="checkbox" class='<?php echo ($has_error) ? 'error' : ''; ?>' value="1" id="ch_two_years_trade_experience" name="two_years_trade_experience" style="display: none;" <?php echo $checked; ?>>
-					          <span class="custom checkbox"></span> Two years trade experience <span class="required">*</span>
+					          <span class="custom checkbox"></span> Two years' trade experience <span class="required">*</span>
 					        </label>
 						</li>
 						<li>
@@ -430,7 +430,7 @@ if(!empty($_POST)) {
 						</label>
 						
 						<label for="checkbox5">
-						  <input type="checkbox" id="checkbox5" value="Glazer And Boarder" name="trades[]" style="display: none;"<?php echo (isset($_POST['trades']['glazer_and_boarder']) && !empty($_POST['trades']['glazer_and_boarder'])) ? ' checked' : ''; ?>>
+						  <input type="checkbox" id="checkbox5" value="Glazier And Boarder" name="trades[]" style="display: none;"<?php echo (isset($_POST['trades']['glazer_and_boarder']) && !empty($_POST['trades']['glazer_and_boarder'])) ? ' checked' : ''; ?>>
 						  <span class="custom checkbox"></span> Glazer And Boarder
 						</label>
 						
@@ -532,70 +532,6 @@ if(!empty($_POST)) {
 					</div>
 				</div>
 			</form>
-			
-			
-			<div class="four columns requirements">
-			<h3>Requirements and Desirables</h3>
-					<ul class="block-grid up-up">
-						<li>
-							<div class='panel blue-panel'>
-								<h4>General Requirements</h4>
-								<ul class="simple-list">
-									<li><span class='tick'>&#10003;</span>UK Citizen</li>
-									<li><span class='tick'>&#10003;</span>UK Driving Licence</li>
-									<li><span class='tick'>&#10003;</span>Two years trade experience</li>
-									<li><span class='tick'>&#10003;</span>CRB checked</li>
-								</ul>
-							</div>
-						</li>
-			
-						<?php 
-						if(!empty($required_trade_certificates)) {
-							
-							if(count(array_merge($required_trade_certificates)) > 0 
-								&& isset($required_trade_certificates[0]) 
-									&& trim($required_trade_certificates[0]) !=='') {
-			
-			
-								echo "<li><div class='panel blue-panel'>";
-								echo "<h4>Trade Requirements</h4>";
-								echo "<ul class='simple-list'>";
-			
-								foreach ($required_trade_certificates as $value) {
-									if(empty($value)) { continue; }
-									echo "<li><span class='tick'>&#10003;</span>$value (Required)</li>";	
-								}	
-								echo "</ul>";
-								echo "</div></li>";
-			
-							}
-						}
-						?> 
-					</ul>
-			
-					<?php
-					if(count(array_merge($trade_desirables)) > 0 
-						&& isset($trade_desirables[0]) 
-							&& trim($trade_desirables[0]) !=='') {
-					?>
-					<div class='panel green-panel'>
-						<h4>Desirables</h4>
-						<ul class="simple-list">
-							<?php
-							foreach ($trade_desirables as $value) {
-								if(empty($value)) { continue; }
-								echo "<li><span class='awesome'>&#10003;</span>$value</li>";	
-							}	
-							?>
-						</ul>
-					</div>
-					<?php
-						}
-					?>
-			
-			
-			
-			</div>
 			</div>
 			
 			

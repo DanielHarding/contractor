@@ -10,6 +10,14 @@
 ?>
 
       <footer class="row">
+      
+      <div class="five columns">
+      <?php echo sfstst_onerandom(); ?>
+      </div>
+      <div class="one columns">
+      &nbsp;
+      </div>
+      
            <div class="three columns">
             <h5>Contact EveryHome</h5>
             <ul class="simple-list">
@@ -22,7 +30,7 @@
             </ul>
         </div>
 
-        <div class="seven columns">
+        <div class="three columns">
             <h5>Head Office&nbsp;</h5>
             <ul class="simple-list">
               <li><strong>The Tannery</strong></li>
@@ -32,7 +40,7 @@
               <li><strong><a href="/contact/">Map and Directions</a></strong></li>
             </ul>
         </div>
-        <div class="two columns">          
+        <div class="twelve columns">          
           <?php 
           $defaults = array(
             'theme_location'  => 'footer',

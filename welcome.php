@@ -241,17 +241,4 @@ get_header(); ?>
   </div>
 
 </div>
-
-<div class="row prefooter">
-  <div class="four columns whoarewe">
-	
-  	
-  </div>
-  <div class="four columns">
-  <?php echo sfstst_onerandom(); ?>
-  </div>
-  <div class="four columns">
-      <a href="/contractor-jobs-yorkshire/"><img src="<?php echo get_template_directory_uri(); ?>/images/apply.png"></a>
-  </div>
-</div>
 <?php get_footer(); ?>
