@@ -96,7 +96,7 @@ if(!empty($_POST)) {
 		$from = "contact@workforeveryhome.co.uk";
 		$subj = "Every Home Contractor Application";
 		
-		$message = "Thanks for registering!";
+		$message = "Thanks for registering!\n\n";
 
 		$fullname = $_POST['first_name'] . ' ' . $_POST['last_name'];
 
@@ -129,7 +129,7 @@ if(!empty($_POST)) {
 					$m .= $ukey . ": YES\n";
 				}
 			}
-			$m .= "\n\n";
+			$m .= "\n\n\n";
 
 		}
 
