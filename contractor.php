@@ -100,8 +100,9 @@ get_header(); ?>
         ?>
       </ul>
 			</div>
-
+			<a href="/" class="logobrand-small right">Every Home Recruitment</a>
   </div>
+	
 
 </div>
 

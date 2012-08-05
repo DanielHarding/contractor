@@ -248,7 +248,7 @@ if(!empty($_POST)) {
 			
 		<?php the_content(); ?>
 
-		<a href="#application" class="large success button center trapp_btn" style="width: 250px;">Start Application Now</a>
+		
 
 		<div class="row"><hr></div>
 		
@@ -431,7 +431,7 @@ if(!empty($_POST)) {
 						
 						<label for="checkbox5">
 						  <input type="checkbox" id="checkbox5" value="Glazier And Boarder" name="trades[]" style="display: none;"<?php echo (isset($_POST['trades']['glazer_and_boarder']) && !empty($_POST['trades']['glazer_and_boarder'])) ? ' checked' : ''; ?>>
-						  <span class="custom checkbox"></span> Glazer And Boarder
+						  <span class="custom checkbox"></span> Glazier And Boarder
 						</label>
 						
 						<label for="checkbox6">

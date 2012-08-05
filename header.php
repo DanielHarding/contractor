@@ -75,7 +75,7 @@
       <div class="row">
         
         <div class="four columns">
-          <a href="/" class="logobrand">EveryHome Recruitment</a>
+          <a href="/" class="logobrand">Work For Every Home Recruitment</a>
         </div>
         
         <div class="eight columns slimhead">
@@ -98,7 +98,7 @@
 	
 	          <div class="hairlinev">&nbsp;</div>
 	
-	          <span class="right subheader"><span class="label tertiary">Call - 0845 319 8314</span></span>
+	          <span class="right subheader"><span class="label tertiary">Call 0845 319 8314 <small>8am - 6pm</small></span></span>
         </div>
       </div>
     

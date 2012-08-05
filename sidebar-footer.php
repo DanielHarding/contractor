@@ -34,13 +34,13 @@
 		</div>
 
 		<div class="three columns">
-		    <h5>Contact EveryHome</h5>
+		    <h5>Contact Every Home</h5>
 		    <ul class="simple-list">
 		      <li><a href="/contact">Contact Us Web Form</a></li>
 		      <li><strong>Email:</strong> <a href="mailto:jobs@workforeveryhome.co.uk">jobs@workforeveryhome.co.uk</a></li>
 		      <li><strong>Phone:</strong> 0845 319 8314</li>
 		      <li>Registered UK and Wales.</li>
-		      <li>&copy 2012 Everyhome LTD</li>
+		      <li>&copy 2012 Every Home LTD</li>
 		      <li></li>
 		    </ul>
 		</div>

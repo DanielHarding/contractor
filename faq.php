@@ -51,7 +51,7 @@ get_header(); ?>
     </div>
   </div>
   <!-- End advice form -->
-
+<a href="/" class="logobrand-small right">Every Home Recruitment</a>
 </div>
 
 <div class="row">

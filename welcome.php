@@ -75,7 +75,7 @@ get_header(); ?>
 
 
 <!-- Start row 2 -->
-<div class="row hide-for-small">
+<div class="row">
   
   <div class="three columns">
     <a href="/contractor-jobs-yorkshire/#phone">
@@ -238,6 +238,8 @@ get_header(); ?>
         ?>
       </ul>
 			</div>
+			
+			
   </div>
 
 </div>

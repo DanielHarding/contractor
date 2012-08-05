@@ -29,15 +29,15 @@ get_header(); ?>
     <div class="panel radius callout ">
         <p>
             <strong>Head Office</strong><br>
-            Every Home<br>
+            Every Home LTD<br>
             The Tannery<br>
             91 Kirkstall Road<br> 
-            Leeds LS3 1HE<br>
+            Leeds LS3 1HS<br>
             United Kingdom<br>
             <br><br>
             Telephone &amp; Email<br>
             0845 319 8314<br>
-            <a href="mailto:jobs@workforeveryhomes.co.uk">jobs@workforeveryhomes.co.uk</a>
+            <a href="mailto:jobs@workforeveryhome.co.uk">jobs@workforeveryhome.co.uk</a>
         </p>
     </div>
     
@@ -79,7 +79,8 @@ get_header(); ?>
             ?>
           </ul>
     	</div>
-    
+    	
+    	<a href="/" class="logobrand-small right">Every Home Recruitment</a>
     	</div>
     
   </div>

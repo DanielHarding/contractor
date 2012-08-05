@@ -19,13 +19,13 @@
       </div>
       
            <div class="three columns">
-            <h5>Contact EveryHome</h5>
+            <h5>Contact Every Home</h5>
             <ul class="simple-list">
               <li><a href="/contact">Contact Us Web Form</a></li>
               <li><strong>Email:</strong> <a href="mailto:jobs@workforeveryhome.co.uk">jobs@workforeveryhome.co.uk</a></li>
               <li><strong>Phone:</strong> 0845 319 8314</li>
               <li>Registered UK and Wales.</li>
-              <li>&copy 2012 Everyhome LTD</li>
+              <li>&copy 2012 Every Home LTD</li>
               <li></li>
             </ul>
         </div>
@@ -33,9 +33,10 @@
         <div class="three columns">
             <h5>Head Office&nbsp;</h5>
             <ul class="simple-list">
+            	<li><strong>Every Home LTD</strong></li>
               <li><strong>The Tannery</strong></li>
               <li>91 Kirkstall Road</li>
-              <li>Leeds LS3 1HE</li>
+              <li>Leeds LS3 1HS</li>
               <li>United Kingdom</li>
               <li><strong><a href="/contact/">Map and Directions</a></strong></li>
             </ul>
@@ -58,7 +59,7 @@
         </div>
       </footer>
     <div class="row">  
-    <a href="/" class="logobrand-small right">EveryHome Recruitment</a>         
+    <a href="/" class="logobrand-small right">Every Home Recruitment</a>         
       <div class="one centered">
         <div class="circle" id="top_circle">
           <h5><a href="#top" id="btn_top" class="">Top</a></h5>
