@@ -93,17 +93,6 @@ if(!empty($_POST)) {
 	if(!$errs && empty($mess) && !$gerrs && empty($gmess) && !$serrs && empty($smess)) {
 		// Success
 
-		/*
-		Mail Server Username: contact+workforeveryhome.co.uk
-		Incoming Mail Server: mail.workforeveryhome.co.uk
-		Incoming Mail Server: (SSL) stickypiston.co
-		Outgoing Mail Server: mail.workforeveryhome.co.uk (server requires authentication) port 25
-		Outgoing Mail Server: (SSL) stickypiston.co (server requires authentication) port 465
-		Supported Incoming Mail Protocols: POP3, POP3S (SSL/TLS), IMAP, IMAPS (SSL/TLS)
-		Supported Outgoing Mail Protocols: SMTP, SMTPS (SSL/TLS)
-		Password: xIG20etew7gK
-		*/
-
 		$from = "contact@workforeveryhome.co.uk";
 		$subj = "Every Home Contractor Application";
 		
@@ -200,6 +189,7 @@ if(!empty($_POST)) {
 
 		require_once ABSPATH . WPINC . '/class-phpmailer.php';
 		require_once ABSPATH . WPINC . '/class-smtp.php';
+
 		$phpmailer = new PHPMailer();
 		
 		$phpmailer->SMTPAuth = true;
@@ -220,6 +210,9 @@ if(!empty($_POST)) {
 		// $phpmailer->AddAttachment("images/phpmailer.gif");             // attachment
 		
 		$phpmailer->AddAddress($_POST['email'], $_POST['first_name'] . ' ' . $_POST['last_name']);
+		$phpmailer->AddAddress('laura@worksforeveryhome.co.uk', 'Laura Admin');
+		$phpmailer->AddAddress('jobs@workforeveryhome.co.uk', 'Jobs Admin');
+		$phpmailer->AddAddress('djharding@hotmail.com', 'Danny Harding');
 
 		// var_dump($m);
 
