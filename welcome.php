@@ -30,14 +30,12 @@ get_header(); ?>
   <!-- Start advice form -->
   <div class="three columns">
     <a name="quick-contact" id="quick-contact"></a>
-    <div class="hide-for-small slim-panel blue_gradient box_round">
-      <!-- <h4 class="huge-phone blue_textshadow">Quick contact</h4> -->
-      <?php echo RGForms::get_form(2); ?>
+    <div class="slim-panel blue_gradient box_round">
+      <h4 class="huge-phone blue_textshadow">Quick contact</h4>
+      <?php echo RGForms::get_form(2, false); ?>
     </div>
   </div>
   <!-- End advice form -->
-
-
 
 </div>
 
