@@ -27,15 +27,15 @@ get_header(); ?>
 
 
 
-  <!-- Start advice form -->
-  <div class="three columns">
-    <a name="quick-contact" id="quick-contact"></a>
-    <div class="slim-panel blue_gradient box_round">
-      <h4 class="huge-phone blue_textshadow">Quick contact</h4>
-      <?php echo RGForms::get_form(2, false); ?>
-    </div>
+<!-- Start quick contact form -->
+<div class="three columns">
+  <a name="quick-contact" id="quick-contact"></a>
+  <div class="quickcontact slim-panel blue_gradient box_round">
+    <h4 class="huge-phone blue_textshadow">Quick contact</h4>
+    <?php echo RGForms::get_form(2, false); ?>
   </div>
-  <!-- End advice form -->
+</div>
+<!-- End quick contact form -->
 
 </div>
 
