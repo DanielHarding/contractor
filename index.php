@@ -13,7 +13,7 @@
  */
 
 get_header(); ?>
-HELLO
+
 		<div id="primary" class="site-content">
 			<div id="content" role="main">
 
@@ -44,3 +44,6 @@ HELLO
 
 			</div><!-- #content -->
 		</div><!-- #primary .site-content -->
+
+<?php get_sidebar(); ?>
+<?php get_footer(); ?>

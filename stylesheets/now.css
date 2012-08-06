@@ -1282,6 +1282,45 @@ article h1, article h2, h3 {
 	font-weight: normal;
 }
 
+h4.huge-phone {
+	margin: 0 0 10px ;
+}
+
+gform_wrapper_2 {
+	padding: 10px 0!important;
+}
+
+#gform_wrapper_2 .gfield_label {
+	display: none;
+}
+
+#gform_wrapper_2 textarea, #gform_wrapper_2 input[type=text] {
+	color: #888;
+
+}
+
+#gform_wrapper_2 ul {
+	list-style: none;
+	margin: 0;
+}
+
+#gform_wrapper_2 textarea {
+	height: 61px;
+	margin-bottom: 6px;
+}
+
+#gform_wrapper_2 .gform_footer {
+	margin: 0 0 10px;
+	text-align: right;
+}
+
+#gform_wrapper_2 .button {
+	font-size: 12px;
+	padding: 7px 15px;
+	background: #5DA423;
+	border: 1px solid #396516;
+}
+
 /*
 
 .tabs-content {
