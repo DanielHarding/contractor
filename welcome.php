@@ -32,7 +32,7 @@ get_header(); ?>
     <a name="quick-contact" id="quick-contact"></a>
     <div class="slim-panel blue_gradient box_round">
       <h4 class="huge-phone blue_textshadow">Quick contact</h4>
-      <?php echo RGForms::get_form(2, false); ?>
+      <?php echo RGForms::get_form(2, false, false, true); ?>
     </div>
   </div>
   <!-- End advice form -->
@@ -205,7 +205,8 @@ get_header(); ?>
         ?>
       </ul>
 			</div>
-			
+
+      <div class="inactivos"></div>
 			
   </div>
 
