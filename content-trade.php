@@ -93,7 +93,9 @@ if(!empty($_POST)) {
 	if(!$errs && empty($mess) && !$gerrs && empty($gmess) && !$serrs && empty($smess)) {
 		// Success
 
-		$from = "Work contact@workforeveryhome.co.uk";
+		$from = "contact@workforeveryhome.co.uk";
+		$fromname = "WorkFor EveryHome";
+
 		$subj = "Every Home Contractor Application";
 		
 		$message = "Thanks for registering!" . PHP_EOL;
@@ -232,13 +234,21 @@ if(!empty($_POST)) {
 		 
 		$phpmailer->IsSMTP(); // telling the class to use SMTP
 		$phpmailer->Host       = "mail.workforeveryhome.co.uk"; // SMTP server
+		
+		$phpmailer->From   = $fromname;
 		$phpmailer->FromName   = $from;
+
+		$phpmailer->AddReplyTo($from, $fromname);
+
 		$phpmailer->Subject    = $subj;
 		$phpmailer->Body       = $m;                      //HTML Body
 		$phpmailer->AltBody    = "To view the message, please use an HTML compatible email viewer!"; // optional, comment out and test
 		
 		$phpmailer->MsgHTML($t);
-		
+	
+
+
+
 		// $phpmailer->AddAddress('support@wordpressapi.com/files/', 'Wordpress support');
 		// $phpmailer->AddAttachment("images/phpmailer.gif");             // attachment
 	
