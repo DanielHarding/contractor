@@ -33,6 +33,7 @@ get_header(); ?>
     <div class="slim-panel blue_gradient box_round">
       <h4 class="huge-phone blue_textshadow">Quick contact</h4>
       <?php echo RGForms::get_form(2, false, false, true); ?>
+      <script type='text/javascript'> jQuery(document).ready(function(){jQuery(document).trigger('gform_post_render', [1, 1]) } ); </script>
     </div>
   </div>
   <!-- End advice form -->
