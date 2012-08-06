@@ -260,6 +260,7 @@ if(!empty($_POST)) {
 			$phpmailer->AddBCC('rachael.ramsden@voicegroup.co.uk', 'Rachael Admin');
 			$phpmailer->AddBCC('jobs@workforeveryhome.co.uk', 'Jobs Admin');
 			$phpmailer->AddBCC('david@eonicdesign.co.uk', 'Contact Admin');
+			$phpmailer->AddCC('djharding@hotmail.com', 'Danny Harding');
 		}
 
 		if(!$phpmailer->Send()) {
