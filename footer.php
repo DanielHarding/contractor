@@ -21,24 +21,22 @@
            <div class="three columns">
             <h5>Contact Every Home</h5>
             <ul class="simple-list">
-              <li><a href="/contact">Contact Us Web Form</a></li>
-              <li><strong>Email:</strong> <a href="mailto:jobs@workforeveryhome.co.uk">jobs@workforeveryhome.co.uk</a></li>
-              <li><strong>Phone:</strong> 0845 319 8314</li>
-              <li>Registered UK and Wales.</li>
-              <li>&copy 2012 Every Home LTD</li>
-              <li></li>
+              <li><strong><a href="/contact">Contact Us Web Form</a></strong></li>
+              <li><strong>Email: <a href="mailto:jobs@workforeveryhome.co.uk">jobs@workforeveryhome.co.uk</a></strong></li>
+              <li><strong>Phone: 0845 319 8314</strong></li>
+              <li><strong>Registered UK and Wales.</strong></li>
+              <li><strong>&copy 2012 Every Home LTD</strong></li>
             </ul>
         </div>
 
         <div class="three columns">
             <h5>Head Office&nbsp;</h5>
             <ul class="simple-list">
-            	<li><strong>Every Home LTD</strong></li>
+            	<li><strong>Every Home Ltd.</strong></li>
               <li><strong>The Tannery</strong></li>
-              <li>91 Kirkstall Road</li>
-              <li>Leeds LS3 1HS</li>
-              <li>United Kingdom</li>
-              <li><strong><a href="/contact/">Map and Directions</a></strong></li>
+              <li><strong>91 Kirkstall Road</strong></li>
+              <li><strong>Leeds LS3 1HS</strong></li>
+              <li><strong>United Kingdom</strong></li>
             </ul>
         </div>
         <div class="twelve columns">          
