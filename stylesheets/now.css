@@ -1341,7 +1341,7 @@ gform_wrapper_2 {
 
 
 
-@media all and (min-width: 768px) { 
+@media only screen and (max-width: 767px) { 
   ul.dropdown a {
     font-size: 11px;
     padding-right: 8px; 
@@ -1356,6 +1356,14 @@ gform_wrapper_2 {
   }
 
   blockquote.huge-text {
+    font-size: 130%;
+  }
+
+  article h1 {
+    font-size: 34px;
+  }
+
+  .subheader {
     font-size: 130%;
   }
 }
