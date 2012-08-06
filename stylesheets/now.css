@@ -1286,6 +1286,10 @@ h4.huge-phone {
 	margin: 0 0 10px ;
 }
 
+.quickcontact {
+	min-height: 215px;
+}
+
 gform_wrapper_2 {
 	padding: 10px 0!important;
 }
