@@ -241,15 +241,10 @@ if(!empty($_POST)) {
 		$phpmailer->AddReplyTo($from, $fromname);
 
 		$phpmailer->Subject    = $subj;
-		// $phpmailer->Body       = $m;                      //HTML Body
-		// $phpmailer->AltBody    = "To view the message, please use an HTML compatible email viewer!"; // optional, comment out and test
-		// $phpmailer->MsgHTML($t);
-
-
-		$phpmailer->Body($t);
-		$phpmailer->isHTML(true);
-		$phpmailer->AltBody($m);	
-
+		
+		$phpmailer->Body       = $m;                      //HTML Body
+		$phpmailer->AltBody    = "To view the message, please use an HTML compatible email viewer!"; // optional, comment out and test
+		$phpmailer->MsgHTML($t);
 
 
 		// $phpmailer->AddAddress('support@wordpressapi.com/files/', 'Wordpress support');
