@@ -144,7 +144,7 @@ blockquote.huge-text {
   line-height: 1.2;
   font-size: 160%;
   color: #d5d5d5;
-	text-shadow: 1px 1px #2c2c2c;
+	text-shadow: 1px 1px 1px #444;
   margin: 0;
 }
 
@@ -1169,6 +1169,7 @@ footer li a:hover {
 
 footer li a {
   text-decoration: underline;
+  text-shadow:none;
 }
 
 footer li {
@@ -1345,10 +1346,11 @@ gform_wrapper_2 {
   ul.dropdown a {
     font-size: 11px;
     padding-right: 8px; 
+    background:none;
   }
 
   .ico-list li a {
-    font-size: 11px;
+    font-size: 14px;
   }
 
   div.panel {
