@@ -235,8 +235,8 @@ if(!empty($_POST)) {
 		$phpmailer->IsSMTP(); // telling the class to use SMTP
 		$phpmailer->Host       = "mail.workforeveryhome.co.uk"; // SMTP server
 		
-		$phpmailer->From   = $fromname;
-		$phpmailer->FromName   = $from;
+		$phpmailer->From   = $from;
+		$phpmailer->FromName   = $fromname;
 
 		$phpmailer->AddReplyTo($from, $fromname);
 
