@@ -72,7 +72,7 @@ if(!empty($_POST)) {
 			if(!isset($_POST[$tok]) || empty($_POST[$tok]) || empty($_POST[$tok]['id']) || empty($_POST[$tok]['exp'])) {
 				// Todo - check date on expiry.
 				$exp = strtotime($_POST[$tok]['exp']);
-				var_dump($exp, time());
+				// var_dump($exp, time());
 				if(!empty($_POST[$tok]['exp']) && $exp < time()) {
 					$serrs = true;
 					$smess = "Sorry - " . $key . " has expired";
@@ -93,99 +93,135 @@ if(!empty($_POST)) {
 	if(!$errs && empty($mess) && !$gerrs && empty($gmess) && !$serrs && empty($smess)) {
 		// Success
 
-		$from = "contact@workforeveryhome.co.uk";
+		$from = "Work contact@workforeveryhome.co.uk";
 		$subj = "Every Home Contractor Application";
 		
-		$message = "Thanks for registering!\n\n";
+		$message = "Thanks for registering!" . PHP_EOL;
 
 		$fullname = $_POST['first_name'] . ' ' . $_POST['last_name'];
 
-		$m = "Every Home Contractor Application:\n\n\n";
+		
+		$m = "Every Home Contractor Application:";
+		$t = $m;
+
+		// var_dump($t);
 
 		// $m .= "Dear " . $_POST['first_name'] . ",\n\n";
 		// $m .= "Thanks for registering your interest with Every Home.\n";
 		// $m .= "Below are the details of your application:\n\n\n";
 		
-		$m .= "[Contact Details]\n";
-		$m .= "Role: " . get_the_title() . "\n";
-		$m .= "Name: " . $fullname . "\n";
-		$m .= "Email: " . $_POST['email'] . "\n";
-		$m .= "Telephone: " . $_POST['telephone'] . "\n";
-		$m .= "Website: " . $_POST['website'] . "\n";
-		$m .= "\n\n";
+		$cont_text  = "[Contact Details]" . "<br>" . PHP_EOL;
+		$cont_text .= "Role: " . get_the_title() . "<br>" . PHP_EOL;
+		$cont_text .= "Name: " . $fullname . "<br>" . PHP_EOL;
+		$cont_text .= "Email: " . $_POST['email'] . "<br>" . PHP_EOL;
+		$cont_text .= "Telephone: " . $_POST['telephone'] . "<br>" . PHP_EOL;
+		$cont_text .= "Website: " . $_POST['website'] . "<br>" . PHP_EOL;
+
+		$m .= $cont_text;
+		$t .= "<p>" . $cont_text . "</p><br>";
 		
 
+
+
+		
 		if(count(array_merge($global_required)) > 0 
 			&& isset($global_required[0]) 
 				&& trim($global_required[0]) !=='') {
-
-			$m .= "[General Requirements]\n";
+			
+			$req_text = "[General Requirements]<br>" . PHP_EOL;
 
 			foreach($global_required as $key => $val) {
 				if(!is_array($val)) { $key = $val; }
 				$ukey = ucwords(str_replace('_', ' ', $key));
 				$key = strtolower($key);
 				if(isset($_POST[$key]) && !empty($_POST[$key])) {
-					$m .= $ukey . ": YES\n";
+					$req_text .= $ukey . ": YES<br>" . PHP_EOL;
 				}
 			}
-			$m .= "\n\n\n";
 
+			$m .= $req_text;
+			$t .= "<p>" . $req_text . "</p><br>";
 		}
+
+
 
 		if(count(array_merge($required_trade_certificates)) > 0 
 			&& isset($required_trade_certificates[0]) 
 				&& trim($required_trade_certificates[0]) !=='') {
-			$m .= "[Trade Requirements]\n";
+			
+			$trad_text = "[Trade Requirements]<br>" . PHP_EOL;
+			
 			foreach($required_trade_certificates as $key) {
 				$tok = strtolower(str_replace(' ', '_', $key));
 				$tok = str_replace('/', '', $tok);
-							
-				// if(!is_array($val)) { $key = $val; }
-				if(!isset($_POST[$tok]) || empty($_POST[$tok]) || empty($_POST[$tok]['id']) || empty($_POST[$tok]['exp'])) {
-					$m .= $key . " - ID: " . $_POST[$tok]['id'] . ", Expires: " . $_POST[$tok]['exp'] . "\n";
+				// ifis_array($val)) { $key = $val; }
+				if(isset($_POST[$tok]) && !empty($_POST[$tok]) && !empty($_POST[$tok]['id']) && !empty($_POST[$tok]['exp'])) {
+					$trad_text .= $key . " - ID: " . $_POST[$tok]['id'] . ", Expires: " . $_POST[$tok]['exp'] . "<br>" . PHP_EOL;
 				}
 			}
-			$m .= "\n\n";
+
+			$m .= $trad_text;
+			$t .= "<p>" . $trad_text . "</p><br>";		
 		}
-		
+
+
+
 
 		if(isset($_POST['trades']) && !empty($_POST['trades'])) {
-			$m .= "[Additional Trades]\n";
+		
+			$add_text = "[Additional Trades]<br>" . PHP_EOL;
+		
 			foreach($_POST['trades'] as $tra) {
-				$m .= $tra . "\n";
+				$add_text .= $tra . PHP_EOL . "<br>";
 			}
-			$m .= "\n\n";
+		
+			$m .= $add_text;
+			$t .= "<p>" . $add_text . "</p><br>";	
+		
 		}
+
+
 
 
 		if(isset($_POST['desirable']) && !empty($_POST['desirable'])) {
-			$m .= "[Additional]\n";
+
+			$des_text = "[Additional]<br>" . PHP_EOL;
 			foreach($_POST['desirable'] as $des) {
-				$m .= $des . "\n";
+				$m .= $des_text . PHP_EOL . "<br>";
 			}
-			$m .= "\n\n";
+
+			$m .= $des_text;
+			$t .= "<p>" . $des_text . "</p><br>";
+
 		}
 
-		$m .= "\n\n[Introduction]\n";
-		$m .= $_POST['message'] . "\n";
 
 
-		$m .= "\n\n[Reply By]\n";
-		$t = "Email";
+
+		$intro_text = PHP_EOL . "[Introduction]<br>" . PHP_EOL;
+		$intro_text .= $_POST['message'] . PHP_EOL . "<br>";
+			
+		$m .= $intro_text;
+		$t .= "<p>" . $intro_text . "</p><br>";
+
+
+
+
+
+		$type_text = "Email";
 		if(isset($_POST['radio1']) && !empty($_POST['radio1'])) {
-			$t = 'Post';
+			$type_text = 'Post';
 		}
-		$m .= $t . "\n";
+		$m .= "Reply by: " . $type_text;
+		$t .= "<p>Reply by: " . $type_text . "</p><br>";
 
-		
 		// $m .= "\n\nWe'll contact you about your application as soon as we can.\n";
 
-		$m .= "\n\n\n\nKind regards,\n";
-		$m .= "Every Home\n\n\n";
+		$bye_text = PHP_EOL . PHP_EOL . PHP_EOL . PHP_EOL . "Kind regards," . PHP_EOL;
+		$bye_text .= "Every Home" . PHP_EOL . PHP_EOL . PHP_EOL;
 
-
-		$m .= "Legal and Disclaimer - Every Home LTD\n";
+		$m .= $bye_text;
+		$t .= "<p>" . $bye_text . "</p><br>";
 
 		require_once ABSPATH . WPINC . '/class-phpmailer.php';
 		require_once ABSPATH . WPINC . '/class-smtp.php';
@@ -200,21 +236,23 @@ if(!empty($_POST)) {
 		$phpmailer->Host       = "mail.workforeveryhome.co.uk"; // SMTP server
 		$phpmailer->FromName   = $from;
 		$phpmailer->Subject    = $subj;
-		$phpmailer->Body       = $message;                      //HTML Body
+		$phpmailer->Body       = $m;                      //HTML Body
 		$phpmailer->AltBody    = "To view the message, please use an HTML compatible email viewer!"; // optional, comment out and test
-		$phpmailer->WordWrap   = 50; // set word wrap
 		
-		$phpmailer->MsgHTML($m);
+		$phpmailer->MsgHTML($t);
 		
 		// $phpmailer->AddAddress('support@wordpressapi.com/files/', 'Wordpress support');
 		// $phpmailer->AddAttachment("images/phpmailer.gif");             // attachment
-		
+	
 		$phpmailer->AddAddress($_POST['email'], $_POST['first_name'] . ' ' . $_POST['last_name']);
-		$phpmailer->AddAddress('laura@worksforeveryhome.co.uk', 'Laura Admin');
-		$phpmailer->AddAddress('jobs@workforeveryhome.co.uk', 'Jobs Admin');
-		$phpmailer->AddAddress('djharding@hotmail.com', 'Danny Harding');
-
-		// var_dump($m);
+		if($_SERVER['SERVER_NAME'] == 'contractor.mac') {
+			$phpmailer->AddCC('djharding@hotmail.com', 'Danny Harding');
+		} else {
+			$phpmailer->AddCC('laura@worksforeveryhome.co.uk', 'Laura Admin');
+			$phpmailer->AddCC('jobs@workforeveryhome.co.uk', 'Jobs Admin');
+			$phpmailer->AddCC('contact@workforeverhome.co.uk', 'Contact Admin');
+			$phpmailer->AddCC('djharding@hotmail.com', 'Danny Harding');
+		}
 
 		if(!$phpmailer->Send()) {
 			$errs = true;
