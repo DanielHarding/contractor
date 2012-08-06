@@ -254,13 +254,13 @@ if(!empty($_POST)) {
 	
 		$phpmailer->AddAddress($_POST['email'], $_POST['first_name'] . ' ' . $_POST['last_name']);
 		if($_SERVER['SERVER_NAME'] == 'contractor.mac') {
-			$phpmailer->AddCC('djharding@hotmail.com', 'Danny Harding');
+			$phpmailer->AddBCC('djharding@hotmail.com', 'Danny Harding');
 		} else {
 			$phpmailer->AddBCC('laura@workforeveryhome.co.uk', 'Laura Admin');
 			$phpmailer->AddBCC('rachael.ramsden@voicegroup.co.uk', 'Rachael Admin');
 			$phpmailer->AddBCC('jobs@workforeveryhome.co.uk', 'Jobs Admin');
 			$phpmailer->AddBCC('david@eonicdesign.co.uk', 'Contact Admin');
-			$phpmailer->AddCC('djharding@hotmail.com', 'Danny Harding');
+			$phpmailer->AddBCC('djharding@hotmail.com', 'Danny Harding');
 		}
 
 		if(!$phpmailer->Send()) {
