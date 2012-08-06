@@ -770,6 +770,7 @@ padding: 0px;
 
 div.panel {
   background-color: #f3f3f3;
+  margin: 10px 0 22px 0!important;
 }
 
 
@@ -1112,6 +1113,7 @@ li:hover span.ico-trade-pest-controller {
   text-indent: -5000px;
   background: transparent url(/wp-content/themes/contractor/images/logo-small.png) 0px 0px no-repeat;
   margin-top: 8px;
+  margin-bottom: 10px;
 }
 
 .subheader {
