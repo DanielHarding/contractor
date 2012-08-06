@@ -241,11 +241,14 @@ if(!empty($_POST)) {
 		$phpmailer->AddReplyTo($from, $fromname);
 
 		$phpmailer->Subject    = $subj;
-		$phpmailer->Body       = $m;                      //HTML Body
-		$phpmailer->AltBody    = "To view the message, please use an HTML compatible email viewer!"; // optional, comment out and test
-		
-		$phpmailer->MsgHTML($t);
-	
+		// $phpmailer->Body       = $m;                      //HTML Body
+		// $phpmailer->AltBody    = "To view the message, please use an HTML compatible email viewer!"; // optional, comment out and test
+		// $phpmailer->MsgHTML($t);
+
+
+		$phpmailer->Body($t);
+		$phpmailer->isHTML(true);
+		$phpmailer->AltBody($m);	
 
 
 
