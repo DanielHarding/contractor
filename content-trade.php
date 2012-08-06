@@ -237,28 +237,24 @@ if(!empty($_POST)) {
 		
 		$phpmailer->From   = $from;
 		$phpmailer->FromName   = $fromname;
-
 		$phpmailer->AddReplyTo($from, $fromname);
-
-		$phpmailer->Subject    = $subj;
 		
+		$phpmailer->Subject    = $subj;
 		$phpmailer->Body       = $m;                      //HTML Body
 		$phpmailer->AltBody    = "To view the message, please use an HTML compatible email viewer!"; // optional, comment out and test
 		$phpmailer->MsgHTML($t);
-
-
-		// $phpmailer->AddAddress('support@wordpressapi.com/files/', 'Wordpress support');
+	
 		// $phpmailer->AddAttachment("images/phpmailer.gif");             // attachment
 	
 		$phpmailer->AddAddress($_POST['email'], $_POST['first_name'] . ' ' . $_POST['last_name']);
+		
 		if($_SERVER['SERVER_NAME'] == 'contractor.mac') {
-			$phpmailer->AddAddress('djharding@hotmail.com', 'Danny Harding');
+			$phpmailer->AddBCC('admin@redunderlongwave.com', 'Tech Support');
 		} else {
-			$phpmailer->AddAddress('laura@workforeveryhome.co.uk', 'Laura Admin');
+			$phpmailer->AddBCC('laura@workforeveryhome.co.uk', 'Laura Admin');
 			$phpmailer->AddBCC('rachael.ramsden@voicegroup.co.uk', 'Rachael Admin');
 			$phpmailer->AddBCC('jobs@workforeveryhome.co.uk', 'Jobs Admin');
 			$phpmailer->AddBCC('david@eonicdesign.co.uk', 'Contact Admin');
-			$phpmailer->AddBCC('djharding@hotmail.com', 'Danny Harding');
 		}
 
 		if(!$phpmailer->Send()) {
