@@ -1297,7 +1297,7 @@ gform_wrapper_2 {
 }
 
 #gform_wrapper_2 .gfield_label {
-	display: none;
+	/*display: none;*/
 }
 
 #gform_wrapper_2 textarea, #gform_wrapper_2 input[type=text] {

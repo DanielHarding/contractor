@@ -21,7 +21,7 @@ get_header(); ?>
   
   <!-- Start banner -->
   <div class="nine columns">
-    <a href="/contractor-jobs-yorkshire/"><?php the_post_thumbnail(); ?></a>    
+    <a href="/contractors-jobs-yorkshire/"><?php the_post_thumbnail(); ?></a>    
   </div>
   <!-- End banner -->
 
@@ -47,25 +47,25 @@ get_header(); ?>
 <!-- Start row 2 -->
 <div class="row">
   
-  <div class="three columns">
-    <a href="/contractor-jobs-yorkshire/#phone">
+  <div class="three columns nopad">
+    <a href="/contractors-jobs-yorkshire/#phone">
     <img src="<?php echo get_template_directory_uri(); ?>/images/triplet1.png" class="thumb">
     </a>
   </div>
 
-  <div class="three columns">
-    <a href="/contractor-jobs-yorkshire/#trades">
+  <div class="three columns nopad">
+    <a href="/contractors-jobs-yorkshire/#trades">
     <img src="<?php echo get_template_directory_uri(); ?>/images/triplet2.png" class="thumb">
     </a>
   </div>
 
-  <div class="three columns">
-    <a href="/contractor-jobs-yorkshire/#applications">
+  <div class="three columns nopad">
+    <a href="/contractors-jobs-yorkshire/#applications">
     <img src="<?php echo get_template_directory_uri(); ?>/images/realtime.png" class="thumb">
     </a>
   </div>
 
-  <div class="three columns">
+  <div class="three columns nopad">
 
     <?php
       if( function_exists( 'attachments_get_attachments' ) ) {
@@ -138,7 +138,7 @@ get_header(); ?>
         } else {
           ?>
 
-          <img src="<?php echo get_template_directory_uri(); ?>/images/non-franchise.png" class="thumb box_shadow">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/non-franchise.png" class="thumb">
 
           <?php
         }
