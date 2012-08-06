@@ -34,15 +34,18 @@ get_header(); ?>
     </article>
 
 	</div>
-	<div class="three columns">
-	
-	<!-- Start quick contact form -->
-	  <a name="quick-contact" id="quick-contact"></a>
-	  <div class="quickcontact slim-panel blue_gradient box_round">
-	    <h4 class="huge-phone blue_textshadow">Quick contact</h4>
-	    <?php echo RGForms::get_form(2, false); ?>
-	</div>
-	<!-- End quick contact form -->
+
+
+<!-- Start quick contact form -->
+<div class="three columns">
+  <a name="quick-contact" id="quick-contact"></a>
+  <div class="quickcontact slim-panel blue_gradient box_round">
+    <h4 class="huge-phone blue_textshadow">Quick contact</h4>
+    <?php echo RGForms::get_form(2, false, false, true); ?>      
+    <script type='text/javascript'> jQuery(document).ready(function(){jQuery(document).trigger('gform_post_render', [1, 1]) } ); </script>
+  </div>
+<!-- End quick contact form -->
+
 
 <div class="panel radius">
 <h3>Trade Jobs</h3>
