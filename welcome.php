@@ -21,62 +21,11 @@ get_header(); ?>
   
   <!-- Start banner -->
   <div class="nine columns">
-    <a href="/contractor-jobs-yorkshire/"><?php the_post_thumbnail(); ?></a>
-
-
-
-<!--<div class='gf_browser_chrome gform_wrapper' id='gform_wrapper_2' ><form method='post' enctype='multipart/form-data'  id='gform_2'  action='/contact/'>
-                <div class='gform_heading'>
-                    <h3 class='gform_title'>Quick Contact</h3>
-                    <span class='gform_description'>Call - 0845 319 8314</span>
-                </div>
-                <div class='gform_body'>
-                    <ul id='gform_fields_2' class='gform_fields top_label description_below'><li id='field_2_1' class='gfield               gfield_contains_required' ><label class='gfield_label' for='input_2_1'>Your name<span class='gfield_required'>*</span></label><div class='ginput_container'><input name='input_1' id='input_2_1' type='text' value='Your Name' class='medium'  tabindex='1'   /></div></li><li id='field_2_3' class='gfield               gfield_contains_required' ><label class='gfield_label' for='input_2_3'>Email Address<span class='gfield_required'>*</span></label><div class='ginput_container'><input name='input_3' id='input_2_3' type='text' value='Email Address' class='medium'  tabindex='2'   /></div></li><li id='field_2_4' class='gfield               gfield_contains_required' ><label class='gfield_label' for='input_2_4'>Company<span class='gfield_required'>*</span></label><div class='ginput_container'><input name='input_4' id='input_2_4' type='text' value='Company' class='medium'  tabindex='3'   /></div></li><li id='field_2_6' class='gfield' ><label class='gfield_label' for='input_2_6'>Phone number</label><div class='ginput_container'><input name='input_6' id='input_2_6' type='text' value='Phone Number' class='medium' tabindex='4'  /></div></li><li id='field_2_7' class='gfield' ><label class='gfield_label' for='input_2_7'>Message</label><div class='ginput_container'><textarea name='input_7' id='input_2_7' class='textarea medium' tabindex='5'   rows='10' cols='50'>Message</textarea></div></li>
-                    </ul></div>
-<div class='gform_footer top_label'> <input type='submit' id='gform_submit_button_2' class='button gform_button' value='Submit' tabindex='6' />
-    <input type='hidden' class='gform_hidden' name='is_submit_2' value='1' />
-    <input type='hidden' class='gform_hidden' name='gform_submit' value='2' />
-    <input type='hidden' class='gform_hidden' name='gform_unique_id' value='5011b401202f9' />
-    <input type='hidden' class='gform_hidden' name='state_2' value='YToyOntpOjA7czo2OiJhOjA6e30iO2k6MTtzOjMyOiIxM2Y5MDVhMjdkNDQ1MTcwZWVmYTFlMGJhYmQ0ZWFmMSI7fQ==' />
-    <input type='hidden' class='gform_hidden' name='gform_target_page_number_2' id='gform_target_page_number_2' value='0' />
-    <input type='hidden' class='gform_hidden' name='gform_source_page_number_2' id='gform_source_page_number_2' value='1' />
-    <input type='hidden' name='gform_field_values' value='' />
-    
-</div>
-        </form>
-        </div><script type='text/javascript'> jQuery(document).ready(function(){jQuery(document).trigger('gform_post_render', [2, 1]) } ); </script>
-
-
-<form method="post" enctype="multipart/form-data" id="gform_1" action="/contact/">
-
-
-<input name="input_9" id="input_1_9" type="text" value="" class="medium" tabindex="1">
-<input type="text" name="input_6.3" id="input_1_6_3" value="" tabindex="2">
-<input type="text" name="input_6.6" id="input_1_6_6" value="" tabindex="3">
-<input name="input_7" id="input_1_7" type="text" value="" class="medium" tabindex="4">
-<input name="input_10" id="input_1_10" type="text" value="" class="medium" tabindex="5">
-<textarea name="input_5" id="input_1_5" class="textarea large" tabindex="6" rows="10" cols="50"></textarea>
-
-
-<input type="submit" id="gform_submit_button_1" class="button gform_button" value="Submit" tabindex="7"> 
-
-<input type="hidden" class="gform_hidden" name="is_submit_1" value="1"> 
-
-<input type="hidden" class="gform_hidden" name="gform_submit" value="1"> 
-<input type="hidden" class="gform_hidden" name="gform_unique_id" value="501ec07e5d4c9"> 
-<input type="hidden" class="gform_hidden" name="state_1" value="YToyOntpOjA7czo2OiJhOjA6e30iO2k6MTtzOjMyOiIxM2Y5MDVhMjdkNDQ1MTcwZWVmYTFlMGJhYmQ0ZWFmMSI7fQ=="> 
-<input type="hidden" class="gform_hidden" name="gform_target_page_number_1" id="gform_target_page_number_1" value="0"> 
-<input type="hidden" class="gform_hidden" name="gform_source_page_number_1" id="gform_source_page_number_1" value="1"> 
-<input type="hidden" name="gform_field_values" value="">
-
-
-
-      -->
-
-    
-    
+    <a href="/contractor-jobs-yorkshire/"><?php the_post_thumbnail(); ?></a>    
   </div>
   <!-- End banner -->
+
+
 
   <!-- Start advice form -->
   <div class="three columns">
@@ -87,6 +36,8 @@ get_header(); ?>
     </div>
   </div>
   <!-- End advice form -->
+
+
 
 </div>
 

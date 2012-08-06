@@ -13,14 +13,14 @@
  */
 
 get_header(); ?>
-
+HELLO
 		<div id="primary" class="site-content">
 			<div id="content" role="main">
 
 			<?php if ( have_posts() ) : ?>
 
 				<?php contractor_content_nav( 'nav-above' ); ?>
-
+				
 				<?php /* Start the Loop */ ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 
@@ -44,6 +44,3 @@ get_header(); ?>
 
 			</div><!-- #content -->
 		</div><!-- #primary .site-content -->
-
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>

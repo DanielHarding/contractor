@@ -227,8 +227,8 @@ if(!empty($_POST)) {
 		$phpmailer = new PHPMailer();
 		
 		$phpmailer->SMTPAuth = true;
-		$phpmailer->Username = 'contact+workforeveryhome.co.uk';
-		$phpmailer->Password = 'xIG20etew7gK';
+		$phpmailer->Username = 'jobs+workforeveryhome.co.uk';
+		$phpmailer->Password = 'nlnETcM2a7GK';
 		 
 		$phpmailer->IsSMTP(); // telling the class to use SMTP
 		$phpmailer->Host       = "mail.workforeveryhome.co.uk"; // SMTP server
@@ -246,9 +246,10 @@ if(!empty($_POST)) {
 		if($_SERVER['SERVER_NAME'] == 'contractor.mac') {
 			$phpmailer->AddCC('djharding@hotmail.com', 'Danny Harding');
 		} else {
-			$phpmailer->AddCC('laura@worksforeveryhome.co.uk', 'Laura Admin');
-			$phpmailer->AddCC('jobs@workforeveryhome.co.uk', 'Jobs Admin');
-			$phpmailer->AddCC('contact@workforeverhome.co.uk', 'Contact Admin');
+			$phpmailer->AddBCC('laura@workforeveryhome.co.uk', 'Laura Admin');
+			$phpmailer->AddBCC('jobs@workforeveryhome.co.uk', 'Jobs Admin');
+			$phpmailer->AddBCC('david@eonicdesign.co.uk', 'Contact Admin');
+			$phpmailer->AddBCC('michele@contentrich.co.uk', 'Contact Admin');
 		}
 
 		if(!$phpmailer->Send()) {
@@ -299,7 +300,7 @@ if(!empty($_POST)) {
 			}
 
 			if(!empty($email_sent)) {
-				echo "<div class='alert-box success'><p class=''>Application request sent</p></div>";
+				echo "<div class='alert-box success'><p class=''>Application request sent, thanks</p></div>";
 			}
 			?>
 			
@@ -484,7 +485,7 @@ if(!empty($_POST)) {
 					</div>
 
 				</fieldset>	
-
+<!--
 					<?php
 					if(count(array_merge($trade_desirables)) > 0 
 						&& isset($trade_desirables[0]) 
@@ -512,7 +513,7 @@ if(!empty($_POST)) {
 						echo "</li>";
 					}
 					?> 
-
+-->
 				<fieldset>
 
 					<legend>About You...</legend>
