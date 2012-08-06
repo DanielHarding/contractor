@@ -1287,7 +1287,7 @@ h4.huge-phone {
 }
 
 .quickcontact {
-	min-height: 215px;
+	min-height: 255px;
 }
 
 gform_wrapper_2 {
@@ -1323,6 +1323,14 @@ gform_wrapper_2 {
 	padding: 7px 15px;
 	background: #5DA423;
 	border: 1px solid #396516;
+}
+
+#gforms_confirmation_message {
+  padding: 10px 10px;
+  background-color: #a4c625;
+  color: #111;
+  font-weight: 600;
+  line-height: 1.2;
 }
 
 /*
