@@ -100,11 +100,9 @@ if(!empty($_POST)) {
 
 		$fullname = $_POST['first_name'] . ' ' . $_POST['last_name'];
 
-		
-		$m = "Every Home Contractor Application:";
-		$t = $m;
-
-		// var_dump($t);
+		$t = "<p><img src='" . get_template_directory_uri() . "/images/logo-safe.png'/></p><br>";
+		$m = "Every Home Contractor Application:<br><br>";
+		$t .= $m;
 
 		// $m .= "Dear " . $_POST['first_name'] . ",\n\n";
 		// $m .= "Thanks for registering your interest with Every Home.\n";
@@ -199,11 +197,10 @@ if(!empty($_POST)) {
 
 
 		$intro_text = PHP_EOL . "[Introduction]<br>" . PHP_EOL;
-		$intro_text .= $_POST['message'] . PHP_EOL . "<br>";
+		$intro_text .= nl2br($_POST['message']) . PHP_EOL . "<br>";
 			
 		$m .= $intro_text;
 		$t .= "<p>" . $intro_text . "</p><br>";
-
 
 
 
@@ -215,13 +212,14 @@ if(!empty($_POST)) {
 		$m .= "Reply by: " . $type_text;
 		$t .= "<p>Reply by: " . $type_text . "</p><br>";
 
-		// $m .= "\n\nWe'll contact you about your application as soon as we can.\n";
 
 		$bye_text = PHP_EOL . PHP_EOL . PHP_EOL . PHP_EOL . "Kind regards," . PHP_EOL;
 		$bye_text .= "Every Home" . PHP_EOL . PHP_EOL . PHP_EOL;
 
 		$m .= $bye_text;
 		$t .= "<p>" . $bye_text . "</p><br>";
+
+		$t .= "<p><img src='" . get_template_directory_uri() . "/images/logo-safe.png'/></p>";
 
 		require_once ABSPATH . WPINC . '/class-phpmailer.php';
 		require_once ABSPATH . WPINC . '/class-smtp.php';
@@ -251,7 +249,6 @@ if(!empty($_POST)) {
 			$phpmailer->AddCC('laura@worksforeveryhome.co.uk', 'Laura Admin');
 			$phpmailer->AddCC('jobs@workforeveryhome.co.uk', 'Jobs Admin');
 			$phpmailer->AddCC('contact@workforeverhome.co.uk', 'Contact Admin');
-			$phpmailer->AddCC('djharding@hotmail.com', 'Danny Harding');
 		}
 
 		if(!$phpmailer->Send()) {
