@@ -423,7 +423,7 @@ if(!empty($_POST)) {
 					<div class='row'>
 						<div><span class="row-label"><?php echo $value; ?></span></div>
 						<div class="six mobile-two columns">
-							<label  class='<?php echo ($has_error_id) ? 'error' : ''; ?>' for="ch_<?php echo $tok; ?>_id">ID/REF <span class="required">*</span></label>
+							<label  class='<?php echo ($has_error_id) ? 'error' : ''; ?>' for="ch_<?php echo $tok; ?>_id">Policy no. <span class="required">*</span></label>
 							<input type="text" name="<?php echo $tok; ?>[id]" id="ch_<?php echo $tok; ?>_id" value="<?php echo $psted_id; ?>" placeholder="ID/REF" class='<?php echo ($has_error_id) ? 'error' : ''; ?>'/>
 						</div>
 						<div class="six mobile-two columns">
