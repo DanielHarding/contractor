@@ -307,7 +307,6 @@ if(!empty($_POST)) {
 			if(!empty($email_sent)) {
 				echo "<div class='alert-box success'><p class=''>Application request sent, thanks</p></div>";
 			?>
-
 				<!-- Google Code for Application Conversion Page -->
 				<script type="text/javascript">
 				/* <![CDATA[ */
@@ -326,7 +325,6 @@ if(!empty($_POST)) {
 				<img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/1011629752/?value=0&amp;label=CaRDCIC1kQMQuP2w4gM&amp;guid=ON&amp;script=0"/>
 				</div>
 				</noscript>
-
 			<?php
 			}
 			?>
