@@ -61,32 +61,32 @@ if(!empty($_POST)) {
 
 	
 
-	if(count(array_merge($required_trade_certificates)) > 0 
-		&& isset($required_trade_certificates[0]) 
-			&& trim($required_trade_certificates[0]) !=='') {
-		foreach($required_trade_certificates as $key) {
-			$tok = strtolower(str_replace(' ', '_', $key));
-			$tok = str_replace('/', '', $tok);
-						
+//	if(count(array_merge($required_trade_certificates)) > 0 
+//		&& isset($required_trade_certificates[0]) 
+//			&& trim($required_trade_certificates[0]) !=='') {
+//		foreach($required_trade_certificates as $key) {
+//			$tok = strtolower(str_replace(' ', '_', $key));
+//			$tok = str_replace('/', '', $tok);
+//						
 			// if(!is_array($val)) { $key = $val; }
-			if(!isset($_POST[$tok]) || empty($_POST[$tok]) || empty($_POST[$tok]['id']) || empty($_POST[$tok]['exp'])) {
+//			if(!isset($_POST[$tok]) || empty($_POST[$tok]) || empty($_POST[$tok]['id']) || empty($_POST[$tok]['exp'])) {
 				// Todo - check date on expiry.
-				$exp = strtotime($_POST[$tok]['exp']);
+//				$exp = strtotime($_POST[$tok]['exp']);
 				// var_dump($exp, time());
-				if(!empty($_POST[$tok]['exp']) && $exp < time()) {
-					$serrs = true;
-					$smess = "Sorry - " . $key . " has expired";
-					break;					
-				} else {
-					$serrs = true;
-					$smess = "Sorry - you don't meet the trade specific requirements - " . $key;
-					break;
-				}
-			}
-			
-		}
-
-	}
+//				if(!empty($_POST[$tok]['exp']) && $exp < time()) {
+//					$serrs = true;
+//					$smess = "Sorry - " . $key . " has expired";
+//					break;					
+//				} else {
+//					$serrs = true;
+//					$smess = "Sorry - you don't meet the trade specific requirements - " . $key;
+//					break;
+//				}
+//			}
+//			
+//		}
+//
+//	}
 
 
 
@@ -410,7 +410,7 @@ if(!empty($_POST)) {
 
 
 				echo "<fieldset>";
-				echo "<legend>Trade Requirements</legend>";
+				echo "<legend>Trade Requirements</legend><p>Fill in information where applicable.</p>";
 				echo "<ul class='simple-list'>";
 				foreach ($required_trade_certificates as $value) { 
 					$tok = strtolower(str_replace(' ', '_', $value));
@@ -426,11 +426,11 @@ if(!empty($_POST)) {
 					<div class='row'>
 						<div><span class="row-label"><?php echo $value; ?></span></div>
 						<div class="six mobile-two columns">
-							<label  class='<?php echo ($has_error_id) ? 'error' : ''; ?>' for="ch_<?php echo $tok; ?>_id">Policy no. <span class="required">*</span></label>
+							<label  class='<?php echo ($has_error_id) ? '' : ''; ?>' for="ch_<?php echo $tok; ?>_id">Policy Number/REF</label>
 							<input type="text" name="<?php echo $tok; ?>[id]" id="ch_<?php echo $tok; ?>_id" value="<?php echo $psted_id; ?>" placeholder="ID/REF" class='<?php echo ($has_error_id) ? 'error' : ''; ?>'/>
 						</div>
 						<div class="six mobile-two columns">
-							<label  class='<?php echo ($has_error_exp) ? 'error' : ''; ?>' for="ch_<?php echo $tok; ?>_exp">Expiry Date <span class="required">*</span></label>
+							<label  class='<?php echo ($has_error_exp) ? '' : ''; ?>' for="ch_<?php echo $tok; ?>_exp">Expiry Date</label>
 							<input type="text" name="<?php echo $tok; ?>[exp]" id="ch_<?php echo $tok; ?>_exp" value="<?php echo $psted_exp; ?>" placeholder="(dd/mm/yyyy)" class='<?php echo ($has_error_exp) ? 'error' : ''; ?>'/>
 						</div>
 					</div>
