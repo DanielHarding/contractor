@@ -116,7 +116,7 @@ if(!empty($_POST)) {
 		$cont_text .= "Email: " . $_POST['email'] . "<br>" . PHP_EOL;
 		$cont_text .= "Telephone: " . $_POST['telephone'] . "<br>" . PHP_EOL;
 		$cont_text .= "Website: " . $_POST['website'] . "<br>" . PHP_EOL . PHP_EOL;
-
+		$cont_text .= "------------------------------------------------------------<br>" . PHP_EOL;
 		$cont_text .= "Address: " . $_POST['address1'] . "<br>" . PHP_EOL;
 		$cont_text .= "Address: " . $_POST['address2']. "<br>" . PHP_EOL;
 		$cont_text .= "City: " . $_POST['city'] . "<br>" . PHP_EOL;
@@ -375,7 +375,7 @@ if(!empty($_POST)) {
 						<div class="six mobile-two columns">
 							<?php $has_error = (isset($_POST) && empty($_POST['address1'])) ? true : false; ?>
 							<label for="f_address1" class='<?php echo ($has_error) ? 'error' : ''; ?>'>Address <span class="required">*</span></label>
-							<input type="text" name="address" class='<?php echo ($has_error) ? 'error' : ''; ?>' id="f_address1" value="<?php echo (isset($_POST['address1'])) ? $_POST['address1'] : ''; ?>" placeholder="Address"/>
+							<input type="text" name="address1" class='<?php echo ($has_error) ? 'error' : ''; ?>' id="f_address1" value="<?php echo (isset($_POST['address1'])) ? $_POST['address1'] : ''; ?>" placeholder="Address"/>
 						</div>
 						<div class="six mobile-two columns">
 							<?php $has_error = (isset($_POST) && empty($_POST['address2'])) ? false : false; ?>
@@ -401,7 +401,7 @@ if(!empty($_POST)) {
 						<div class="six mobile-two columns">
 							<?php $has_error = (isset($_POST) && empty($_POST['country'])) ? true : false; ?>
 							<label for="f_country" class='<?php echo ($has_error) ? 'error' : ''; ?>'>Country <span class="required">*</span></label>
-							<input type="text" name="country" class='<?php echo ($has_error) ? 'error' : ''; ?>' id="f_country" value="<?php echo (isset($_POST['country'])) ? $_POST['country'] : ''; ?>" placeholder="Country"/>
+							<input type="text" name="country" class='<?php echo ($has_error) ? 'error' : ''; ?>' id="f_country" value="<?php echo (isset($_POST['country'])) ? $_POST['country'] : 'United Kingdom'; ?>" placeholder="Country" readonly/>
 						</div>
 						<div class="six mobile-two columns">
 							<?php $has_error = (isset($_POST) && empty($_POST['postcode'])) ? true : false; ?>
