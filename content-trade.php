@@ -115,7 +115,14 @@ if(!empty($_POST)) {
 		$cont_text .= "Name: " . $fullname . "<br>" . PHP_EOL;
 		$cont_text .= "Email: " . $_POST['email'] . "<br>" . PHP_EOL;
 		$cont_text .= "Telephone: " . $_POST['telephone'] . "<br>" . PHP_EOL;
-		$cont_text .= "Website: " . $_POST['website'] . "<br>" . PHP_EOL;
+		$cont_text .= "Website: " . $_POST['website'] . "<br>" . PHP_EOL . PHP_EOL;
+
+		$cont_text .= "Address: " . $_POST['address1'] . "<br>" . PHP_EOL;
+		$cont_text .= "Address: " . $_POST['address2']. "<br>" . PHP_EOL;
+		$cont_text .= "City: " . $_POST['city'] . "<br>" . PHP_EOL;
+		$cont_text .= "County: " . $_POST['county'] . "<br>" . PHP_EOL;
+		$cont_text .= "Country: " . $_POST['country'] . "<br>" . PHP_EOL;
+		$cont_text .= "Postcode: " . $_POST['postcode'] . "<br>" . PHP_EOL;
 
 		$m .= $cont_text;
 		$t .= "<p>" . $cont_text . "</p><br>";
@@ -357,6 +364,55 @@ if(!empty($_POST)) {
 					</div>
 
 				</fieldset>
+
+
+
+				<fieldset>
+
+					<legend>Address Details</legend>
+
+					<div class='row'>
+						<div class="six mobile-two columns">
+							<?php $has_error = (isset($_POST) && empty($_POST['address1'])) ? true : false; ?>
+							<label for="f_address1" class='<?php echo ($has_error) ? 'error' : ''; ?>'>Address <span class="required">*</span></label>
+							<input type="text" name="address" class='<?php echo ($has_error) ? 'error' : ''; ?>' id="f_address1" value="<?php echo (isset($_POST['address1'])) ? $_POST['address1'] : ''; ?>" placeholder="Address"/>
+						</div>
+						<div class="six mobile-two columns">
+							<?php $has_error = (isset($_POST) && empty($_POST['address2'])) ? false : false; ?>
+							<label for="f_address2" class='<?php echo ($has_error) ? 'error' : ''; ?>'>Address <span class=""></span></label>
+							<input type="text" name="address2" class='<?php echo ($has_error) ? 'error' : ''; ?>' id="f_address2" value="<?php echo (isset($_POST['address2'])) ? $_POST['address2'] : ''; ?>" placeholder="Address"/>
+						</div>
+					</div>
+
+					<div class='row'>
+						<div class="six mobile-two columns">
+							<?php $has_error = (isset($_POST) && empty($_POST['city'])) ? true : false; ?>
+							<label for="f_city" class='<?php echo ($has_error) ? 'error' : ''; ?>'>City <span class="required">*</span></label>
+							<input type="text" name="city" class='<?php echo ($has_error) ? 'error' : ''; ?>' id="f_city" value="<?php echo (isset($_POST['city'])) ? $_POST['city'] : ''; ?>" placeholder="City"/>
+						</div>
+						<div class="six mobile-two columns">
+							<?php $has_error = (isset($_POST) && empty($_POST['county'])) ? true : false; ?>
+							<label for="f_county" class='<?php echo ($has_error) ? 'error' : ''; ?>'>County <span class="required">*</span></label>
+							<input type="text" name="county" class='<?php echo ($has_error) ? 'error' : ''; ?>' id="f_county" value="<?php echo (isset($_POST['county'])) ? $_POST['county'] : ''; ?>" placeholder="County"/>
+						</div>
+					</div>
+					
+					<div class='row'>
+						<div class="six mobile-two columns">
+							<?php $has_error = (isset($_POST) && empty($_POST['country'])) ? true : false; ?>
+							<label for="f_country" class='<?php echo ($has_error) ? 'error' : ''; ?>'>Country <span class="required">*</span></label>
+							<input type="text" name="country" class='<?php echo ($has_error) ? 'error' : ''; ?>' id="f_country" value="<?php echo (isset($_POST['country'])) ? $_POST['country'] : ''; ?>" placeholder="Country"/>
+						</div>
+						<div class="six mobile-two columns">
+							<?php $has_error = (isset($_POST) && empty($_POST['postcode'])) ? true : false; ?>
+							<label for="f_postcode" class='<?php echo ($has_error) ? 'error' : ''; ?>'>Postcode <span class="required">*</span></label>
+							<input type="text" name="postcode" class='<?php echo ($has_error) ? 'error' : ''; ?>' id="f_postcode" value="<?php echo (isset($_POST['postcode'])) ? $_POST['postcode'] : ''; ?>" placeholder="Postcode"/>
+						</div>
+					</div>
+
+				</fieldset>
+
+
 
 
 
