@@ -312,7 +312,7 @@ if(!empty($_POST)) {
 			}
 
 			if(!empty($email_sent)) {
-				echo "<div class='alert-box success'><p class=''>Application request sent, thanks</p></div>";
+				echo "<div class='alert-box success'><p class=''><strong>Thanks for your enquiry.</strog><br>You will receive a further email from us with a full Every Home application pack.</p></div>";
 			?>
 				
 			<?php
