@@ -17,7 +17,7 @@ if(!empty($_POST)) {
 	*/
 
 	$email_sent = false;
-	$req = array('first_name', 'last_name', 'email', 'telephone');
+	$req = array('first_name', 'last_name', 'email', 'telephone', 'address1', 'city', 'county', 'country', 'postcode');
 	$global_required = array('uk_citizen', 'uk_driving_licence', 'crb_checked', 'two_years_trade_experience');
 
 	$email_sent = false;
@@ -312,7 +312,7 @@ if(!empty($_POST)) {
 			}
 
 			if(!empty($email_sent)) {
-				echo "<div class='alert-box success'><p class=''><strong>Thanks for your enquiry.</strog><br>You will receive a further email from us with a full Every Home application pack.</p></div>";
+				echo "<div class='alert-box success'><p class=''><strong>coThanks for your enquiry.</strog><br>You will receive a further email from us with a full Every Home application pack.</p></div>";
 			?>
 				
 			<?php
