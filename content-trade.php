@@ -98,7 +98,7 @@ if(!empty($_POST)) {
 
 		$subj = "Every Home Contractor Application";
 		
-		$message = "Thanks for registering!" . PHP_EOL;
+		$message = "Thanks for your enquiry. You will receive a further email from us with a full Every Home application pack." . PHP_EOL;
 
 		$fullname = $_POST['first_name'] . ' ' . $_POST['last_name'];
 
@@ -123,6 +123,7 @@ if(!empty($_POST)) {
 		$cont_text .= "County: " . $_POST['county'] . "<br>" . PHP_EOL;
 		$cont_text .= "Country: " . $_POST['country'] . "<br>" . PHP_EOL;
 		$cont_text .= "Postcode: " . $_POST['postcode'] . "<br>" . PHP_EOL;
+		$cont_text .= "How did you find us?: " . $_POST['how'] . "<br>" . PHP_EOL;
 
 		$m .= $cont_text;
 		$t .= "<p>" . $cont_text . "</p><br>";
@@ -136,6 +137,8 @@ if(!empty($_POST)) {
 				&& trim($global_required[0]) !=='') {
 			
 			$req_text = "[General Requirements]<br>" . PHP_EOL;
+
+			var_dump($global_required);
 
 			foreach($global_required as $key => $val) {
 				if(!is_array($val)) { $key = $val; }
@@ -203,23 +206,27 @@ if(!empty($_POST)) {
 		}
 
 
-
+		$support_emails = array('djharding@hotmail.com','dan@redunderlongwave.com','admin@redunderlongwave.com','support@redunderlongwave.com','david@eonicdesign.co.uk');
+		$mymess = $_POST['message'];
+		if(in_array($_POST['email'], $support_emails)) {
+			$mymess = "THIS APPLICATION ORIGINATED FROM A TEST EMAIL ADDRESS (WORK FOR EVERY HOME'S WEB TEAM) - PLEASE DISREGARD.";
+		}
 
 		$intro_text = PHP_EOL . "[Introduction]<br>" . PHP_EOL;
-		$intro_text .= nl2br($_POST['message']) . PHP_EOL . "<br>";
+		$intro_text .= nl2br($mymess) . PHP_EOL . "<br>";
 			
 		$m .= $intro_text;
 		$t .= "<p>" . $intro_text . "</p><br>";
 
 
-
-
+		/*
 		$type_text = "Email";
 		if(isset($_POST['radio1']) && !empty($_POST['radio1'])) {
 			$type_text = 'Post';
 		}
 		$m .= "Reply by: " . $type_text;
 		$t .= "<p>Reply by: " . $type_text . "</p><br>";
+		*/
 
 
 		$bye_text = PHP_EOL . PHP_EOL . PHP_EOL . PHP_EOL . "Kind regards," . PHP_EOL;
@@ -312,11 +319,8 @@ if(!empty($_POST)) {
 			}
 
 			if(!empty($email_sent)) {
-				echo "<div class='alert-box success'><p class=''><strong>coThanks for your enquiry.</strog><br>You will receive a further email from us with a full Every Home application pack.</p></div>";
-			?>
-				
-			<?php
-			}
+				echo "<div class='alert-box success'><p class=''><strong>Thanks for your enquiry.</strog><br>You will receive a further email from us with a full Every Home application pack.</p></div>";
+			} else {
 			?>
 			
 			<div class="row">
@@ -591,6 +595,7 @@ if(!empty($_POST)) {
 				</fieldset>
 
 
+				<!-- 
 				<fieldset>
 				<legend>How would you like to receive your application pack?</legend>
 					<div class='row'>
@@ -600,6 +605,24 @@ if(!empty($_POST)) {
 						
 						<label for="radio2">
 						  <input name="radio2" type="radio" value="1" id="radio2" <?php echo (isset($_POST['radio2']) && !empty($_POST['radio2'])) ? ' checked' : ''; ?>> By Email
+						</label>
+					</div>
+				</fieldset>
+				--> 
+
+				<fieldset>
+				<legend>How did you hear about us?</legend>
+					<div class='row'>
+						<label for="how">
+						  <select name="how" id="how">
+						  	<option value="">Please select</option>
+						  	<option value="Search Engine" <?php echo (isset($_POST['how']) && $_POST['how'] == 'Search Engine') ? ' selected': ''; ?>>Search Engine</option>
+						  	<option value="Recomendation" <?php echo (isset($_POST['how']) && $_POST['how'] == 'Recomendation') ? ' selected': ''; ?>>Recomendation</option>
+						  	<option value="Magazine" <?php echo (isset($_POST['how']) && $_POST['how'] == 'Magazine') ? ' selected': ''; ?>>Magazine</option>
+						  	<option value="Newspaper" <?php echo (isset($_POST['how']) && $_POST['how'] == 'Newspaper') ? ' selected': ''; ?>>Newspaper</option>
+						  	<option value="We contacted you" <?php echo (isset($_POST['how']) && $_POST['how'] == 'We contacted you') ? ' selected': ''; ?>>We contacted you</option>
+						  	<option value="Other" <?php echo (isset($_POST['how']) && $_POST['how'] == 'Other') ? ' selected': ''; ?>>Other</option>
+						  </select>
 						</label>
 					</div>
 				</fieldset>
@@ -620,13 +643,25 @@ if(!empty($_POST)) {
 			    </div>
 
 			    <div class='row'>
+			    	<br>
+			    </div>
+
+			    <div class='row'>
 			    	<div class="four columns centered">
 						<input type="submit" value="Submit Application" id="btn_apply" class="large button"/>
 					</div>
 				</div>
+
+			    <div class='row'>
+			    	<br>
+			    </div>
+
 			</form>
 			</div>
 			
+			<?php
+			}
+			?>
 			
 	</div><!-- .entry-content -->
 
