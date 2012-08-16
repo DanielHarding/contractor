@@ -459,10 +459,9 @@ if(!empty($_POST)) {
 						</li> -->
 					<li>
 
-					<legend>CRB checked</legend>
                                         <div class='row'>
-                                                <label for="crb_checked">
-                                                  <select name="crb_checked" id="how">
+                                                <label for="crb_checked">CRB Checked
+                                                  <select name="crb_checked" id="crb_checked">
                                                         <option value="">Please select</option>
                                                         <option value="yes" <?php echo (isset($_POST['crb_checked']) && $_POST['crb_checked'] == 'yes') ? ' selected': ''; ?>>Yes</option>
                                                         <option value="no" <?php echo (isset($_POST['crb_checked']) && $_POST['crb_checked'] == 'no') ? ' selected': ''; ?>>No</option>
