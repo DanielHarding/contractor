@@ -6,8 +6,30 @@
 ?>
 
 <?php
+
+/*
+function cmp($a, $b){
+
+	var_dump($a, $b);
+
+    $chk = array('Liability Insurance up to £2m'=>0, 'other'=>1); 
+    // company logic dictates a week begins on a Tuesday.
+    if ($chk[$a]<$chk[$b]){
+        return -1;
+    }else{
+        return 1;
+    }
+}
+*/
+
+
 $required_trade_certificates = get_post_meta($post->ID, 'wpcf-certificate'); 
 $trade_desirables = get_post_meta($post->ID, 'wpcf-desirable'); 
+
+// uksort($required_trade_certificates, "cmp");
+natcasesort($required_trade_certificates);
+// var_dump($required_trade_certificates);
+
 if(!empty($_POST)) {
 
 	/*
@@ -137,8 +159,6 @@ if(!empty($_POST)) {
 				&& trim($global_required[0]) !=='') {
 			
 			$req_text = "[General Requirements]<br>" . PHP_EOL;
-
-			var_dump($global_required);
 
 			foreach($global_required as $key => $val) {
 				if(!is_array($val)) { $key = $val; }
@@ -463,6 +483,7 @@ if(!empty($_POST)) {
 
 
 			<?php
+
 			if(count(array_merge($required_trade_certificates)) > 0 
 				&& isset($required_trade_certificates[0]) 
 					&& trim($required_trade_certificates[0]) !=='') {
