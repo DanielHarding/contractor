@@ -1098,11 +1098,21 @@ li:hover span.ico-trade-pest-controller {
 
 
 .logobrand-small {
+  width: 92px;
+  height: 58px;
+  display: block;
+  text-indent: -5000px;
+  background: transparent url(/wp-content/themes/contractor/images/logo-small.png) 0px 0px no-repeat;
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+
+.logobrand-house {
   width: 160px;
   height: 39px;
   display: block;
   text-indent: -5000px;
-  background: transparent url(/wp-content/themes/contractor/images/logo-small.png) 0px 0px no-repeat;
+  background: transparent url(/wp-content/themes/contractor/images/house.png) 0px 0px no-repeat;
   margin-top: 8px;
   margin-bottom: 10px;
 }
