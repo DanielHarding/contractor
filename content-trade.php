@@ -40,7 +40,7 @@ if(!empty($_POST)) {
 
 	$email_sent = false;
 	$req = array('first_name', 'last_name', 'email', 'telephone', 'address1', 'city', 'county', 'country', 'postcode');
-	$global_required = array('uk_citizen', 'uk_driving_licence', 'crb_checked', 'two_years_trade_experience');
+	$global_required = array('uk_citizen', 'uk_driving_licence', 'two_years_trade_experience');
 
 	$email_sent = false;
 	$errs = $mess = false;
@@ -146,6 +146,7 @@ if(!empty($_POST)) {
 		$cont_text .= "Country: " . $_POST['country'] . "<br>" . PHP_EOL;
 		$cont_text .= "Postcode: " . $_POST['postcode'] . "<br>" . PHP_EOL;
 		$cont_text .= "How did you find us?: " . $_POST['how'] . "<br>" . PHP_EOL;
+		$cont_text .= "CRB Checked: " . $_POST['crb_checked'] . "<br>" . PHP_EOL;
 
 		$m .= $cont_text;
 		$t .= "<p>" . $cont_text . "</p><br>";
@@ -172,8 +173,7 @@ if(!empty($_POST)) {
 			$m .= $req_text;
 			$t .= "<p>" . $req_text . "</p><br>";
 		}
-
-
+		
 
 		if(count(array_merge($required_trade_certificates)) > 0 
 			&& isset($required_trade_certificates[0]) 
@@ -469,15 +469,27 @@ if(!empty($_POST)) {
 					          <span class="custom checkbox"></span> Two years' trade experience <span class="required">*</span>
 					        </label>
 						</li>
-						<li>
+					<!--	<li>
 					        <?php $checked = (isset($_POST['crb_checked']) && !empty($_POST['crb_checked'])) ? ' checked' : ''; ?>
 					        <?php $has_error = (isset($_POST) && empty($_POST['crb_checked'])) ? true : false; ?>
 					        <label for="ch_crb_checked" class='<?php echo ($has_error) ? 'error' : ''; ?>'>
 					          <input type="checkbox" class='<?php echo ($has_error) ? 'error' : ''; ?>' value="1" id="ch_crb_checked" name="crb_checked" style="display: none;" <?php echo $checked; ?>>
 					          <span class="custom checkbox"></span> CRB checked <span class="required">*</span>
 					        </label>
-						</li>
-					</ul>
+						</li> -->
+					<li>
+
+                                        <div class='row'>
+                                                <label for="crb_checked">CRB Checked
+                                                  <select name="crb_checked" id="crb_checked">
+                                                        <option value="">Please select</option>
+                                                        <option value="yes" <?php echo (isset($_POST['crb_checked']) && $_POST['crb_checked'] == 'yes') ? ' selected': ''; ?>>Yes</option>
+                                                        <option value="no" <?php echo (isset($_POST['crb_checked']) && $_POST['crb_checked'] == 'no') ? ' selected': ''; ?>>No</option>
+                                                  </select>
+                                                </label>
+                                        </div>
+
+
 
 				</fieldset>
 
