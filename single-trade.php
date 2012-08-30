@@ -62,7 +62,7 @@ get_header(); ?>
         ?>
       </ul>
 			</div>
-		<a href="/" class="logobrand-house right">Every Home Recruitment</a>
+		<a href="/" class="logobrand-house">Every Home Recruitment</a>
 	</div>
 
 </div>

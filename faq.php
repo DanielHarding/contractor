@@ -42,7 +42,7 @@ get_header(); ?>
   </div>
 </div>
 <!-- End quick contact form -->
-<a href="/" class="logobrand-small right">Every Home Recruitment</a>
+<a href="/" class="logobrand-house">Every Home Recruitment</a>
 </div>
 
 <div class="row">

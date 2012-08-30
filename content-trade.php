@@ -500,11 +500,26 @@ if(!empty($_POST)) {
 				&& isset($required_trade_certificates[0]) 
 					&& trim($required_trade_certificates[0]) !=='') {
 
+				// print("<pre>");
+				// var_dump($required_trade_certificates);
+				// print("</pre>");
 
+				function mycmp($a, $b) {
+				    return (strtolower($a) == 'liability insurance up to £2m') ? -1 : 1;
+				}
+
+				usort($required_trade_certificates, "mycmp");
+
+				// print("<pre>");
+				// var_dump($required_trade_certificates);
+				// print("</pre>");
 
 				echo "<fieldset>";
 				echo "<legend>Trade Requirements</legend><p>Fill in information where applicable.</p>";
 				echo "<ul class='simple-list'>";
+
+
+
 				foreach ($required_trade_certificates as $value) { 
 					$tok = strtolower(str_replace(' ', '_', $value));
 					$tok = str_replace('/', '', $tok);
